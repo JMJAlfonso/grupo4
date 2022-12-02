@@ -2,7 +2,7 @@
 ___
 ## **Participantes:** 
 - Loza, Fabian Gustavo: Me considero responsable, algo perfeccionista, pero positivo. Estudié Administración y Sistemas. 
-- Lombardi, Alfonso Javier: detallista, innovador, responsable, polifacetico. Estudie Sistemas, un poco de economia y medicina.
+- Lombardi, Alfonso Javier: detallista, innovador, responsable, polifacetico. Estudie Sistemas.
 - Andrade, Yanina Noelia: Soy extrovertida, alegre y autodidacta. Estudié marketing, gastronomía. 
 - Cabral, Bruno Fabián 
 - Gonzales, Franco 
