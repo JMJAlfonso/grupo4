@@ -1,6 +1,6 @@
 Grupo 4: 
 Participantes: 
-*Loza, Fabian
+*Loza, Fabian Gustavo: Me considero responsable, algo perfeccionista, pero positivo. Estudié Administración y Sistemas. 
 *Lombardi, Alfonso Javier
 *Andrade, Yanina Noelia: Soy extrovertida, alegre y autodidacta. Estudié marketing, gastronomía
 *Cabral, Bruno Fabián 
@@ -32,10 +32,9 @@ Nuestra audiencia objetiva se divide en dos secciones:
 	  es decir, ésta es una opción complementaria a su viaje convencional.
 	o Aventureros: son aquellos practicantes de algún deporte de aventura que planifican viajes específicos para practicar 
 	  su actividad. En general realizan dos a tres viajes al año, cada uno de ellos con una duración que va entre los 2 y 4 días
-	 (en adelante nos referiremos a estas activi-dades como “travesías”).
-	o Entusiastas: al igual que los Aventureros, son practicantes de algún de-porte de aventura, 
-	  pero se diferencian en que realizan actividades mu-cho más exigentes (tanto en lo referido a lo técnico como en cantidad de días de actividad,
-	  como por ejemplo expediciones al Aconcagua). En general pueden realizar estos viajes, a lo sumo, una vez al año.
+	 (en adelante nos referiremos a estas actividades como “travesías”).
+	o Entusiastas: al igual que los Aventureros, son practicantes de algún deporte de aventura, 
+	  pero se diferencian en que realizan actividades mucho más exigentes (tanto en lo referido a lo técnico como en cantidad de días de actividad, como por ejemplo expediciones al Aconcagua). En general pueden realizar estos viajes, a lo sumo, una vez al año.
 Podemos sintetizar esta información agrupando en un tipo de perfil de demanda:
 -Sexo: mayoritariamente varones
 -Edad: 20 a 45 años
@@ -52,6 +51,4 @@ Alihuen Aventura Pura Vida: https://alihuenaventura.com.ar/
 Lafken Patagonia: http://lafkenpatagonia.com/
 Iceberg Turismo: https://icebergturismo.tur.ar/
 Abriendo Rutas: https://en.abriendorutas.tur.ar/
-
-
 
