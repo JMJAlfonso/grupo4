@@ -4,7 +4,7 @@ ___
 - Loza, Fabian Gustavo: Me considero responsable, algo perfeccionista, pero positivo. Estudié Administración y Sistemas. 
 - Lombardi, Alfonso Javier: detallista, innovador, responsable, polifacetico. Estudie Sistemas.
 - Andrade, Yanina Noelia: Soy extrovertida, alegre y autodidacta. Estudié marketing, gastronomía. 
-- Cabral, Bruno Fabián 
+- Cabral, Bruno Fabián: autogestivo, observador y perseverante. estudié en una escuela técnico informática. 
 - Gonzales, Franco 
 - Sosa, Alejandro 
 - Jaqueline Vazquez: curiosa y disciplinada, diseñadora UX. Estudié administración.
@@ -22,7 +22,7 @@ Vamos a ofrecer servicio de entretenimiento para las personas que se encuentren 
 - *Kayak* 
 - *Rappel* 
 - *Cabalgata* 
-- *Paracoidismo* 
+- *Paracaidismo* 
 - *Vuelo en Parapente* 
 - *Cañonismo* 
 - *Ciclismo de Montaña* 
