@@ -57,3 +57,7 @@ al igual que los Aventureros, son practicantes de algún deporte de aventura, pe
 - [Abriendo Rutas](https://en.abriendorutas.tur.ar/)
 
 ![meme](https://images7.memedroid.com/images/UPLOADED805/599f555e74a0a.jpeg)
+
+
+
+Figma: wireframes: https://www.figma.com/file/Jj9Xzu5rykzOJkweWipyGy/Proyecto-de-turismo-aventura?node-id=0%3A1&t=kQ1VUNClOtN8iQOn-0
