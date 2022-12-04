@@ -61,3 +61,5 @@ al igual que los Aventureros, son practicantes de algún deporte de aventura, pe
 
 
 Figma: wireframes: https://www.figma.com/file/Jj9Xzu5rykzOJkweWipyGy/Proyecto-de-turismo-aventura?node-id=0%3A1&t=kQ1VUNClOtN8iQOn-0
+
+Figma: Prototipo Baja: https://acortar.link/ov0h9k
