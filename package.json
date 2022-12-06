@@ -1,0 +1,27 @@
+{
+  "name": "grupo4-losmessianos",
+  "version": "1.0.0",
+  "description": "___\r ## **Participantes:**",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMJAlfonso/grupo4-losMessianos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMJAlfonso/grupo4-losMessianos/issues"
+  },
+  "homepage": "https://github.com/JMJAlfonso/grupo4-losMessianos#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
