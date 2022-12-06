@@ -1,6 +1,7 @@
 # **Grupo 4**
 ___
 ## **Participantes:** 
+
 - Loza, Fabian Gustavo: Me considero responsable, algo perfeccionista, pero positivo. Estudié Administración y Sistemas. 
 - Lombardi, Alfonso Javier: detallista, innovador, responsable, polifacetico. Estudie Sistemas.
 - Andrade, Yanina Noelia: Soy extrovertida, alegre y autodidacta. Estudié marketing, gastronomía. 
@@ -40,6 +41,7 @@ son aquellos practicantes de algún deporte de aventura que planifican viajes es
 al igual que los Aventureros, son practicantes de algún deporte de aventura, pero se diferencian en que realizan actividades mucho más exigentes (tanto en lo referido a lo técnico como en cantidad de días de actividad, como por ejemplo expediciones al Aconcagua). En general pueden realizar estos viajes, a lo sumo, una vez al año. 
 
 ## **Tipo de perfil de demanda:** 
+
 - Sexo: mayoritariamente varones 
 - Edad: 20 a 45 años 
 - Escolaridad: principalmente universitarios (cursando y profesionales) 
@@ -50,14 +52,12 @@ al igual que los Aventureros, son practicantes de algún deporte de aventura, pe
 - Temporalidad: Vacaciones, en general hay preferencia por el verano, más que por el invierno.
 
 ## Referentes del sector en Argentina: 
+
 - [Iguazú Jungle](http://www.iguazujungle.com/index.php) 
 - [Alihuen Aventura Pura Vida](https://alihuenaventura.com.ar/)
 - [Lafken Patagonia](http://lafkenpatagonia.com/)
 - [Iceberg Turismo](https://icebergturismo.tur.ar/)
 - [Abriendo Rutas](https://en.abriendorutas.tur.ar/)
-
-![meme](https://images7.memedroid.com/images/UPLOADED805/599f555e74a0a.jpeg)
-
 
 
 Figma: wireframes: https://www.figma.com/file/Jj9Xzu5rykzOJkweWipyGy/Proyecto-de-turismo-aventura?node-id=0%3A1&t=kQ1VUNClOtN8iQOn-0
