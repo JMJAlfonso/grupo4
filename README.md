@@ -53,11 +53,11 @@ al igual que los Aventureros, son practicantes de algún deporte de aventura, pe
 
 ## Referentes del sector en Argentina: 
 
-- [Iguazú Jungle](http://www.iguazujungle.com/index.php) 
-- [Alihuen Aventura Pura Vida](https://alihuenaventura.com.ar/)
-- [Lafken Patagonia](http://lafkenpatagonia.com/)
-- [Iceberg Turismo](https://icebergturismo.tur.ar/)
-- [Abriendo Rutas](https://en.abriendorutas.tur.ar/)
+- [Iguazú Jungle](http://www.iguazujungle.com/index.php) : La información es clara y fácil de encontrar. La parte de compra de tickets es sencilla. Los colores en relación al lugar se asocian.
+- [Alihuen Aventura Pura Vida](https://alihuenaventura.com.ar/): Los colores de la empresa se encuentran en toda la página. Es muy grande la información a tal punto de que puede resultar incómodo. La información es completa. Tiene una barra de tareas muy sencilla.
+- [Lafken Patagonia](http://lafkenpatagonia.com/): Las fotos son muy llamativas y da la sensación de estar de vacaciones, un estilo más animalista con los colores acorde. El menú se encuentra del lado derecho. 
+- [Iceberg Turismo](https://icebergturismo.tur.ar/): La primera información que hay es respecto al servicio que venden y al contacto. Tiene un mapa del circuito. Los colores van a tono a la zona fría. También tienen un calendario con las fechas de las actividades y una sección con información breve y relevante de la actividad.
+- [Abriendo Rutas](https://en.abriendorutas.tur.ar/): tiene colores que definen los diferentes servicios que ofrecen. Cada actividad tiene un detalle extenso de información. La forma de pago y los descuentos que aplican es un plus. La barra de tareas se pierde por el tipo y color de letra. 
 
 
 Figma: wireframes: https://www.figma.com/file/Jj9Xzu5rykzOJkweWipyGy/Proyecto-de-turismo-aventura?node-id=0%3A1&t=kQ1VUNClOtN8iQOn-0
