@@ -6,7 +6,7 @@ ___
 - Lombardi, Alfonso Javier: detallista, innovador, responsable, polifacetico. Estudie Sistemas.
 - Andrade, Yanina Noelia: Soy extrovertida, alegre y autodidacta. Estudié marketing, gastronomía. 
 - Cabral, Bruno Fabián: autogestivo, observador y perseverante. estudié en una escuela técnico informática. 
-- Sosa, Alejandro 
+- Sosa, Alejandro : Detallista, curioso, responsable. Estudio actualmente programacion en universidad.
 - Jaqueline Vazquez: curiosa y disciplinada, diseñadora UX. Estudié administración.
 
 ___
