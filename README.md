@@ -59,6 +59,8 @@ al igual que los Aventureros, son practicantes de algún deporte de aventura, pe
 - [Abriendo Rutas](https://en.abriendorutas.tur.ar/): tiene colores que definen los diferentes servicios que ofrecen. Cada actividad tiene un detalle extenso de información. La forma de pago y los descuentos que aplican es un plus. La barra de tareas se pierde por el tipo y color de letra. 
 
 
-Figma: wireframes: https://www.figma.com/file/Jj9Xzu5rykzOJkweWipyGy/Proyecto-de-turismo-aventura?node-id=0%3A1&t=kQ1VUNClOtN8iQOn-0
+## [Figma: wireframes](https://www.figma.com/file/Jj9Xzu5rykzOJkweWipyGy/Proyecto-de-turismo-aventura?node-id=0%3A1&t=kQ1VUNClOtN8iQOn-0)
 
-Figma: Prototipo Baja/Media: https://acortar.link/ov0h9k
+## [Figma: Prototipo Baja/Media](https://acortar.link/ov0h9k)
+
+## [Trello](https://trello.com/b/ruszGwNJ/turismo-aventura-los-messianos)
