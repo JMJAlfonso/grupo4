@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Rubik", sans-serif;
+    background-color: #8bd6eb;
+  }
+
+div {
+  background-color: #8282a4;
+  display: flex;
+  
+ }
