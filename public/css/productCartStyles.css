@@ -4,6 +4,13 @@
   margin: 0px;
 }
 
+a:link { 
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
 header {
   display: none;
 }
@@ -12,7 +19,7 @@ body {
   background-image: url(/images/trekking-raquetas.jpg);
   font-family: "Rubik", sans-serif;
   background-position: center;
-  background-color: #8bd6eb
+  background-color: #8bd6eb;
 }
 
 .cart-container {
@@ -28,6 +35,7 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  position: relative;
 }
 
 main .cart-container ul {
@@ -55,8 +63,8 @@ main .cart-container .product-txt li {
 }
 
 .product-image {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 10px;
   border-radius: 10px;
 }
@@ -65,6 +73,14 @@ main .cart-container .product-txt li {
   display: flex;
   justify-content: space-between;
   border: #000000 2px solid;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: auto;
+  display: none;
 }
 
 .box {
@@ -79,11 +95,22 @@ main .cart-container .product-txt li {
   margin: 10px;
   border: #000000 2px solid;
   border-radius: 5px;
+}
 
+.box-container-x {
+  align-items: center;
+  background-color: red;
+  margin: 10px;
+  border: #000000 2px solid;
+  border-radius: 5px;
 }
 
 .box-amount {
   margin: 0 10px;
+}
+
+#cantidad {
+  width: 33px;
 }
 
 .box-subtotal {
@@ -92,13 +119,56 @@ main .cart-container .product-txt li {
 
 .box-cancel {
   margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  text-align: center;
 }
 
 .product-total {
   background-color: #84a60a;
   font-size: 25px;
   font-weight: bold;
-  color:#000000;
+  color: #000000;
   display: flex;
   justify-content: space-between;
+}
+
+.go-pay {
+  background-color: #cbb349;
+  margin: 10px 10px;
+  border: solid 2px black;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 350ms;
+}
+
+.go-pay a {
+  color: #000000;
+}
+
+.go-pay:hover {
+  background-color: #8282a4;
+}
+
+.total-products {
+  margin: 20px;
+}
+
+
+@media (min-width: 360px) {
+  .product-image {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+@media (min-width: 768px) {
+  .description {
+    display: block;
+  }
+
+  #cantidad {
+    width: 80px;
+  }
 }
