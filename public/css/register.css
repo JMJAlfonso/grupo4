@@ -74,12 +74,6 @@ color: #FFFFFF;
 }
 
 
-/*.contenedor-login {
-
-/*width: 50%;
-height: 50%;
-background-color:black
-} */
 
 .caja1{
     background: rgba(2, 9, 70, 0.65);
@@ -90,14 +84,6 @@ background-color:black
 
 }
 
-/*@media(min-width:570px){
-    .caja1{
-        background: rgba(2, 9, 70, 0.65);
-        padding: 10px 15px;
-        width: 91vw;
-        box-sizing: border-box;
-        margin: auto;
-}*/
 
 main .caja2{
     display: flex;
@@ -105,5 +91,16 @@ main .caja2{
     align-items: center;
 }
 
-/*padding: 10px 15px;
-margin: 5x 5px 5px 5px;*/
+@media(min-width:600px) {
+    .caja1{
+        width: 80%;
+        margin: auto;
+      
+}
+
+@media(min-width:100px) {
+    .caja1{
+        width: 50%;
+        margin: auto;
+      
+}
