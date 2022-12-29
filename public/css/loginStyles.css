@@ -8,3 +8,5 @@
     font-family: "Rubik", sans-serif;
     background-color: #8bd6eb;
   }
+  #container{
+    box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
