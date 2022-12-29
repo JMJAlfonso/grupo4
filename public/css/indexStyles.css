@@ -23,7 +23,7 @@ main {
 }
 
 /* --------cellphone------------ */
-@media (min-width:360px){
+@media (min-width:300px){
   main {
     padding: 5%;    
   }
@@ -36,20 +36,20 @@ main {
     justify-content: center;    
   }
   .who-we-are .image{
-    width: 20%;   
+    width: 20vw;
+    height: 30h;   
     padding-top: 10px;    
   }
   .who-we-are .text{  
-    padding: 10px; 
-    justify-content: space-around;  
+    padding: 4%;     
   }
   main section .resumeText{
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
   }
   main section .description{
     
-    font-size: 9px;
+    font-size: 10px;
     padding-top: 5px;
     text-align: justify;
     line-height: 120%;
@@ -95,24 +95,24 @@ main {
     justify-content: center;    
   }
   .who-we-are .image{
-    width: 20%;
-    height: 48vh;
+    width: 25vw;
+    height: 45vh;
     padding-top: 10px;    
   }
   .who-we-are .text{  
-    padding: 2%; 
+    padding: 2% 5%; 
     justify-content: space-around;  
   }
   main section .resumeText{
-    font-size: 23px;
+    font-size: 2rem;
     text-align: center;
   }
   main section .description{
     
-    font-size: 11px;
+    font-size: 1rem;
     padding-top: 1%;
     text-align: justify;
-    line-height: 1rem;
+    line-height: 1.2rem;
   }
   
   main .slider-section{
@@ -159,22 +159,21 @@ main {
     justify-content: center;    
   }
   .who-we-are .image{
-    width: 20%;
-    height: 80%;
-    padding-top: 10px;    
+    width: 25vw;
+    height: 85vh;
+    padding-top: 2%;   
   }
   .who-we-are .text{  
-    padding: 2%; 
-    justify-content: space-around;  
+    padding: 2% 2%;      
   }
   main section .resumeText{
-    font-size: 55px;
+    font-size: 3em;
     text-align: center;
   }
   main section .description{
     
-    font-size: 26px;
-    padding-top: 1%;
+    font-size: 1.3em;
+    padding: 5% 0% 0% 10%;
     text-align: justify;
     line-height: 130%;
   }
