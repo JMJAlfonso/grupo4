@@ -8,3 +8,37 @@
     font-family: "Rubik", sans-serif;
     background-color: #8bd6eb;
   }
+  
+  #titulo1{
+    background-color: beige;
+  }
+  #titulo2 {
+    background-color: beige;
+  }
+  #titulo3{
+    background-color: beige;
+  }
+  #titulo4{
+    background-color: beige;
+  }
+  #titulo5{
+    background-color: beige;
+  }
+  #titulo6{
+    background-color: beige;
+  }
+  #titulo7{
+    background-color: beige;
+  }
+  #titulo8{
+    background-color: beige;
+  }
+.negrita { font-weight:bold}
+
+article{
+    background-color: azure;
+    padding: 15px; background-color:antiquewhite
+    margin:100px;
+    width: 500px;
+}
+
