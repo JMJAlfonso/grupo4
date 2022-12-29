@@ -14,9 +14,7 @@ body{
 h2{
     text-align: center;
     color: white;
-
-    
-
+    font-size: 30px;
 }
 
 body {
@@ -27,16 +25,12 @@ background-color: white;
 .create-form{ 
 padding: 20px 15px;
 margin: 5x 5px 5px 5px;
-
-
-
 }
 
 .form-control{
 margin: 15px;
 color:#FFFFFF;
 font-size: 20px;
-
 }
 
 .form-control label{
@@ -59,6 +53,7 @@ padding: 5px 10px;
 border-radius: 10px;
 font-family: 'Rubik';
 margin: 5px;
+position: relative;
 
  
   
@@ -79,12 +74,12 @@ color: #FFFFFF;
 }
 
 
-.contenedor-login {
+/*.contenedor-login {
 
 /*width: 50%;
-height: 50%;*/
+height: 50%;
 background-color:black
-}
+} */
 
 .caja1{
     background: rgba(2, 9, 70, 0.65);
@@ -95,13 +90,19 @@ background-color:black
 
 }
 
-@media(min-width:570px){
+/*@media(min-width:570px){
     .caja1{
         background: rgba(2, 9, 70, 0.65);
         padding: 10px 15px;
         width: 91vw;
         box-sizing: border-box;
         margin: auto;
+}*/
+
+main .caja2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*padding: 10px 15px;
