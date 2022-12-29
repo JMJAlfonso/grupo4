@@ -1,5 +1,5 @@
 let slider = document.querySelector(".slider-container");
-let sliderIndividual = document.querySelectorAll(".contain-slider");
+let sliderIndividual = document.querySelectorAll(".slider-contain");
 let counter = 1;
 let width = sliderIndividual[0].clientWidth;
 let interval = 3000;
