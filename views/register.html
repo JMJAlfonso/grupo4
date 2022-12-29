@@ -6,18 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Aventura</title>
-</head>
-<body>
-    <header>
-        <img src="/images/Logo.jpg" width=360px alt="Logo de Turismo Aventura">
-    </header>
-</body>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/loginStyles.css">
 </head>
 
 <body>
-    <header>
-        <img src="images/logo.jpg" width=360px alt="Logo de Turismo Aventura">
-    </header>
+    <main>
+        <form action="/saveInformation" method="post" class="create-form">
+            <div class="form-control">
+                <label>Nombre:</label>
+                <input type="text" name="name" class="control">
+            </div>
+            <div class="form-control">
+                <label>Apellido:</label>
+                <input type="text" name="surname" class="control">
+            </div>
+            <div class="form-control">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="nombre@gmail.com" class="control">
+            </div>
+
+            <div class="form-control">
+                <label>País</label>
+                <select name="country">
+                    <option value="argentina">Argentina</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="chile">Chile</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="paraguay">Paraguay</option>
+                    <option value="peru">Peru</option>
+                    <option value="uruguay">Uruguay</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="guyanaFrancesa">Guyana Francesa </option>
+                </select>
+
+            </div>
+            <div class="form-control">
+                <label>Contraseña:</label>
+                <input type="password" name="password" class="control">
+            </div>
+            <div class="form-control">
+                <label>Repetir Contraseña:</label>
+                <input type="repeat_password" name="repeat_password" class="control">
+            </div>
+            
+            <button type="submit" class="form-button">Registrarse</button>
+
+
+
+        </form>
+    </main>
+
+
 </body>
+
 </html>

@@ -1,10 +1,40 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+        box-sizing: border-box;
   }
   
   body {
     font-family: "Rubik", sans-serif;
-    background-color: #8bd6eb;
+    background-color: white;
+  }
+.create-form{
+  padding: 20px 15px;
+}
+
+.form-control{
+  margin: 15px;
+}
+
+.form-control label{
+  margin-bottom: 5px;
+  font-style: rubik;
+  display: block;
+}
+
+.control{
+  width: 100%;
+  padding: 8px;
+}
+
+.form-button{
+  color:white;
+  background-color: #364C59;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+  .contenedor-login {
+  
+  width: 50%;
+  height: 50%;
+  background-color: aqua;
   }
