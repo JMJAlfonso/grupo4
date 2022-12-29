@@ -127,9 +127,6 @@
     background-color: #8bd6eb; 
     width: 100vw;
   }
-  body >header, footer{
-    height: 15vh;
-  }
  body .logo{
   width: 20%;
   height: 80%;
