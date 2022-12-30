@@ -38,7 +38,7 @@ input{
 .boton{
     text-transform: uppercase;
     outline: 0;
-    background-color: #256D85;
+    background-color: #D78400;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -55,7 +55,7 @@ input{
     align-items: stretch;
     position: relative;
     z-index: 1;
-    background-color: #06283D;
+    background-color: rgba(2, 9, 70, 0.65);
     width: 18em;
     height: 25em;
     padding: 45px;
@@ -96,7 +96,7 @@ i{
 #facebook{
     text-transform: uppercase;
     outline: 0;
-    background-color: #256D85;
+    background-color: #D78400;
     width: 80%;
     height: 30px;
     border: 0;
@@ -110,7 +110,7 @@ i{
 #gmail{
     text-transform: uppercase;
     outline: 0;
-    background-color: #256D85;
+    background-color: #D78400;
     width: 80%;
     height: 30px;
     border: 0;
@@ -129,7 +129,7 @@ i{
     align-items: stretch;
     position: relative;
     z-index: 1;
-    background-color: #06283D;
+    background-color: rgba(2, 9, 70, 0.65);
     width: 20em;
     height: 26em;
     padding: 45px;
@@ -165,7 +165,7 @@ i{
     align-items: stretch;
     position: relative;
     z-index: 1;
-    background-color: #06283D;
+    background-color: rgba(2, 9, 70, 0.65);
     width: 20em;
     height: 26em;
     padding: 45px;
