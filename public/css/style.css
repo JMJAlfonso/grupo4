@@ -40,6 +40,7 @@ input{
     outline: 0;
     background-color: #D78400;
     width: 100%;
+    border-radius: 10px;
     border: 0;
     padding: 15px;
     color: #fff;
@@ -98,6 +99,7 @@ i{
     outline: 0;
     background-color: #D78400;
     width: 80%;
+    border-radius: 10px;
     height: 30px;
     border: 0;
     padding: 10px;
@@ -113,6 +115,7 @@ i{
     background-color: #D78400;
     width: 80%;
     height: 30px;
+    border-radius: 10px;
     border: 0;
     padding: 10px;
     color: #fff;
