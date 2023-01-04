@@ -89,7 +89,7 @@ main .slider-contain{
 }
 
 /* --------cellphone------------ */
-@media (min-width:300px){
+/*@media (min-width:300px){
    
   main .inpiration-phrase {
     padding-top: 5%;
@@ -98,7 +98,7 @@ main .slider-contain{
     font-size: 12px;
   }     
 
-}
+}*/
 /* --------big cellphone and tablet------------ */
 @media (min-width:480px){
 
