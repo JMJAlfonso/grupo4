@@ -97,10 +97,11 @@ main .caja2{
         margin: auto;
       
 }
-
+}
 @media(min-width:100px) {
     .caja1{
         width: 50%;
         margin: auto;
       
+}
 }

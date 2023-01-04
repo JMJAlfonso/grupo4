@@ -15,15 +15,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" />     
 </head>
 
 <body>
     <header>
         <nav class="nav-bar">
-            <div class="logo-text"><img class="logo-header" src="images/Logo.png">
+            <a href="#" class="logo-text"><img class="logo-header" src="images/Logo.png">
                 <h1>Aventyr</h1>
-            </div>
+            </a>
             <div class="nav-list">
                 <ul>
                     <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
@@ -34,33 +34,19 @@
                 </ul>
             </div>
             <div class="login-button">
-                <button><a class="user"><i class="fa-solid fa-user"></i>Ingresar</a></button>
+                <button><a class="user" href="#"><i class="fa-solid fa-user"></i>Ingresar</a></button>
                 <button><a class="Register" href="#">Registrarse</a></button>
-                <button><a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a></button>
+                <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><a class="icon"><i class="fa-solid fa-bars"></i></i></a></button>
-            </div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+
+
+
         </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Quienes somos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Actividades</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Seguridad</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-            </ul>
-            <div class="login-button">
-                <button> <a class="user"><i class="fa-solid fa-user"></i>Ingresar</a></button>
-                <button><a class="Register" href="#">Registrarse</a></button>
-                <button><a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a></button>
-            </div>
-        </div>
+
     </header>
     <main>
         <section class="who-we-are">
-            <img class="image" src="/images/quienes-somos.jpg" alt="imagenes quienes somos">
-
             <div class="text">
                 <h1 class="resumeText">Quienes somos, vision, mision, qué hacemos...</h1>
                 <p class="description">Somos una empresa joven y en continuo crecimiento. La seguridad con la que se
@@ -79,6 +65,7 @@
             </div>
         </section>
         <section class="slider-section">
+        <div class="color-slider">
             <div class="slider-container">
                 <div class="slider-contain">
                     <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1">
@@ -93,16 +80,34 @@
                     <img class="slider-image" src="/images/villapehuenia4.jpg" alt="villapehuenia 4">
                 </div>
                 <div class="slider-contain">
+                    <img class="slider-image" src="/images/image-slider1.jpg" alt="image-slider 1">
+                </div>
+                <div class="slider-contain">
+                    <img class="slider-image" src="/images/image-slider2.jpg" alt="image-slider 2">
+                </div>
+                <div class="slider-contain">
+                    <img class="slider-image" src="/images/image-slider3.jpg" alt="image-slider 3">
+                </div>
+                <div class="slider-contain">
+                    <img class="slider-image" src="/images/image-slider4.jpg" alt="villapehuenia =4">
+                </div>
+                <div class="slider-contain">
                     <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1">
                 </div>
             </div>
+        </div> 
         </section>
+        <section class="what-are-you-waiting">
+            <div>
+                <h3>¿ QUE ESPERAS POR LA TUYA ?</h3>
+            </div>
+        </section>    
     </main>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>Newsletter</h4>
+                    <h4>Recibí nuestras novedades</h4>
                     <ul>
                         <form action="">
                             <div class="email-box">
@@ -117,10 +122,10 @@
                 <div class="footer-col">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Quienes somos</a></li>
-                        <li><a href="#">Actividades</a></li>
-                        <li><a href="#">Seguridad</a></li>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/">Quienes somos</a></li>
+                        <li><a href="/productDetail">Actividades</a></li>
+                        <li><a href="">Seguridad</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
@@ -130,13 +135,15 @@
                         <a href="#"><i class="fa-brands fa-whatsapp"></i></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></i></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
 
+            </div>
+        </div>      
     </footer>
-</body>
 <script src="js/slider.js"></script>
+</body>
 
 </html>
