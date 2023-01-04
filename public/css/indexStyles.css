@@ -12,7 +12,7 @@
   }  
   
   header{
-    background-color: #364c59;
+    background-color: rgba(2, 9, 70, 0.65);
     box-shadow: 0 3px 10px 0 #464646;
   
   }
@@ -56,17 +56,21 @@
     color: #FFFFFF;
     font-weight: 400;
     text-transform: uppercase;
+    transition: color 400ms ease;
   }
   .nav-link:hover{
-    color: rgba(0, 0, 0,0.8);
+    color: #EB9204;
   }
   .login-button button{
     border: none;
-    background-color: #84A60A;
+    background-color: #EB9204;
     padding: 10px 15px;
-    
     margin: 5px;
-    
+    border-radius: 4px;
+    transition: background-color 400ms ease;
+  }
+  .login-button button:hover{
+    background-color: #ffb43c;
   }
   .login-button{
     align-items: center;
@@ -80,8 +84,12 @@
   }
   .cart{
     font-size: 20px;
-    color: #84a604;
+    color: #EB9204;
     padding: 15px;
+    transition: color 400ms ease;
+  }
+  .cart:hover{
+    color: #ffb43c;
   }
   .login-button button a{
     text-decoration: none;
@@ -281,7 +289,7 @@ footer{
   font-weight: 300;
   color: #bbbbbb;
   display: block;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .footer-col ul li a:hover{
   color: #FFFFFF;
@@ -362,7 +370,8 @@ footer{
 @media(min-width:940px){
   .tbox{
     width: 0px;
-    transition: 0.6s;
+    transition: 0.9s;
+      
   }
   .email-box:hover >.tbox,.tbox:focus{
     width: 160px;
