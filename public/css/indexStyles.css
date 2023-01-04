@@ -9,29 +9,121 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: stretch;
-  }    
+  }  
   
+  header{
+    background-color: #364c59;
+    box-shadow: 0 3px 10px 0 #464646;
   
-main {
-  background-color: #FFFFFF;
-  padding: 5%;  
-}
-main .who-we-are{
-  background-image:url(../images/index-background.jpg) ;
-  background-attachment: scroll;
-  background-size:cover ;
-  border-radius: 4px;
-  width: 100%;    
-  padding: 5%;
-  display: flex;  
-  justify-content: center;   
+  }
+  .nav-bar{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 2.5rem;
+  }
+  .logo-text{
+    text-decoration: none;
+  
+  }
+  .logo-header {
+    width: 125px;
+    text-decoration: none;
+    
+  }
+  .logo-text h1{
+    padding-left: 15px;
+    color: #FFFFFF;
+    margin-top: 0;
+    font-size: 25px;
+    text-decoration: none;
+    
+  }
+  .nav-list{
+    display: flex;
+    align-items: center;
+  }
+  .nav-list ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .nav-item{
+    margin: 0 15px;
+  }
+  .nav-link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .nav-link:hover{
+    color: rgba(0, 0, 0,0.8);
+  }
+  .login-button button{
+    border: none;
+    background-color: #84A60A;
+    padding: 10px 15px;
+    
+    margin: 5px;
+    
+  }
+  .login-button{
+    align-items: center;
+    display: flex;
+  }
+  .login-button button{
+   padding:8px
+  }
+  .login-button .user i{
+    height: 15px;
+  }
+  .cart{
+    font-size: 20px;
+    color: #84a604;
+    padding: 15px;
+  }
+  .login-button button a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+  .menu-toggle{
+    display: none;
+  }
+  @media (max-width : 940px){
+    .nav-list, .login-button{ display: none;
 
-} 
-main > section .text{
-  text-align: center;
-  margin: 40% 10% 20% 10%;    
-  padding: 2% 2%;
-  background: rgba(2, 9, 70, 0.65);
+    }
+    .menu-toggle{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+  }
+  
+  main {
+    background-color: #FFFFFF;
+    padding: 5%;  
+  }
+ main .who-we-are{
+    background-image:url(../images/index-background.jpg) ;
+    background-attachment: scroll;
+    background-size:cover ;
+    border-radius: 4px;
+    width: 100%;    
+    padding: 5%;
+    display: flex;  
+    justify-content: center;   
+
+  } 
+  main > section .text{
+    text-align: center;
+    margin: 40% 10% 20% 10%;    
+    padding: 2% 2%;
+    background: rgba(2, 9, 70, 0.65);
   } 
  main  .resumeText{   
   padding: 10px 15px;
@@ -89,7 +181,7 @@ main .slider-contain{
 }
 
 /* --------cellphone------------ */
-/*@media (min-width:300px){
+@media (min-width:300px){
    
   main .inpiration-phrase {
     padding-top: 5%;
@@ -98,7 +190,7 @@ main .slider-contain{
     font-size: 12px;
   }     
 
-}*/
+}
 /* --------big cellphone and tablet------------ */
 @media (min-width:480px){
 
@@ -136,10 +228,145 @@ main .slider-contain{
   }
   main .what-are-you-waiting {
     font-size: 18px;
-  } 
+  }   
+  
 
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px ;
+}
 
+ul{
+  list-style: none;
+}
+footer{
+  background-color: rgba(2, 9, 70, 0.65);
+  padding: 70px 0;
+  
+}
+.footer-col{
+  width: 33%;
+  padding: 0 15px; 
+}
+.footer-col h4{
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #EB9204;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #FFFFFF;
+  padding-left: 8px;
+}
+.footer-col .redes-sociales a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  transition: all 0.5s ease;
 
+}
+.footer-col .redes-sociales a:hover{
+  color: #24262b;
+  background-color: #FFFFFF;
+}
+/*responsive*/
+@media(max-width:768px){
+  .footer-col{
+  width: 25%;
+  margin-bottom: 30px;
+  }
+}
+@media(max-width:940px){
+  .footer-col{
+  width: 100%;
+  margin-bottom: 30px;
+  }
+}
+.logo-title{
+  color: #FFFFFF;
+  padding-left: 50px;
+  text-transform: capitalize;
+}
+.email-box{
+  height: 40px;
+  display: flex;
+}
+.email-box i{
+  background: #2f3542;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.tbox,.btn{
+  border: none;
+  outline: none;
+}
+
+.btn{
+  background: #2f3542;
+  color: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.row-2{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.logo-footer{
+  width: 100px;
+  text-align: center;
+}
+.footer-col-2{
+  width: 33%;
+  margin: auto;
+  padding-top: 15px;
+}
+@media(min-width:940px){
+  .tbox{
+    width: 0px;
+    transition: 0.6s;
+  }
+  .email-box:hover >.tbox,.tbox:focus{
+    width: 160px;
+    padding: 0 10px;
+  }
+  }
   
