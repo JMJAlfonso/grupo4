@@ -81,7 +81,7 @@ header{
     display: none;
   }
   @media (max-width : 940px){
-    .nav-list, .login-button{ display: none;
+    .nav-list, .login-button{ display: none; 
 
     }
     .menu-toggle{
