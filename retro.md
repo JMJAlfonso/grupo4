@@ -25,3 +25,25 @@
 ### Dejar de hacer: 
 - Dejar de ser desorganizados. 
 - Evitar ignorar a los compañeros. 
+
+
+
+## RETRO SPRINT 2
+
+### Comenzar a hacer: 
+- Ponernos de acuerdo en cuanto a diseño general del sitio.
+
+### Hacer más: 
+- Comunicarnos.
+- Hacer reuniones.
+- Mejorar el codigo.
+
+### Continuar haciendo: 
+- Ser cooperativos, apoyarnos mutuamente, seguir usando Trello.
+
+### Hacer menos: 
+- Dejar de hacer reuniones extensas sin concretar cosas puntuales.
+
+### Dejar de hacer: 
+- Dejar de ser desorganizados.
+- No hacer reuniones semanales.
