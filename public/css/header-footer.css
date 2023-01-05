@@ -8,7 +8,6 @@ header{
 .nav-bar{
   display: flex;
   justify-content: space-around;
-  padding: 1rem 2.5rem;
 }
 .logo-text{
   text-decoration: none;
@@ -109,8 +108,9 @@ header{
   padding-left: 10px ;
 }
 
-ul{
+footer ul{
   list-style: none;
+  padding-left: 0;
 }
 footer{
   background-color: rgba(2, 9, 70, 0.65);
