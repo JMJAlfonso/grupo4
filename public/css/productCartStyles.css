@@ -11,10 +11,6 @@ a:visited {
   text-decoration: none;
 }
 
-header {
-  display: none;
-}
-
 body {
   background-image: url(/images/trekking-raquetas.jpg);
   background-attachment: fixed;
