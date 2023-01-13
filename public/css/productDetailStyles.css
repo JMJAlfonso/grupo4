@@ -52,3 +52,12 @@ main  .description{
   height: 50%;
   border-radius: 0.2em;
 }
+
+body {
+  background-image: url(/images/registro_fondo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Rubik", sans-serif;
+  background-position: center;
+  background-color: #8bd6eb;
+}
