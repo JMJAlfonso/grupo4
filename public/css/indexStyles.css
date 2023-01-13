@@ -4,134 +4,29 @@
     box-sizing: border-box;
   }
   body {       
-    font-family: "Rubik", sans-serif;
-    
+    font-family: "Rubik", sans-serif;    
     flex-wrap: wrap;
     flex-direction: column;
     align-items: stretch;
-  }  
-  
-  header{
-    background-color: rgba(2, 9, 70, 0.65);
-    box-shadow: 0 3px 10px 0 #464646;
-  
-  }
-  .nav-bar{
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 2.5rem;
-  }
-  .logo-text{
-    text-decoration: none;
-  
-  }
-  .logo-header {
-    width: 125px;
-    text-decoration: none;
-    
-  }
-  .logo-text h1{
-    padding-left: 15px;
-    color: #FFFFFF;
-    margin-top: 0;
-    font-size: 25px;
-    text-decoration: none;
-    
-  }
-  .nav-list{
-    display: flex;
-    align-items: center;
-  }
-  .nav-list ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-  }
-  .nav-item{
-    margin: 0 15px;
-  }
-  .nav-link{
-    text-decoration: none;
-    font-size: 1rem;
-    color: #FFFFFF;
-    font-weight: 400;
-    text-transform: uppercase;
-    transition: color 400ms ease;
-  }
-  .nav-link:hover{
-    color: #EB9204;
-  }
-  .login-button button{
-    border: none;
-    background-color: #EB9204;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 4px;
-    transition: background-color 400ms ease;
-  }
-  .login-button button:hover{
-    background-color: #ffb43c;
-  }
-  .login-button{
-    align-items: center;
-    display: flex;
-  }
-  .login-button button{
-   padding:8px
-  }
-  .login-button .user i{
-    height: 15px;
-  }
-  .cart{
-    font-size: 20px;
-    color: #EB9204;
-    padding: 15px;
-    transition: color 400ms ease;
-  }
-  .cart:hover{
-    color: #ffb43c;
-  }
-  .login-button button a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: 500;
-  }
-  .menu-toggle{
-    display: none;
-  }
-  @media (max-width : 940px){
-    .nav-list, .login-button{ display: none;
-
-    }
-    .menu-toggle{
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-    }
-
-  }
+  }    
   
   main {
     background-color: #FFFFFF;
     padding: 5%;  
   }
- main .who-we-are{
+ main .who-we-are{   
     background-image:url(../images/index-background.jpg) ;
     background-attachment: scroll;
     background-size:cover ;
     border-radius: 4px;
-    width: 100%;    
+    width: 100%;       
     padding: 5%;
     display: flex;  
-    justify-content: center;   
-
+    justify-content: center; 
   } 
   main > section .text{
     text-align: center;
-    margin: 40% 10% 20% 10%;    
-    padding: 2% 2%;
-    background: rgba(2, 9, 70, 0.65);
+    margin: 15% 0% 20% 0%;
   } 
  main  .resumeText{   
   padding: 10px 15px;
@@ -139,17 +34,68 @@
   text-align: center;
   color: #fff;   
 }
-main  .description{   
+main #form-index{ 
+  margin-top: 0%;
+  background: rgba(2, 9, 70, 0.65);
   font-size: 10px;
   color: #fff;
-  padding: 10px 15px;  
-  line-height: 120%;    
+  padding: 10px 15px;
+  line-height: 120%;   
 } 
- main .inpiration-phrase , .what-are-you-waiting {
+div.input-form-index > input{  
+    font-size: 8px;
+    height: 1.5em;
+}
+.input-form-index,.button-form-index{
+  margin-top: 5%;  
+}
+ main .recomendation , .what-are-you-waiting {
   padding:0% 5% ;
   font-size: 10px;
   text-align: center;   
   color:#84a604;    
+}
+.articles{
+  display: flex;
+  justify-content: space-around;  
+  flex-direction: column;
+  height: 150vh;
+}
+.article{  
+  font-size: 8px;
+  height: 33%;
+  margin: 0% 0%;
+  width: 100%;
+}
+.article .div-image1{  
+  background-image: url(../images/ciclismo.jpg);
+  background-attachment: scroll;
+  background-size: cover;
+  border-radius: 4px;
+  width: 100%;
+  height: 48%;
+}
+.article .div-image2{  
+  background-image:url(../images/parapente.jpg);
+  background-attachment: scroll;
+  background-size: cover;
+  border-radius: 4px;
+  width: 100%;
+  height: 55%;
+  
+}
+.article .div-image3{  
+  background-image:url(../images/kayac.jpg);
+  background-attachment: scroll;
+  background-size: cover;
+  border-radius: 4px;
+  width: 100%;
+  height: 48%;  
+}
+
+.main-article{
+  margin-top: 2%;
+  font-size: 16px;
 }
 main .slider-section{  
   background-image:url(../images/arcoiris-background.jpg) ;
@@ -191,26 +137,35 @@ main .slider-contain{
 /* --------cellphone------------ */
 @media (min-width:300px){
    
-  main .inpiration-phrase {
+  main .recomendation {
     padding-top: 5%;
   }
   main .what-are-you-waiting {
     font-size: 12px;
+  }
+  div.input-form-index > input{
+    font-size: 10px ;
+
   }     
 
 }
 /* --------big cellphone and tablet------------ */
 @media (min-width:480px){
+  main .who-we-are{ 
+    height: 80vh;
+  }
 
   main section .resumeText{
     font-size: 2rem;       
   }
-  main section .description{
-    
-    font-size: 1rem;       
-    line-height: 1.2rem;    
+  main #form-index{    
+    font-size: 16px;    
+  } 
+  div.input-form-index > input{
+    font-size: 12px;
+    height: 2em;
   }
-  main .inpiration-phrase , .what-are-you-waiting {
+  main .recomendation , .what-are-you-waiting {
     font-size: 12px;
   }
   main .what-are-you-waiting {
@@ -221,17 +176,22 @@ main .slider-contain{
 
 /* --------big tablet and laptop------------ */
 @media (min-width:769px){ 
+  main .who-we-are{ 
+    height: 100vh;
+  }
  
    main section .resumeText{
     font-size: 3em;   
   }
-  main section .description{
-    
-    font-size: 1.3em;      
-    line-height: 130%;
+  main #form-index{     
+    font-size: 20px;    
+  } 
+  div.input-form-index > input{
+    font-size: 18px;
+    height: 2.2em;
   }
 
-  main .inpiration-phrase , .what-are-you-waiting {
+  main .recomendation , .what-are-you-waiting {
     font-size: 16px;
   }
   main .what-are-you-waiting {
@@ -240,141 +200,3 @@ main .slider-contain{
   
 }
 
-.row{
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10px ;
-}
-
-ul{
-  list-style: none;
-}
-footer{
-  background-color: rgba(2, 9, 70, 0.65);
-  padding: 70px 0;
-  
-}
-.footer-col{
-  width: 33%;
-  padding: 0 15px; 
-}
-.footer-col h4{
-  font-size: 18px;
-  text-transform: capitalize;
-  color: #FFFFFF;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-  
-}
-.footer-col h4::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #EB9204;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-.footer-col ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-.footer-col ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 300;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.5s ease;
-}
-.footer-col ul li a:hover{
-  color: #FFFFFF;
-  padding-left: 8px;
-}
-.footer-col .redes-sociales a{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin:0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #FFFFFF;
-  transition: all 0.5s ease;
-
-}
-.footer-col .redes-sociales a:hover{
-  color: #24262b;
-  background-color: #FFFFFF;
-}
-/*responsive*/
-@media(max-width:768px){
-  .footer-col{
-  width: 25%;
-  margin-bottom: 30px;
-  }
-}
-@media(max-width:940px){
-  .footer-col{
-  width: 100%;
-  margin-bottom: 30px;
-  }
-}
-.logo-title{
-  color: #FFFFFF;
-  padding-left: 50px;
-  text-transform: capitalize;
-}
-.email-box{
-  height: 40px;
-  display: flex;
-}
-.email-box i{
-  background: #2f3542;
-  width: 40px;
-  line-height: 40px;
-  text-align: center;
-}
-.tbox,.btn{
-  border: none;
-  outline: none;
-}
-
-.btn{
-  background: #2f3542;
-  color: white;
-  padding: 0 10px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.row-2{
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10px;
-}
-
-.logo-footer{
-  width: 100px;
-  text-align: center;
-}
-.footer-col-2{
-  width: 33%;
-  margin: auto;
-  padding-top: 15px;
-}
-@media(min-width:940px){
-  .tbox{
-    width: 0px;
-    transition: 0.9s;
-      
-  }
-  .email-box:hover >.tbox,.tbox:focus{
-    width: 160px;
-    padding: 0 10px;
-  }
-  }
-  
