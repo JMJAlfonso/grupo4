@@ -21,9 +21,6 @@ app.get('/register',(req,res)=>{
 app.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'/views/login.html'))
 });
-app.get('/prueba',(req,res)=>{
-    res.sendFile(path.join(__dirname,'/views/prueba.html'))
-});
 app.listen(3000, () => {
     console.log('Servidor iniciado en http://localhost:3000');
 });
