@@ -91,13 +91,29 @@ header{
   .nav-list, .login-button{ display: none;
 
   }
+  .nav-bar{
+    flex-direction: column;
+  }
   .menu-toggle{
+    
+    color: #fff;
     display: flex;
+    flex-direction: column; 
+  }
+  .menu-toggle i{
     align-items: center;
     text-align: center;
-    color: #fff;
+    padding: 15px;
+    border-radius: 5px;   
+    margin: 5px;
   }
-
+  .logo-text{
+    text-align: center;
+  }
+  .logo-text h1{
+    text-align: center;
+    padding-left: 0px;
+  }
 }
 
 /* FOOTER */
@@ -114,7 +130,7 @@ footer ul{
 }
 footer{
   background-color: rgba(2, 9, 70, 0.65);
-  padding: 70px 0;
+  padding: 50px 0;
   
 }
 .footer-col{
@@ -175,13 +191,8 @@ footer{
   background-color: #FFFFFF;
 }
 /*responsive*/
-@media(max-width:768px){
-  .footer-col{
-  width: 25%;
-  margin-bottom: 30px;
-  }
-}
-@media(max-width:940px){
+
+@media(min-width:0px){
   .footer-col{
   width: 100%;
   margin-bottom: 30px;
@@ -201,10 +212,12 @@ footer{
   width: 40px;
   line-height: 40px;
   text-align: center;
+  color: #fff;
 }
 .tbox,.btn{
   border: none;
   outline: none;
+  font-size: 70%;
 }
 
 .btn{
@@ -220,16 +233,9 @@ footer{
   padding-left: 10px;
 }
 
-.logo-footer{
-  width: 100px;
-  text-align: center;
-}
-.footer-col-2{
-  width: 33%;
-  margin: auto;
-  padding-top: 15px;
-}
-@media(min-width:940px){
+
+
+@media(min-width:768px){
   .tbox{
     width: 0px;
     transition: 0.9s;
@@ -239,5 +245,8 @@ footer{
     width: 160px;
     padding: 0 10px;
   }
+    .footer-col{
+      width: 33%;
+    }
   }
   
