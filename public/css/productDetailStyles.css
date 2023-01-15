@@ -84,10 +84,9 @@ margin-left: 60px;
   animation: Aumentar 5s ease;
 }
 @keyframes Aumentar {
-  0%{ width: 0%;
-  
+  0% { width: 0%;
   }
-  100 %{ width:var (--w)
+  100% { width:var (--w)
   }
 }
 
