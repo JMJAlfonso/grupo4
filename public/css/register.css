@@ -1,11 +1,13 @@
 body{
-    background-image:url(../images/registro_fondo.jpg) ;
+    background-image:url(../images/fondo_blanco.jpg) ;
     background-attachment: fixed;
     background-size:cover ;
     font-family: 'Rubik', sans-serif;
     font-size: 15px;
     line-height: 23px;
 }
+
+
 
 *{  
  box-sizing: border-box;
@@ -91,6 +93,7 @@ main .caja2{
     align-items: center;
 }
 
+/*tablet*/
 @media(min-width:600px) {
     .caja1{
         width: 80%;
@@ -98,7 +101,8 @@ main .caja2{
       
 }
 }
-@media(min-width:100px) {
+/*computadora*/
+@media(min-width:768px) {
     .caja1{
         width: 50%;
         margin: auto;
