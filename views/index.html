@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/1e0542afd6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -38,9 +39,6 @@
                 <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-
-
-
         </nav>
 
     </header>
@@ -54,7 +52,7 @@
                     <h3>¡Consultanos! Te ayudamos a armar tu viaje</h3>
                 </div>
                 <div class="input-form-index">
-                    <input id="txfName" type="text" name="name" placeholder="Tu nombre" required minlength="4" style="width: 100%;" required>
+                    <input id="txfName" type="text" name="name" placeholder="Tu nombre" required minlength="4" style="width: 100%;" required oninvalid="" >
                 </div>
                 <span class="feedback" ></span>
                 <div class="input-form-index">
@@ -77,10 +75,11 @@
                 <h2>Actividades</h2>
                 <h4>¡Que no te podes perder si venis a Villa Pehuenia!</h4>
             </div>
-        </section>                
+        </section>
+                       
         <section class="articles">         
             <article class="article" id="article1">
-                <div class="div-image1" ></div>                   
+                <a href='/productDetail'><div class="div-image1" ></div></a>                    
                 <div class="main-article">
                     <h3> Ciclismo de montaña</h3>                    
                     <div class="description-container">
@@ -88,10 +87,11 @@
                     </div>
                     <p class="price">$3.600</p>
                     <p class="discount">5% off</p>
-                </div>       
+                </div>
+                       
             </article>
             <article class="article" id="article2">
-                <div class="div-image2"> </div>                 
+                <a href='/productDetail'><div class="div-image2" ></div></a>                 
                 <div class="main-article">
                     <h3> Parapente</h3>                    
                     <div class="description-container">
@@ -102,7 +102,7 @@
                 </div>       
             </article>
             <article class="article" id="article3">
-                <div class="div-image3" ><img></div>
+                <a href='/productDetail'><div class="div-image3" ></div></a>
                 <div class="main-article">
                     <h3> kayak</h3>                    
                     <div class="description-container">
@@ -113,39 +113,342 @@
                 </div>       
             </article>                 
         </section>
-
         <section class="slider-section">
-        <div class="color-slider">
-            <div class="slider-container">
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1">
+            <div class="color-slider">
+                <div class="slider-container">
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1" width="300px" heigth="300px">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/villapehuenia2.jpg" alt="villapehuenia 2" width="300px" heigth="300px">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/villapehuenia3.jpg" alt="villapehuenia 3">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/villapehuenia4.jpg" alt="villapehuenia 4">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/image-slider1.jpg" alt="image-slider 1">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/image-slider2.jpg" alt="image-slider 2">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/image-slider3.jpg" alt="image-slider 3">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/image-slider4.jpg" alt="villapehuenia =4">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1">
+                    </div>
                 </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/villapehuenia2.jpg" alt="villapehuenia 2">
+            </div> 
+            </section>
+
+        <section class="carrousel"> 
+            <h2>Testimonios de pasajeros</h2>
+            <div class="conteCarrousel">
+                <div class="itemCarrousel" id="itemCarrousel-1">
+                    <div class="itemCarrouselTarjeta">                                                   
+                        <div class="testimonio_caja" id="testimonio-1">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-hombre1.jpg" alt="perfil-1">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Armando Perez</strong>
+                                        <span>@Perezdo</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <div class="resenias">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Excelente agencia de turismo. 100% los recomiendo.</p>
+                                </div>                                              
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#testimonio9">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#testimonio2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div> 
+                        </div>                    
+                    
+                        <div class="testimonio_caja" id="testimonio-2">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-mujer1.jpg" alt="perfil-2">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>NataliaBazan</strong>
+                                        <span>@NatBazan</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Todo de maravilla,muy profefionales.Gracias por la excelente experiencia.Espero poder repetirla pronto.</p>
+                                </div>
+                                <div class="itemCarrouselArrows">
+                                    <a href="#itemCarrousel-3">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                    <a href="#itemCarrousel-2">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>                                               
+                            </div>
+                        </div>
+                    
+                        <div class="testimonio_caja" id="testimonio-3">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-hombre2.jpg" alt="perfil-3">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Hans Miller</strong>
+                                        <span>@HMiller</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <div class="resenias">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>                                            
+                                        </div>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>First time meeting argentina, a friend from there invite me. Love it Villa Pehuenia. Definetely u'll not waist time.</p>
+                                     
+                                </div>
+                                                                           
+                            </div>
+                        </div>                                                
+                    </div>
+                    <div class="itemCarrouselArrows">
+                        <a href="#itemCarrousel-3">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#itemCarrousel-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>                   
                 </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/villapehuenia3.jpg" alt="villapehuenia 3">
+                <div class="itemCarrousel" id="itemCarrousel-2">
+                    <div class="itemCarrouselTarjeta">
+                        <div class="testimonio_caja" id="testimonio-4">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-mujer2.jpg" alt="perfil-1">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Paula Rodriguez</strong>
+                                        <span>@PauRodriguez</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Excelente servicio. Me hubiese gustado tener mas tiempo para recorrer Otra vez sera.</p>
+                                </div>                                              
+                            </div>
+                        </div>                    
+                    
+                        <div class="testimonio_caja" id="testimonio-5">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-mujer3.jpg" alt="perfil-2">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Nicole Alvarez</strong>
+                                        <span>@Nicole_Alvarez</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Muy atentos y profesionales.Me encanto el recorrido en kayak,los lugares son asombrosos.</p>
+                                </div>                                              
+                            </div>
+                        </div>
+                    
+                        <div class="testimonio_caja" id="testimonio-6">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-hombre3.jpg" alt="perfil-3">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Pedro Uriarte</strong>
+                                        <span>@Pedro-Uriarte</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Me gusto mucho la experiencia, el equipo super atento. Los recomiendo.</p>
+                                </div>                                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemCarrouselArrows">
+                        <a href="#itemCarrousel-1">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#itemCarrousel-3">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/villapehuenia4.jpg" alt="villapehuenia 4">
-                </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/image-slider1.jpg" alt="image-slider 1">
-                </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/image-slider2.jpg" alt="image-slider 2">
-                </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/image-slider3.jpg" alt="image-slider 3">
-                </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/image-slider4.jpg" alt="villapehuenia =4">
-                </div>
-                <div class="slider-contain">
-                    <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1">
+                <div class="itemCarrousel" id="itemCarrousel-3">
+                    <div class="itemCarrouselTarjeta">
+                        <div class="testimonio_caja" id="testimonio-7">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-mujer4.jpg" alt="perfil-1">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Maria Cardozo</strong>
+                                        <span>@Maria_Cardozo</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Excelente servicio. Me hubiese gustado tener mas tiempo para recorrer Otra vez sera.</p>
+                                </div>                                              
+                            </div>
+                        </div>                    
+                    
+                        <div class="testimonio_caja" id="testimonio-8">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-hombre4.jpg" alt="perfil-2">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Jorge Farias</strong>
+                                        <span>@JorgeFarias</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Excelente experiencia. No lo dudes y viaja.</p>
+                                </div>                                              
+                            </div>
+                        </div>
+                    
+                        <div class="testimonio_caja" id="testimonio-9">
+                            <div class="caja-top">
+                                <div class="perfil">
+                                    <div class="perfil-img">
+                                        <img src="/images/foto-perfil-hombre5.jpg" alt="perfil-3">
+                                    </div>
+                                    <!---nobre y usuario-->
+                                    <div class="name-user">
+                                        <strong>Rodrigo Rivera</strong>
+                                        <span>@RoRivera</span>
+                                    </div>
+                                </div>
+                                    <!---resenias-->
+                                    <div class="resenias">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                    <!---comentarios-->
+                                    <div class="comentarios_clientes">
+                                    <p>Chevere la atencion y su profesionalismo.Los mejores en su rubro sin duda. </p>
+                                </div>                                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemCarrouselArrows">
+                        <a href="#itemCarrousel-2">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#itemCarrousel-1">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div> 
+            <div class="conteCarrouselController">
+                <a href="#itemCarrousel-1">•</a>
+                <a href="#itemCarrousel-2">•</a>
+                <a href="#itemCarrousel-3">•</a>
+            </div>
         </section>
         <section class="what-are-you-waiting">
             <div>
@@ -197,3 +500,4 @@
 </body>
 
 </html>
+
