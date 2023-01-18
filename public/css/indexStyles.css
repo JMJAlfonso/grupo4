@@ -57,7 +57,7 @@ div.input-form-index > input{
   text-align: center;
   color: white;
   background: rgba(2, 9, 70, 0.65);
-  padding: 2%;    
+  padding: 1%;    
 }
 .articles{
   display: flex;
@@ -65,9 +65,6 @@ div.input-form-index > input{
   flex-direction: column;
   height: 180vh;
   z-index: 100;
-}
-.articles .div-image1,.div-image2,.div-image3{
-  height: 50%;
 }
 .article{  
   font-size: 8px;
@@ -89,50 +86,38 @@ div.input-form-index > input{
 .main-article > h3 {
   font-size: 22px;
 }
-.article .div-image1{  
-  background-image: url(../images/ciclismo.jpg);
-  background-attachment: scroll;
-  background-size: contain;
-  border-radius: 4px;
-  width: 100%;
-  height: 48%;
+.articles .div-image{
+  height: 50%;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: #000000 1px solid;
 }
-.article .div-image2{  
-  background-image:url(../images/parapente.jpg);
-  background-attachment: scroll;
-  background-size: contain;
-  border-radius: 4px;
-  width: 100%;
-  height: 48%;
-  
+
+.article >a >div > img{   
+  height: 100%;
+  width: 100%;  
 }
-.article .div-image3{  
-  background-image:url(../images/kayac.jpg);
-  background-attachment: scroll;
-  background-size: contain;
-  border-radius: 4px;
-  width: 100%;
-  height: 48%;  
-}
+
 
 .main-article{
   margin-top: 2%;
   font-size: 16px;
 }
 main .slider-section{  
-  background-image:url(../images/arcoiris-background.jpg) ;
+  background-image: url(../images/arcoiris-background.jpg);
   background-attachment: scroll;
-  background-size:cover;
-  width: 100%;   
-  overflow: hidden;  
-  border-radius: 0.3em; 
-  margin: 3% 0%;  
+  background-size: contain;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.3em;
+  margin: 3% 0%; 
 
 }
 main > section .color-slider{  
-  margin: 6% 10%;  
-  background: rgba(2, 9, 70, 0.65);
+  margin: 0% 10%;    
   overflow: hidden;
+  margin-top: -8%;
 } 
 main .slider-container{
   height: 100%;
@@ -142,18 +127,25 @@ main .slider-container{
   vertical-align: bottom; 
   margin-top: 10%;  
 }
-
+.title-slider{
+  text-align: center;
+    font-size: 1.8em;
+    background: rgba(2, 9, 70, 0.65);
+    color: white;
+    padding: 1%;
+}
 
 main .slider-contain{
-  width: 100%;
+  width: 50%;
+  height: 50;
   display: flex;
   justify-content: space-around;
-  flex-shrink: 0;
+  flex-shrink: 0;  
 }
 
 .slider-image{    
-  width: 80%;
-  height: 90%;
+  width: 100%;
+  height: 100%;  
   border-radius: 0.2em;
 }
 .carrousel{
@@ -162,7 +154,7 @@ main .slider-contain{
 .carrousel >h2{
   width: 100%;
     background: rgba(2, 9, 70, 0.65);
-    font-size: 2.2rem;
+    font-size: 1.8em;
     color: white;
     font-weight: bold;
     text-align: center;
@@ -205,6 +197,9 @@ main .slider-contain{
 .resenias > i{
   margin-top: 2px;
   color: darkgoldenrod;
+}
+.resenias .fa-thin{
+  color: lightgrey;  
 }
 .name-user{
   display: flex;
@@ -327,7 +322,7 @@ ul{
   }
 
   main .recomendation , .what-are-you-waiting {
-    font-size: 16px;
+    font-size: 1.8em;
   }
   .articles{
     display: flex;
@@ -347,35 +342,20 @@ ul{
 #article1,#article2{
   margin-right: 1%;
 }
-.article .div-image1 {    
-    background-size: contain; 
-    transition: all 0.5s ease;   
-}
-
-.article .div-image2 {   
-  background-size: contain;
-  transition: all 0.5s ease;    
-}
-
-.article .div-image3 {    
+.article .div-image { 
+  margin: 0%;   
+  overflow: hidden;
   background-size: contain;
   transition: all 0.5s ease;    
 }
   main .what-are-you-waiting {
-    font-size: 18px;
+    font-size: 1em;
+    margin-top: 1%;;
   }
-  .div-image1:hover{
-    transform: scale(1.1);
+  .div-image:hover{    
+    transform: scale(1.1); 
     margin-bottom: 5%;    
-  } 
-  .div-image2:hover{
-    transform: scale(1.1);
-    margin-bottom: 5%;    
-  } 
-  .div-image3:hover{   
-    transform: scale(1.1);
-    margin-bottom: 5%;    
-  }
+  }  
   .conteCarrousel{
     width: 100%;
     height: 200px;
@@ -407,8 +387,15 @@ ul{
     padding: 20px;
     visibility:visible;
 }
+.itemCarrouselArrows :active {
+  color: cornflowerblue;
+}
 .conteCarrouselController{  
   visibility:visible;
+}
+.conteCarrouselController > a:active{
+  color: cornflowerblue;
+  
 }
 }
 

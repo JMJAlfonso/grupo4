@@ -1,55 +1,8 @@
-<<<<<<< HEAD:views/index.html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo Aventura</title>
-    <link rel="styleSheet" href="css/indexStyles.css">  
-    <link rel="styleSheet" href="css/header-footer.css">  
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/1e0542afd6.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />     
-</head>
-
-<body>
-    <header>
-        <nav class="nav-bar">
-            <a href="/" class="logo-text"><img class="logo-header" src="images/Logo.png">
-                <h1>Aventyr</h1>
-            </a>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Quienes somos</a></li>
-                    <li class="nav-item"><a href="/productDetail" class="nav-link">Actividades</a></li>
-                </ul>
-            </div>
-            <div class="login-button">
-                <button><a class="user" href="/login"><i class="fa-solid fa-user"></i>Ingresar</a></button>
-                <button><a class="Register" href="/register">Registrarse</a></button>
-                <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-        </nav>
-
-    </header>
-=======
 <%- include ('partials/head', {style: 'indexStyles', title: 'Inicio'}) %> 
 </head>
 
 <body>
-    <%- include ('partials/header') %> 
->>>>>>> fcf5bb5a295c1e8026391afc5917529eec63c183:views/index.ejs
+    <%- include ('partials/header') %>
     <main>
         <section class="who-we-are">
             <div class="text">
@@ -87,7 +40,7 @@
                        
         <section class="articles">         
             <article class="article" id="article1">
-                <a href='/productDetail'><div class="div-image1" ></div></a>                    
+                <a href='/productDetail'><div class="div-image" ><img src="../images/ciclismo.jpg"></div></a>                    
                 <div class="main-article">
                     <h3> Ciclismo de montaña</h3>                    
                     <div class="description-container">
@@ -96,10 +49,10 @@
                     <p class="price">$3.600</p>
                     <p class="discount">5% off</p>
                 </div>
-                       
+                
             </article>
             <article class="article" id="article2">
-                <a href='/productDetail'><div class="div-image2" ></div></a>                 
+                <a href='/productDetail'><div class="div-image" ><img src="../images/parapente.jpg"></div></a>                 
                 <div class="main-article">
                     <h3> Parapente</h3>                    
                     <div class="description-container">
@@ -110,7 +63,7 @@
                 </div>       
             </article>
             <article class="article" id="article3">
-                <a href='/productDetail'><div class="div-image3" ></div></a>
+                <a href='/productDetail'><div class="div-image" ><img src="../images/kayac.jpg"></div></a>
                 <div class="main-article">
                     <h3> kayak</h3>                    
                     <div class="description-container">
@@ -121,7 +74,11 @@
                 </div>       
             </article>                 
         </section>
+        <div class="title-slider">
+            <h3> Paisajes & Naturaleza</h3>
+        </div>
         <section class="slider-section">
+            
             <div class="color-slider">
                 <div class="slider-container">
                     <div class="slider-contain">
@@ -150,6 +107,9 @@
                     </div>
                     <div class="slider-contain">
                         <img class="slider-image" src="/images/villapehuenia1.jpg" alt="villapehuenia 1">
+                    </div>
+                    <div class="slider-contain">
+                        <img class="slider-image" src="/images/villapehuenia2.jpg" alt="villapehuenia 2" width="300px" heigth="300px">
                     </div>
                 </div>
             </div> 
@@ -234,7 +194,8 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>                                            
+                                            <i class="fas fa-star"></i>
+                                            <i class="fa-thin fas  fa-star"></i>                                            
                                         </div>
                                     </div>
                                     <!---comentarios-->
@@ -275,6 +236,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
+                                        <i class="fa-thin fas  fa-star"></i> 
                                     </div>
                                     <!---comentarios-->
                                     <div class="comentarios_clientes">
@@ -328,6 +290,7 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-thin fas  fa-star"></i> 
                                     </div>
                                     <!---comentarios-->
                                     <div class="comentarios_clientes">
@@ -365,6 +328,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
+                                        <i class="fa-thin fas  fa-star"></i> 
                                     </div>
                                     <!---comentarios-->
                                     <div class="comentarios_clientes">
@@ -391,6 +355,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
+                                        <i class="fa-thin fas  fa-star"></i> 
                                     </div>
                                     <!---comentarios-->
                                     <div class="comentarios_clientes">
@@ -448,52 +413,4 @@
             </div>
         </section>    
     </main>
-<<<<<<< HEAD:views/index.html
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Recibí nuestras novedades</h4>
-                    <ul>
-                        <form action="">
-                            <div class="email-box">
-                                <i class="fa-solid fa-envelope"></i>
-                                <input class="tbox" type="email" name="" value="" placeholder="Ingresa tu email">
-                                <button class="btn" type="button" name="button">Suscribite</button>
-                            </div>
-                        </form>
-
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/">Quienes somos</a></li>
-                        <li><a href="/productDetail">Actividades</a></li>
-                        <li><a href="">Seguridad</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Redes Sociales</h4>
-                    <div class="redes-sociales">
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></i></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>      
-    </footer>
-<script src="js/slider.js"></script>
-</body>
-
-</html>
-
-=======
     <%- include ('partials/footer') %> 
->>>>>>> fcf5bb5a295c1e8026391afc5917529eec63c183:views/index.ejs
