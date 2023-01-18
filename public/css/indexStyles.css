@@ -20,8 +20,7 @@
  main .who-we-are{   
     background-image:url(../images/index-background.jpg) ;
     background-attachment: scroll;
-    background-size:cover ;
-    border-radius: 4px;
+    background-size:cover ;   
     width: 100%;       
     padding: 5%;
     display: flex;  
@@ -84,7 +83,8 @@ div.input-form-index > input{
   font-size: 18px;
 }
 .main-article > h3 {
-  font-size: 22px;
+  margin-top: 5%;
+  font-size: 1.8em;
 }
 .articles .div-image{
   height: 50%;
@@ -98,7 +98,34 @@ div.input-form-index > input{
   height: 100%;
   width: 100%;  
 }
-
+.article .price{
+  margin-top: 5%;
+  text-align: center;  
+  color: darkslateblue;
+  opacity: 0.9;
+  font-size: 1.8em;
+}
+.article .discount{
+  text-align: center;  
+  color: darkslateblue;
+  opacity: 0.9;
+}
+.article-button{
+  margin: 10% 20%;
+  height: 40px;
+  background-color: darkslateblue;
+  opacity: 0.9;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3%; 
+}
+.article-button > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8em;
+}
 
 .main-article{
   margin-top: 2%;
@@ -109,10 +136,8 @@ main .slider-section{
   background-attachment: scroll;
   background-size: contain;
   width: 100%;
-  overflow: hidden;
-  border-radius: 0.3em;
-  margin: 3% 0%; 
-
+  overflow: hidden; 
+  margin: 3% 0%;   
 }
 main > section .color-slider{  
   margin: 0% 10%;    
@@ -397,5 +422,25 @@ main ul{
   color: cornflowerblue;
   
 }
+ .comentarios_clientes{    
+    overflow-y:scroll;
+  }
+  .comentarios_clientes::-webkit-scrollbar{    
+    width: 10px;    
+  }
+  .comentarios_clientes::-webkit-scrollbar-track{ 
+    background: #ba1a1a;
+    border-radius: 20px;
+      
+  }
+  .comentarios_clientes::-webkit-scrollbar-thumb{
+    
+    
+  }
+  .comentarios_clientes::-webkit-scrollbar-thumb:hover{
+    background:darkslateblue ;
+  }
+
+ 
 }
 
