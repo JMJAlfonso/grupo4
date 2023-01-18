@@ -1,29 +1,30 @@
-<%- include ('partials/head', {style: 'style', title: 'Iniciar Sesion'}) %> 
-</head>
+<%- include ('partials/head', {style: 'style' , title: 'Iniciar Sesion' }) %>
+    </head>
 
-<body>
-    <%- include ('partials/header') %> 
+    <body>
+        <%- include ('partials/header') %>
 
+            <main>
+                <div class="containerPrincipal">
 
-    <div class="containerPrincipal">
-
-        <div class="form-group">
-            <h1>¡BIENVENIDOS!</h1>
-
-
-            <input id="usuario" type="text" class="form-control" name="username" placeholder="usuario">
+                    <div class="form-group">
+                        <h1>¡BIENVENIDOS!</h1>
 
 
-            <input id="contraseña" type="password" class="form-control" name="password" placeholder="contraseña">
+                        <input id="usuario" type="text" class="form-control" name="username" placeholder="usuario">
 
-            <a href="/"><button class="boton">iniciar sesion</button></a>
-            <a href="/register" class="cuenta">¿No tienes Cuenta? <b>Registrate</b></a>
 
-            <a href="/recovery" class="olvidar">¿Olvidaste tu contraseña?</a>
-            <a href="https://www.facebook.com"><button id="facebook">Ingresa con Facebook</button></a>
-            <a href="https://www.gmail.com"><button id="gmail">Ingresa con Gmail</button></a>
+                        <input id="contraseña" type="password" class="form-control" name="password"
+                            placeholder="contraseña">
 
-        </div>
-    </div>
+                        <a href="/"><button class="boton">iniciar sesion</button></a>
+                        <a href="/register" class="cuenta">¿No tienes Cuenta? <b>Registrate</b></a>
 
-    <%- include ('partials/footer') %> 
+                        <a href="/recovery" class="olvidar">¿Olvidaste tu contraseña?</a>
+                        <a href="https://www.facebook.com"><button id="facebook">Ingresa con Facebook</button></a>
+                        <a href="https://www.gmail.com"><button id="gmail">Ingresa con Gmail</button></a>
+
+                    </div>
+                </div>
+            </main>
+            <%- include ('partials/footer') %>
