@@ -433,10 +433,7 @@ main ul{
     border-radius: 20px;
       
   }
-  .comentarios_clientes::-webkit-scrollbar-thumb{
-    
-    
-  }
+  
   .comentarios_clientes::-webkit-scrollbar-thumb:hover{
     background:darkslateblue ;
   }
