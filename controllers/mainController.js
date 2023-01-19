@@ -16,6 +16,9 @@ const controller = {
     register: (req, res) => {
         res.render('register');
     },
+    loadAndEdit: (req, res) => {
+        res.render('loadAndEdit');
+    },
 };
 
 module.exports = controller
