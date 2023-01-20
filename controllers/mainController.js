@@ -19,6 +19,9 @@ const controller = {
     loadAndEdit: (req, res) => {
         res.render('loadAndEdit');
     },
+    us: (req, res) => {
+        res.render('us');
+    },
 };
 
 module.exports = controller;
