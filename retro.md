@@ -47,3 +47,22 @@
 ### Dejar de hacer: 
 - Dejar de ser desorganizados.
 - No hacer reuniones semanales.
+
+
+
+## RETRO SPRINT 3
+
+### Comenzar a hacer: 
+- Ser puntuales a la hora de conectarse.
+
+### Hacer más: 
+- Usar trello.
+
+### Continuar haciendo: 
+- Reuniones semanales.
+
+### Hacer menos: 
+- Dejar de tener comunicaciones extensas.
+
+### Dejar de hacer: 
+- Interrumpir cuando habla el otro.
