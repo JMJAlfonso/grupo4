@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+  body {
+    background-image: url(/images/registro_fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Rubik", sans-serif;
+    background-position: center;
+    background-color: #8bd6eb;
+  }
+  
+  .resumeText{
+    text-align: center;
+    font-size: 1.8em;
+    background: rgba(2, 9, 70, 0.65);
+    color: white;
+    padding: 1%;
+  }
+
+  .description{
+    width: 20em;
+    text-align: center;
+    font-size: 25px;
+    background: rgba(2, 9, 70, 0.65);
+    color: white;
+    padding: 1%;
+    margin-bottom: 100px;
+  }
