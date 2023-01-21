@@ -8,7 +8,7 @@ const carrouselDot3 = document.querySelector('.carrousel-dot3');
 const uno =1;
 const dos =2;
 const tres =3;
-var ultimaPos =0;
+var ultimaPos =1;
 
 prev.addEventListener('click',()=>{    
     conteCarrousel.scrollLeft -= 350;
