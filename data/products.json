@@ -5,7 +5,9 @@
   "image": "/images/Trekking.JPG",
   "category": "Tourism",
   "price": 3000,
-  "day": "9:am", "11:am",
+  "day" : "Lunes y", 
+  "start": "9:am",
+ "finish" : "11:am",
 }, {
   "id": 2,
   "name": "Kayac",
@@ -13,11 +15,12 @@
   "image": "/images/kayac.JPG",
   "category": "tourism",
   "price": 4819,
-   "day": "10:am", "13:am",
+   "day": "13:am",
+  "start": "10:am",
+  "finish": "13:am",
 }, {
   "id": 3,
-  "name": "Paracaidismo
-",
+  "name": "Paracaidismo",
   "description": "El paracaidismo es la técnica de lanzamiento de seres humanos u objetos desde cierta altura usando un paracaídas para amortiguar el impacto del aterrizaje. Se puede realizar desde cualquier aeronave como un avión, helicóptero, globo aerostático o desde un objeto fijo elevado a la altura necesaria..",
   "image": "/images/paracaidismo.JPG",
   "category": "tourism",
@@ -25,8 +28,7 @@
   "day": "11:am", "18:pm",
 }, {
   "id": 4,
-  "name": "Parapente
-",
+  "name": "Parapente",
   "description": "El parapente es una aeronave ligera y flexible, hecha únicamente de “cuerdas y tela”. La disciplina deportiva se basa en el vuelo sin motor, despegando de una pendiente y volando aprovechando las corrientes térmicas y dinámicas..",
   "image": "/images/Parapente.JPG",
   "category": "Painting & Vinyl Wall Covering",
@@ -35,8 +37,7 @@
  
 }, {
   "id": 5,
-  "name": "Rappel
-",
+  "name": "Rappel",
   "description": "El rápel o también llamado rappel es un método de descenso por cuerda. Es utilizado en superficies verticales una pared o un tiro vertical. El rápel suele ser utilizado en espacios abiertos o actividades tales como el barranquismo, montañismo, espeleología, escalada en roca y otras disciplinas que requieren de un descenso vertical.",
   "image": "/images/Rappel.JPG",
   "category": "tourism",
@@ -45,8 +46,7 @@
 
 }, {
   "id": 6,
-  "name": "Cabalgata
-",
+  "name": "Cabalgata",
   "description": "La cabalgata es una actividad de esparcimiento y deportiva que utiliza al equino en un medio natural.",
   "image": "/images/cabalgata.JPG",
   "category": "tourismo",
@@ -54,8 +54,7 @@
   "day": "9:am", "12:am",
 }, {
   "id": 7,
-  "name": "Ciclismo
-",
+  "name": "Ciclismo",
   "description": "El ciclismo de montaña,es considerado un deporte de riesgo, esta actividad es realizada en circuitos naturales a través de bosques por caminos angostos con cuestas empinadas..",
   "image": "/images/ciclismo.JPG",
   "category": "tourism",
@@ -63,8 +62,7 @@
    "day": "10:am", "13:am",
 }, {
   "id": 8,
-  "name": "Espeleismo
-",
+  "name": "Espeleismo",
   "description": "Consiste básicamente en explorar cavidades geológicas naturales, valiéndose de técnicas y equipos específicos de descenso y desplazamiento..",
   "image": "/images/Espeleismo.JPG",
   "category": "Tourism",
