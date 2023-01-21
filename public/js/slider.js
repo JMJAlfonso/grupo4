@@ -12,7 +12,7 @@ setInterval(function(){
     slides();
 },interval);
 
-function slides(){
+function slides(){   
     slider.style.transform = "translate("+(-width*counter)+"px)";
     slider.style.transition = "transform .8s"
     counter++;

@@ -28,8 +28,7 @@
     justify-content: center; 
   } 
   main > section .text{
-    text-align: center;
-    margin: 15% 0% 20% 0%;
+    margin: 30% 0% 20% 0%;
   } 
  main  .resumeText{   
   padding: 10px 15px;
@@ -76,15 +75,14 @@ div.input-form-index > input{
 }
 .main-article > div {
   margin-top: 4px;
-  font-size: 18px;
+  font-size: 90%;
 }
 .main-article > p {
   margin-top: 4px;
   font-size: 18px;
 }
 .main-article > h3 {
-  margin-top: 5%;
-  font-size: 1.8em;
+  margin-top: 5%;  
 }
 .articles .product-image{   
   overflow: hidden; 
@@ -97,10 +95,10 @@ div.input-form-index > input{
 }
 .article .price{
   margin-top: 5%;
-  text-align: center;  
+  text-align: center;
   color: darkslateblue;
   opacity: 0.9;
-  font-size: 1.8em;
+  font-size: 125%;
 }
 .article .discount{
   text-align: center;  
@@ -108,7 +106,8 @@ div.input-form-index > input{
   opacity: 0.9;
 }
 .article-button{
-  margin: 10% 20%;
+  position: relative;
+  bottom: -3px;
   height: 40px;
   background-color: darkslateblue;
   opacity: 0.9;
@@ -116,7 +115,7 @@ div.input-form-index > input{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3%; 
+  border-radius: 1%;
 }
 .article-button > a {
   color: #fff;
@@ -128,6 +127,7 @@ div.input-form-index > input{
   margin-top: 2%;
   font-size: 16px;
   text-align: center;
+  height: 25%;
 }
 main .slider-section{  
   background-image: url(../images/arcoiris-background.jpg);
@@ -169,8 +169,7 @@ main .slider-contain{
 
 .slider-image{    
   width: 100%;
-  height: 100%;  
-  border-radius: 0.2em;
+  height: 100%;   
 }
 .carrousel{
   width: 100%;  
@@ -216,6 +215,10 @@ main .slider-contain{
   cursor: pointer;
   border-radius: 5px;
 }
+.comentarios_clientes{
+  font-size: 14px;
+  margin-top: 1%;
+}
 .perfil{
   display: flex;
   align-items: center;
@@ -231,6 +234,7 @@ main .slider-contain{
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+  font-size: 14px;
 }
 .perfil-img{
   width: 50px;
@@ -244,19 +248,8 @@ main .slider-contain{
   object-fit:center;  
 }
 
-.itemCarrouselArrows{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%; 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px; 
-  visibility: hidden;
+.itemCarrouselArrows{   
+  visibility: hidden; 
   
 }
 
@@ -286,12 +279,9 @@ main ul{
   color: grey;
 }
 
-.itemCarrouselArrows > a > i{
-  color: white;
-}
 
 /* --------cellphone------------ */
-@media (min-width:300px){
+@media (min-width:361px){
    
   main .recomendation {
     margin: 5% 0% 0% 0%;
@@ -305,14 +295,12 @@ main ul{
   }     
 
 }
-/* --------big cellphone and tablet------------ */
-@media (min-width:480px){
   main .who-we-are{ 
     height: 80vh;
   }
 
   main section .resumeText{
-    font-size: 2rem;       
+    font-size: 1.3rem;       
   }
   main #form-index{    
     font-size: 16px;    
@@ -326,9 +314,7 @@ main ul{
   }
   main .what-are-you-waiting {
     font-size: 14px;
-  }   
-
-}
+  }
 
 /* --------big tablet and laptop------------ */
 @media (min-width:769px){ 
@@ -385,6 +371,9 @@ main ul{
   transition: all 1.5s ease;
   background-size: cover;  
 } 
+.article-button{    
+  bottom: -23px;
+}
   .product-image:hover{    
     overflow: hidden;   
     transform: scale(1.1); 
@@ -395,38 +384,53 @@ main ul{
     margin-top: 1%;;
   }  
   .conteCarrousel{
+    display: flex;
     width: 100%;
     height: 200px;
     overflow: hidden;
+    scroll-behavior: smooth;
   } 
   .itemCarrouselTarjeta{    
     flex-wrap: nowrap;  
   }
   .testimonio_caja{   
-    margin: 30px;
+    margin: 10px;
     padding: 20px;
     height: 90%;    
   }
   #itemCarrousel-1,#itemCarrousel-2,#itemCarrousel-3{
     background-color: rgba(2, 9, 70, 0.65);
-    height: 100%;
+    height: 100%;    
   }
   .itemCarrouselArrows {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    visibility:visible;
+    position: relative;
+    margin: 0%;
+    z-index: 1;
+    top: 115px;
+    height: 29%;    
+    width: 100%;
+    visibility: visible;
+    cursor: pointer;
+}
+.itemCarrouselArrows .prev{
+  position: relative;
+  left: -11px;
+  color: #364c59;
+  opacity: 0.74;
+  font-size: 20px;
+}
+.itemCarrouselArrows .next{
+position: relative;
+left: 11px;
+color: #364c59;
+opacity: 0.74;
+font-size: 20px;
 }
 .itemCarrouselArrows :active {
-  color: cornflowerblue; 
+  color: cornflowerblue;
 }
 .conteCarrouselController{  
   visibility:visible;
@@ -435,7 +439,7 @@ main ul{
   color: cornflowerblue;
   
 }
- .comentarios_clientes{    
+ /*.comentarios_clientes{    
     overflow-y:scroll;
   }
   .comentarios_clientes::-webkit-scrollbar{    
@@ -449,7 +453,7 @@ main ul{
   
   .comentarios_clientes::-webkit-scrollbar-thumb:hover{
     background:darkslateblue ;
-  }
+  }*/
 
  
 }
