@@ -11,11 +11,11 @@ const tres =3;
 var ultimaPos =1;
 
 prev.addEventListener('click',()=>{    
-    conteCarrousel.scrollLeft -= 350;
+    conteCarrousel.scrollLeft -= 230;
 })
 
 next.addEventListener('click',()=>{    ;  
-    conteCarrousel.scrollLeft += 350;
+    conteCarrousel.scrollLeft += 230;
 })
 
 carrouselDot1.addEventListener('click',()=>{     
