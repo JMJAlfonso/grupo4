@@ -56,8 +56,7 @@
   "image": "/images/cabalgata.JPG",
   "category": "tourismo",
   "price": 2134,
-  "day1": "lunes",
-"day2": "viernes",
+  "day1": "lunes y viernes",
 "start": "9:00 AM",
   "finish": "11:00 AM",
 }, {
