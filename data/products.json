@@ -5,10 +5,9 @@
   "image": "/images/Trekking.JPG",
   "category": "Tourism",
   "price": 3000,
-  "day1": "Lunes",
-   "day2": "Jueves",
-  "start": "9:am",
- "end" : "11:am",
+  "day": "Lunes y jueves",
+  "start": "9:00 AM",
+ "end" : "11:00 AM",
 }, {
   "id": 2,
   "name": "Kayac",
@@ -17,8 +16,8 @@
   "category": "tourism",
   "price": 4819,
    "day": "lunes",
-  "start": "10:am",
-  "finish": "13:am",
+  "start": "10:00 AM",
+  "finish": "13:00 PM",
 }, {
   "id": 3,
   "name": "Paracaidismo",
@@ -27,8 +26,8 @@
   "category": "tourism",
   "price":8000,
   "day": "viernes",
-"start": "11:am",
-  "finish": "18:am",
+"start": "11:00 AM",
+  "finish": "18:00 PM",
 }, {
   "id": 4,
   "name": "Parapente",
@@ -37,8 +36,8 @@
   "category": "Painting & Vinyl Wall Covering",
   "price": 5430,
 "day": "sábados",
-"start": "10:am",
-  "finish": "14:am",
+"start": "10:00 AM",
+  "finish": "14:00 PM",
  
 }, {
   "id": 5,
@@ -48,8 +47,8 @@
   "category": "tourism",
   "price":4000,
  "day": "lunes",
-"start": "10:am",
-  "finish": "13:am",
+"start": "10:00 AM",
+  "finish": "13:00 PM",
 }, {
   "id": 6,
   "name": "Cabalgata",
@@ -59,8 +58,8 @@
   "price": 2134,
   "day1": "lunes",
 "day2": "viernes",
-"start": "9:am",
-  "finish": "11:am",
+"start": "9:00 AM",
+  "finish": "11:00 AM",
 }, {
   "id": 7,
   "name": "Ciclismo",
@@ -69,8 +68,8 @@
   "category": "tourism",
   "price": 2000,
    "day": "lunes",
-"start": "10:am",
-  "finish": "13:am",
+"start": "10:00 AM",
+  "finish": "13:00 PM",
 }, {
   "id": 8,
   "name": "Espeleismo",
@@ -79,8 +78,8 @@
   "category": "Tourism",
   "price":6000,
   "day": "lunes",
-"start": "9:am",
-  "finish": "13:am",
+"start": "9:00 AM",
+  "finish": "13:00 PM",
 }, {
   "id": 1
 }, {
