@@ -44,7 +44,7 @@ main  .description{
 }
 
 body {
-  background-image: url(/images/registro_fondo.jpg);
+  background-image:linear-gradient(0deg, rgb(255, 255, 255, 0.5), rgb(255, 255, 255,0.5)),url(../images/registro_fondo.jpg); 
   background-attachment: fixed;
   background-size: cover;
   font-family: "Rubik", sans-serif;
