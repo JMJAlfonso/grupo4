@@ -340,14 +340,12 @@ main ul{
   }
   .articles{
     display: flex;
-    justify-content: space-around;
-    height: 100vh;
-    flex-direction: row;
-    margin-bottom: 10%;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .article {
     font-size: 8px;
-    height: 100%;
+    height: 60%;
     margin-top: 5%;
     padding: 2%;
     width: 33%;
