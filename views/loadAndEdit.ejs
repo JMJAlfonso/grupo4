@@ -10,39 +10,35 @@
         <form action="/saveInformation" method="post" class="create-form">
             <div class="caja1">
             <div class="h2">
-                <h2>Actividades para cargar</h2>
+                <h2>Formulario para cargar actividad</h2>
             </div>
                     <div class="form-control">
-                    <label>Nombre:</label>
+                    <label>Nombre de la actividad:</label>
                     <input type="text" name="name" class="control">
                 </div>
                 <div class="form-control">
-                    <label>Apellido:</label>
-                    <input type="text" name="surname" class="control">
+                    <label>Precio:</label>
+                    <input type="number" name="price" class="control">
                 </div>
                 <div class="form-control">
-                    <label>Email:</label>
-                    <input type="email" name="email" placeholder="nombre@gmail.com" class="control">
+                    <label>Fecha y Hora de INICIO:</label>
+                    <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control">
                 </div>
                 <div class="form-control">
-                    <label>ID:</label>
-                    <input type="number" name="tel" class="control" placeholder="123-456">
+                    <label>Fecha y Hora de FINALIZACION:</label>
+                    <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control">
                 </div>
+                
+                
 
                 <div class="form-control">
-                    <label>País</label>
-                    <select name="country" class="control">
-                        <option value="argentina">Argentina</option>
-                        <option value="bolivia">Bolivia</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="chile">Chile</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="ecuador">Ecuador</option>
-                        <option value="paraguay">Paraguay</option>
-                        <option value="peru">Peru</option>
-                        <option value="uruguay">Uruguay</option>
-                        <option value="venezuela">Venezuela</option>
-                        <option value="guyanaFrancesa">Guyana Francesa </option>
+                    <label>Dificultad</label>
+                    <select name="category" class="control">
+                        <option value="argentina">Dificultad Baja</option>
+                        <option value="bolivia">Dificultad Media</option>
+                        <option value="brasil">Dificultad Alta</option>
+                        <option value="chile">Dificultad Extrema</option>
+                        
                     </select>
                     
                 </div>
@@ -55,10 +51,10 @@
                     <input type="repeat_password" name="repeat_password" class="control">
                 </div>
             <div class="caja2">
-                <button type="submit" class="form-button">Registrarse</button>
+                <button type="submit" class="form-button">Subir</button>
                 <div class="pregunta-de-registro">
-                    <label>¿Ya eres miembro? <br>
-                        Inicia tu sesión</label>
+                    <label>¿Necesitas ayuda? <br>
+                        Entra en este link</label>
                 </div>
                 <button type="gmail" class="form-button">Registrarse con Gmail</button>
                 <button type="facebook" class="form-button">Registrarse con Facebook</button>
