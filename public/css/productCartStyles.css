@@ -25,13 +25,13 @@ body {
   flex-direction: column;
   width: 90%;
   margin: auto;
-  border: #000000 2px solid;
-  background-color: rgba(2, 9, 70, 0.65);
+  /* border: #000000 2px solid; */
+  background-color: rgba(2, 9, 70, 0.50);
   color: #ffffff;
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 80%), 0 5px 5px 0 rgb(0 0 0 / 20%)
+  /* box-shadow: 0 0 20px 0 rgb(0 0 0 / 80%), 0 5px 5px 0 rgb(0 0 0 / 20%) */
 }
 
 main .cart-container ul {
@@ -45,7 +45,7 @@ main .cart-container .file-txt {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(2, 9, 70, 0.50);
+  background-color: rgba(2, 9, 70, 0.30);
   font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ main .cart-container .product-txt li {
 .product-container {
   display: flex;
   justify-content: space-between;
-  border: #000000 2px solid;
+  border: rgb(255 255 255 / 20%) 1px solid;
 }
 
 .description {
@@ -138,7 +138,7 @@ main .cart-container .product-txt li {
 }*/
 
 .product-total {
-  background-color: rgba(2, 9, 70, 0.50);
+  background-color: rgba(2, 9, 70, 0.30);
   font-size: 25px;
   font-weight: bold;
   color: #ffffff;
