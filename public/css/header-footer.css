@@ -88,7 +88,7 @@ header .nav-bar{
 .menu-toggle{
   display: none;
 }
-@media (max-width : 940px){
+@media (min-width : 0px){
   .nav-list, .login-button{ display: none;
 
   }
@@ -114,6 +114,18 @@ header .nav-bar{
   .logo-text h1{
     text-align: center;
     padding-left: 0px;
+  }
+}
+@media (min-width : 769px){
+  .nav-list, .login-button{ 
+    display: flex;
+ 
+  }
+  .menu-toggle{
+    display: none;
+  }
+  .nav-bar{
+    flex-direction: row;
   }
 }
 

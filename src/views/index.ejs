@@ -1,3 +1,4 @@
+<<<<<<< HEAD:views/index.ejs
 <%- include ('partials/head', {style: 'indexStyles', title: 'Inicio'}) %> 
 </head>
 <body>
@@ -23,6 +24,38 @@
                 </div>
                 <div class="input-form-index">
                     <textarea id="txfMess" type="text" name="message" placeholder="Tu mensaje" required rows="5" style="width: 100%;"></textarea required>
+=======
+<%- include ('partials/head', {style: 'indexStyles' , title: 'Inicio' }) %>
+    </head>
+
+    <body>
+        <%- include ('partials/header') %>
+            <main>
+                <section class="who-we-are">
+                    <div class="text">
+                        <h1 class="resumeText">Excursiones y actividades en Villa Pehuenia y alrededores</h1>
+                    </div>
+                    <form action="/" autocomplete="on" id="form-index">
+                        <div>
+                            <h3>¡Consultanos! Te ayudamos a armar tu viaje</h3>
+                        </div>
+                        <div class="input-form-index">
+                            <input id="txfName" type="text" name="name" placeholder="Tu nombre" required minlength="4"
+                                style="width: 100%;" required oninvalid="">
+                        </div>
+                        <span class="feedback"></span>
+                        <div class="input-form-index">
+                            <input id="txfEmail" type="email" name="email" placeholder="Tu correo electronico"
+                                style="width: 100%;" required>
+                        </div>
+                        <div class="input-form-index">
+                            <input id="txfWhats" type="tel" name="whatsapp" placeholder="Whatsapp" style="width: 100%;"
+                                required>
+                        </div>
+                        <div class="input-form-index">
+                            <textarea id="txfMess" type="text" name="message" placeholder="Tu mensaje" required rows="5"
+                                style="width: 100%;"></textarea required>
+>>>>>>> 944993714e58956c8c29434c7944af9ca03d13bb:src/views/index.ejs
                 </div>                     
                 <span class="feedback" ></span>
                 <div class="button-form-index">                    
@@ -36,51 +69,25 @@
                 <h4>¡Que no te podes perder si venis a Villa Pehuenia!</h4>
             </div>
         </section>
-                       
-        <section class="articles">        
-            <article class="article" id="article1">                
-                <div class="product-div-image" ><img class="product-image" src="../images/ciclismo.jpg"></div>                    
-                <div class="main-article">
-                    <h3> Ciclismo de montaña</h3>                    
-                    <div class="description-container">
-                        <p class="description">Ideal para experimentar y recorrer el lugar. Te prestamos bici y accesorios.</p>
+        <div class="outside">
+        <% products.forEach((product) => { %>
+            <section class="articles">         
+                <article class="article" id="article1">                
+                    <div class="product-div-image" ><img class="product-image" src="../images/<%= product.image %>"></div>                    
+                    <div class="main-article">
+                        <h3> <%= product.name %></h3>                    
+                        <div class="description-container">
+                            <p class="description"><%= product.description %></p>
+                        </div>
+                        <p class="price">$<%= product.price %></p>                 
                     </div>
-                    <p class="price">$3.600</p>
-                    <p class="discount">5% off</p>                    
-                </div>
-                <div class="article-button">
-                    <a href='/productDetail'>Mas información</a>
-                </div>                
-            </article>
-            <article class="article" id="article2">
-                <div class="product-div-image" ><img class="product-image" src="../images/parapente.jpg"></div>               
-                <div class="main-article">
-                    <h3> Parapente</h3>                    
-                    <div class="description-container">
-                        <p class="description">A pura adrenalina. No olvidaras las vistas desde el cielo. </p>
-                    </div>
-                    <p class="price">$18.000</p>
-                    <p class="discount">5% off</p>
-                </div>
-                <div class="article-button">
-                    <a href='/productDetail'>Mas información</a>
-                </div>       
-            </article>
-            <article class="article" id="article3">
-                <div class="product-div-image" ><img class="product-image" src="../images/kayac.jpg"></div>
-                <div class="main-article">
-                    <h3> Kayak</h3>                    
-                    <div class="description-container">
-                        <p class="description">Un dia a tu ritmo inmerso por la naturaleza</p>                        
-                    </div>
-                    <p class="price">$8.000</p>
-                    <p class="discount">5% off</p>
-                </div>
-                <div class="article-button">
-                    <a href='/productDetail'>Mas información</a>
-                </div>       
-            </article>                 
-        </section>
+                    <div class="article-button">
+                        <a href='/productDetail'>Mas información</a>
+                    </div>                
+                </article>             
+            </section>
+        <% }) %>
+        </div>
         <div class="title-slider">
             <h3> Paisajes & Naturaleza</h3>
         </div>
