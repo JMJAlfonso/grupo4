@@ -11,7 +11,7 @@ const productRouter = require('./src/routes/productRouter.js');
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 
-//Configuración 
+//Configuración
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views')); // Define la ubicación de la carpeta de las vistas
 app.use(methodOverride('_method'));
