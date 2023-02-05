@@ -1,8 +1,12 @@
 const path = require ('path');
 const express = require('express');
 const mainRouter = require('./src/routes/main');
-
+const methodOverride= require('method-override');
 const app = express();
+
+app.use(express.urlencoded({extended:false}));
+app.use(express.json())
+app.use(methodOverride('_method'));
 
 app.use(express.static('public'));
 
