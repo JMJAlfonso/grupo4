@@ -9,7 +9,8 @@ router.get('/register', mainController.register);
 router.get('/productDetail', mainController.productDetail);
 router.get('/productCart', mainController.productCart);
 router.get('/login', mainController.login);
-router.get('/loadAndEdit', mainController.loadAndEdit);
+router.get('/loadProduct', mainController.loadProduct);
+router.get('/editProduct', mainController.editProduct);
 router.get('/us', mainController.us);
 router.get('/listDetail' , mainController.listDetail);
 
