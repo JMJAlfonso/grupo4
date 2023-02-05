@@ -41,6 +41,9 @@ const controller = {
     us: (req, res) => {
         res.render('us');
     },
+    listDetail: (req, res) => {
+        res.render('listDetail');
+    },
 };
 
 module.exports = controller;

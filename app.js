@@ -1,19 +1,26 @@
-const path = require ('path');
+//Módulos
 const express = require('express');
-const mainRouter = require('./src/routes/main');
-const methodOverride= require('method-override');
 const app = express();
+const path = require ('path');
+const methodOverride= require('method-override');
+
+const mainRouter = require('./src/routes/main');
+const productRouter = require('./src/routes/productRouter.js');
+
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
-app.use(methodOverride('_method'));
 
+//Configuración 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './src/views')); // Define la ubicación de la carpeta de las vistas
+app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './src/views'));
 
+//Routers
 app.use('/', mainRouter);
+app.use('/products', productRouter);
 
 app.listen(3000, () => {
     console.log('Servidor iniciado en http://localhost:3000');
