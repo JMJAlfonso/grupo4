@@ -7,23 +7,23 @@
         <%- include ('partials/header') %>
             <main>
 
-                <form action="/saveInformation" method="post" class="create-form">
+                <form action="/admin/edit?_method=PUT" method="POST" class="create-form">
                     <div class="caja1">
                         <div class="h2">
                             <h2>Formulario para cargar actividad</h2>
                         </div>
                         <div class="form-control">
                             <label>I.D:</label>
-                            <input type="number" name="name" class="control">
+                            <input type="number" name="name" class="control" value="<%= product.id %>">
                         </div>
                         <div class="form-control">
                             <label>Nombre de la actividad:</label>
-                            <input type="text" name="name" class="control">
+                            <input type="text" name="name" class="control" value="<%= product.name %>">
                         </div>
                         <div class="form-control">
                             <label>Descripción:</label>
-                            <textarea type="text" name="description" placeholder="Detalle de la actividad" required
-                                rows="5" style="width: 100%;"></textarea required>
+                            <textarea type="text" name="description" placeholder="text-description" 
+                                rows="5" style="width: 100%;"  ><%= product.description %></textarea required>
                 </div>
                 <div class="form-control">
                     <label>Imagen:</label>
@@ -41,16 +41,16 @@
 
                 <div class="form-control">
                     <label>Precio $</label>
-                    <input type="number" name="price" class="control">
+                    <input type="number" name="price" class="control" value="<%= product.price %>">
                 </div>
                 
                 <div class="form-control">
-                    <label>Fecha y Hora de INICIO:</label>
+                    <label>Fecha y Hora de INICIO: <%= product.dateStart%> </label>
                     <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control">
                 </div>
                 <div class="form-control">
-                    <label>Fecha y Hora de FINALIZACION:</label>
-                    <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control">
+                    <label>Fecha y Hora de FINALIZACION: <%= product.dateFinish%></label>
+                    <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control" >
                 </div>
                 
                 
