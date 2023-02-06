@@ -18,7 +18,7 @@ const controller = {
         let newMessage = req.body;        
         messagesUsers.push(newMessage);
                 
-        let messagesUsersJson = JSON.stringify(messagesUsers);
+        let messagesUsersJson = JSON.stringify(messagesUsers,null,' ');
         fs.writeFileSync(messageFilePath,messagesUsersJson);
         res.redirect('/');
     },

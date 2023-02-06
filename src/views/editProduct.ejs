@@ -1,74 +1,71 @@
 <%- include ('partials/head', {style: 'register' , title: 'Registro' }) %>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <%- include ('partials/header') %>
-            <main>
+    <%- include ('partials/header') %>
+        <main>
 
-                <form action="/saveInformation" method="post" class="create-form">
-                    <div class="caja1">
-                        <div class="h2">
-                            <h2>Formulario para cargar actividad</h2>
-                        </div>
-                        <div class="form-control">
-                            <label>I.D:</label>
-                            <input type="number" name="name" class="control">
-                        </div>
-                        <div class="form-control">
-                            <label>Nombre de la actividad:</label>
-                            <input type="text" name="name" class="control">
-                        </div>
-                        <div class="form-control">
-                            <label>Descripción:</label>
-                            <textarea type="text" name="description" placeholder="Detalle de la actividad" required
-                                rows="5" style="width: 100%;"></textarea required>
+            <form action="/admin/products/<%=product.id %>?_method=PUT" method="POST" class="create-form">
+                <div class="caja1">
+                    <div class="h2">
+                        <h2>Formulario para editar actividad <%= product.name%></h2>
+                    </div>
+                    <div class="form-control">
+                        <label>I.D:</label>
+                        <input type="number" name="id" class="control" value="<%= product.id %>">
+                    </div>
+                    <div class="form-control">
+                        <label>Nombre de la actividad:</label>
+                        <input type="text" name="name" class="control" value="<%= product.name %>">
+                    </div>
+                    <div class="form-control">
+                        <label>Descripción:</label>
+                        <textarea type="text" name="description" placeholder="text-description" 
+                            rows="5" style="width: 100%;"  ><%= product.description %></textarea required>
+                    </div>
+                <div class="form-control">
+                    <label>Imagen: <%= product.image %> </label>
+                    <input type="file" name="image" class="control" value="">
                 </div>
                 <div class="form-control">
-                    <label>Imagen:</label>
-                    <input type="file" name="image" class="control">
-                </div>
-                <div class="form-control">
-                    <label>Dificultad</label>
+                    <label>Dificultad: <%= product.category %> </label>
                     <select name="category" class="control">
-                        <option value="argentina">Dificultad Baja</option>
-                        <option value="bolivia">Dificultad Media</option>
-                        <option value="brasil">Dificultad Alta</option>
-                        <option value="chile">Dificultad Extrema</option> 
+                        <option value="Dificultad Baja">Dificultad Baja</option>
+                        <option value="Dificultad Media">Dificultad Media</option>
+                        <option value="Dificultad Alta">Dificultad Alta</option>
+                        <option value="Dificultad Extrema">Dificultad Extrema</option> 
                     </select>
                 </div>
 
                 <div class="form-control">
                     <label>Precio $</label>
-                    <input type="number" name="price" class="control">
+                    <input type="number" name="price" class="control" value="<%= product.price %>">
                 </div>
                 
                 <div class="form-control">
-                    <label>Fecha y Hora de INICIO:</label>
-                    <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control">
+                    <label>Fecha y Hora de INICIO: <%= product.dateStart%> </label>
+                    <input type="datetime-local" name="dateStart" class="control" value="<%= product.dateStart%>">
                 </div>
                 <div class="form-control">
-                    <label>Fecha y Hora de FINALIZACION:</label>
-                    <input type="datetime-local" name="email" placeholder="nombre@gmail.com" class="control">
+                    <label>Fecha y Hora de FINALIZACION: <%= product.dateFinish%></label>
+                    <input type="datetime-local" name="dateFinish"  class="control" value="<%= product.dateFinish%>" >                    
+                </div>      
+                
+                
+                <div class="caja2">
+                    <button type="submit" class="form-button">Subir</button>
+                    <button type="reset" class="form-button">Limpiar</button>
+                    <div class="pregunta-de-registro">
+                        <label>¿Necesitas ayuda? <br>
+                            Entra en este link</label>
+                    </div> 
                 </div>
-                
-                
-                
-            <div class="caja2">
-                <button type="submit" class="form-button">Subir</button>
-                <button type="reset" class="form-button">Limpiar</button>
-                <div class="pregunta-de-registro">
-                    <label>¿Necesitas ayuda? <br>
-                        Entra en este link</label>
                 </div>
-               
-                
             </div>
-            </div>
-        </div>
-        </form>
-    </main>
-</header>
+            </form>
+         </main>
+    </header>
 
 <%- include ('partials/footer') %> 

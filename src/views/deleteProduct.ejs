@@ -1,0 +1,57 @@
+<%- include ('partials/head', {style: 'register' , title: 'Registro' }) %>
+
+</head>
+
+<body>
+
+    <%- include ('partials/header') %>
+        <main>
+
+            <form action="/admin/products/<%=product.id %>?_method=DELETE" method="POST" class="create-form">
+                <div class="caja1">
+                    <div class="h2">
+                        <h2>Formulario para eliminar actividad <%= product.name%></h2>
+                    </div>
+                    <div class="form-control">
+                        <label>I.D: <%= product.id %></label>                        
+                    </div>
+                    <div class="form-control">
+                        <label>Nombre de la actividad: <%= product.name %></label>                        
+                    </div>
+                    <div class="form-control">
+                        <label>Descripción: <%= product.description %></label>                        
+                    </div>
+                <div class="form-control">
+                    <label>Imagen: <%= product.image %> </label>                    
+                </div>
+                <div class="form-control">
+                    <label>Dificultad: <%= product.category %> </label>                    
+                </div>
+
+                <div class="form-control">
+                    <label>Precio $ <%= product.price %></label>                    
+                </div>
+                
+                <div class="form-control">
+                    <label>Fecha y Hora de INICIO: <%= product.dateStart%> </label>                   
+                </div>
+                <div class="form-control">
+                    <label>Fecha y Hora de FINALIZACION: <%= product.dateFinish%></label>                                       
+                </div>      
+                
+                
+                <div class="caja2">
+                    <button type="submit" class="form-button">Subir</button>                    
+                    
+                    <div class="pregunta-de-registro">
+                        <label>¿Necesitas ayuda? <br>
+                            Entra en este link</label>
+                    </div> 
+                </div>
+                </div>
+            </div>
+            </form>
+         </main>
+    </header>
+
+<%- include ('partials/footer') %> 

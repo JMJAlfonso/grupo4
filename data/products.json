@@ -1,13 +1,12 @@
-[
-  {
+[   {
     "id": 1,
     "name": "Trekking",
     "description": "El trekking consiste en el desarrollo de caminatas por un entorno natural y abierto con fines recreativos. Vamos a acceder desde RP13, recorriendo desde el centro cívico de Villa Pehuenia 12 kilómetros hacia el norte con destino a Paso del Arco.",
     "image": "Trekking.JPG",
     "category": "Dificultad Baja",
     "price": 3000,
-    "date_start": "25/01/2023, 7:00 AM",
-    "date_finish": "25/01/2023, 9:00 AM"
+    "dateStart": "25/01/2023, 7:00 AM",
+    "dateFinish": "25/01/2023, 9:00 AM"
   },
   {
     "id": 2,
@@ -16,8 +15,8 @@
     "image": "kayac.JPG",
     "category": "Dificultad Media",
     "price": 4819,
-    "date_start": "09/02/2023, 16:00 PM",
-    "date_finish": "09/02/2023, 17:00 PM"
+    "dateStart": "09/02/2023, 16:00 PM",
+    "dateFinish": "09/02/2023, 17:00 PM"
   },
   {
     "id": 3,
@@ -26,7 +25,7 @@
     "image": "paracaidismo.JPG",
     "category": "Dificultad Extrema",
     "price": 8000,
-    "date_start": "05/02/2023, 10:00 AM",
+    "dateStart": "05/02/2023, 10:00 AM",
     "date_finish": "05/02/2023, 12:00 AM"
     
   },
@@ -37,8 +36,8 @@
     "image": "Parapente.JPG",
     "category": "Dificultad Extrema",
     "price": 5430,
-    "date_start": "01/03/2023, 08:00 AM",
-    "date_finish": "01/03/2023, 10:00 AM"
+    "dateStart": "01/03/2023, 08:00 AM",
+    "dateFinish": "01/03/2023, 10:00 AM"
   },
   {
     "id": 5,
@@ -47,8 +46,8 @@
     "image": "Rappel.JPG",
     "category": "Dificultad Alta",
     "price": 4000,
-    "date_start": "25/02/2023, 13:00 PM",
-    "date_finish": "25/02/2023, 15:00 PM"
+    "dateStart": "25/02/2023, 13:00 PM",
+    "dateFinish": "25/02/2023, 15:00 PM"
   },
   {
     "id": 6,
@@ -57,8 +56,8 @@
     "image": "cabalgata.JPG",
     "category": "Dificultad Baja",
     "price": 2134,
-    "date_start": "09/03/2023, 19:00 PM",
-    "date_finish": "09/03/2023, 20:00 PM"
+    "dateStart": "09/03/2023, 19:00 PM",
+    "dateFinish": "09/03/2023, 20:00 PM"
   },
   {
     "id": 7,
@@ -67,8 +66,8 @@
     "image": "ciclismo.JPG",
     "category": "Dificultad Media",
     "price": 2000,
-    "date_start": "14/03/2023, 17:00 PM",
-    "date_finish": "14/03/2023, 20:00 PM"
+    "dateStart": "14/03/2023, 17:00 PM",
+    "dateFinish": "14/03/2023, 20:00 PM"
   },
   {
     "id": 8,
@@ -77,7 +76,8 @@
     "image": "Espeleismo.JPG",
     "category": "Dificultad Alta",
     "price": 6000,
-    "date_start": "17/02/2023, 07:00 AM",
-    "date_finish": "17/02/2023, 13:00 PM"
+    "dateStart": "17/02/2023, 07:00 AM",
+    "dateFinish": "17/02/2023, 13:00 PM"
   }
+
 ]
