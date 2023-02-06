@@ -7,13 +7,12 @@ const products = JSON.parse(productsJson);
 
 
 const productController = {
-    list: function (req, res){
-        console.log(products);
+    createProduct: function (req, res){
+        //console.log(products);
 
-       res.render('listDetail'); 
+       res.render('createProduct'); 
     }
 }
 
 module.exports = productController;
-
 

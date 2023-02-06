@@ -5,7 +5,7 @@ const path = require ('path');
 const methodOverride= require('method-override');
 
 const mainRouter = require('./src/routes/main');
-const productRouter = require('./src/routes/productRouter.js');
+const adminRouter = require('./src/routes/adminRouter.js');
 
 
 app.use(express.urlencoded({extended:false}));
@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 //Routers
 app.use('/', mainRouter);
-app.use('/products', productRouter);
+app.use('/admin', adminRouter);
 
 app.listen(3000, () => {
     console.log('Servidor iniciado en http://localhost:3000');

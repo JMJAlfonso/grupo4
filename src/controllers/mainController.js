@@ -35,8 +35,8 @@ const controller = {
     register: (req, res) => {
         res.render('register');
     },
-    loadProduct: (req, res) => {
-        res.render('loadProduct');
+    createProduct: (req, res) => {
+        res.render('createProduct');
     },
     editProduct: (req, res) => {
         res.render('editProduct');
