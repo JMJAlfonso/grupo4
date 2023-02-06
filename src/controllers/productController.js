@@ -12,28 +12,41 @@ const productController = {
 
        res.render('createProduct'); 
     },
-    editProduct: function (req, res){
-        const idProductEdit = req.params.id;
-        let productEdit = products.find((product)=> product.id ==idProductEdit);
-        console.log(productEdit);
+    productDetail: function (req, res){        
+       let productEdit = products.find((product)=> product.id ==req.params.id);        
+       res.render('productDetail',{product:productEdit}); 
+    },
+    editProduct: function (req, res){        
+       let productEdit = products.find((product)=> product.id ==req.params.id);        
        res.render('editProduct',{product:productEdit}); 
     },
-    saveEditProduct: function(req,res){
-        let productEdited = req.body;        
-        products.forEach(function(product){
-            if(product.id == productEdited.id){
-                product.name = productEdited.name;
-                product.description = productEdited.description;
-            }
-                
-                    
-                
-        });
-                        
-        let productsJson = JSON.stringify(products);
-        fs.writeFileSync(productFilePath,productsJson);
+    update: function(req,res){
+       let indexToEdit;
+       let productToEdit = products.find((product,index) => {
+        if (product.id == req.params.id){
+            indexToEdit =index;
+            return true;
+        }else{
+            return false;
+        }
+         });       
+       productToEdit = {
+        ...productToEdit,
+        ...req.body
+       }              
+        products[indexToEdit] = productToEdit;  
+        console.log(products[indexToEdit])       
+        fs.writeFileSync(productFilePath,JSON.stringify(products,null,' '));
         res.redirect('/');
-    }
+    },
+    deleteProduct: function (req, res){        
+        let productEdit = products.find((product)=> product.id ==req.params.id);        
+        res.render('deleteProduct',{product:productEdit}); 
+     },
+    delete:function(req,res){
+        const productsFiltered = products.filter((product)=>product.id != req.params.id) 
+        fs.writeFileSync(productFilePath,JSON.stringify(productsFiltered,null,' '));
+    },
 }
 
 module.exports = productController;
