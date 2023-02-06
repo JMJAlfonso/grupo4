@@ -16,7 +16,7 @@
   
   main { 
        
-    padding: 5%;  
+    padding: 2%;  
   }
  main .who-we-are{   
     background-image:url(../images/index-background.jpg) ;
@@ -342,17 +342,15 @@ main ul{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: row;   
   }
   .article {
+    margin-top: 2%;
     font-size: 8px;
-    height: 60%;
-    margin-top: 5%;
     padding: 2%;
-    width: 33%;
-    box-shadow: 4px 5px 5px 1px grey;   
-}
-#article1,#article2{
-  margin-right: 1%;
+    width: 32%;
+    height: 650px; 
+    box-shadow: 4px 5px 5px 1px grey;    
 }
 .article .product-div-image { 
   border: black solid 1px  ;
@@ -372,7 +370,7 @@ main ul{
   background-size: cover;  
 } 
 .article-button{    
-  bottom: -23px;
+  bottom: -110px;
 }
   .product-image:hover{    
     overflow: hidden;   
