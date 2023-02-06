@@ -8,13 +8,12 @@ let products = JSON.parse(productsJson);
 const productController = {
 
     createProduct: function (req, res){
-        //console.log(products);
-
-       res.render('createProduct'); 
+     res.render('createProduct', {products: products}); 
     },
+        
     productDetail: function (req, res){        
-       let productEdit = products.find((product)=> product.id ==req.params.id);        
-       res.render('productDetail',{product:productEdit}); 
+       let product = products.find((product)=> product.id ==req.params.id);        
+       res.render('productDetail',{product}); 
     },
     editProduct: function (req, res){        
        let productEdit = products.find((product)=> product.id ==req.params.id);        

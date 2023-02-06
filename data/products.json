@@ -6,8 +6,8 @@
     "image": "Trekking.JPG",
     "category": "Dificultad Baja",
     "price": 3000,
-    "date_start": "25/01/2023, 7:00 AM",
-    "date_finish": "25/01/2023, 9:00 AM"
+    "dateStart": "25/01/2023, 7:00 AM",
+    "dateFinish": "25/01/2023, 9:00 AM"
     },
  {
   "id": 2,
