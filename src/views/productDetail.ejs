@@ -3,11 +3,42 @@
 
 
 <body>
-    <%- include ('partials/header') %> 
+<main>
+    <% products.forEach(function(product){ %>
+        <section class = "actividades_detalladas">
+           
+            
+        <article>
+          <div class="slider-image" 
+            src="/images/Trekking.JPG" alt="Trekking">
+        </div>
+        <p>Información de la actividad:</p>
+        <ul>
+            <li>
+                Nombre: <%=product.name%>
+            </li>
+            <li>
+                Descripción: <%=product.description%>
+            </li>
+            <li>
+                Precio: <%=product.price%>
+            </li>
+            <li>
+                Categoría: <%=product.category%>
+            </li>
+            <li>
+                Fecha de inicio: <%=product.date_start%>
+            </li>
+            <li>
+                Hasta: <%=product.date_finish%>
+            </li>
+        </ul>
+        </article>
+        <% }) %>
+    </section>
+   
 
-    <main>
-
-        <h1 class="titulo1">Trekking</h1>
+       <h1 class="titulo1">Trekking</h1>
         <h2 class="subtitulo">Descripcion de la actividad</h2>
 
         <div class="contenedor">
@@ -595,4 +626,5 @@
                                             </article>
                                         </div>
     </main>
+    </body>
     <%- include ('partials/footer') %> 

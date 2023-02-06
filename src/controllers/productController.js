@@ -8,10 +8,10 @@ const products = JSON.parse(productsJson);
 
 const productController = {
     createProduct: function (req, res){
-        //console.log(products);
+     res.render('createProduct', {products: products}); 
+    },
 
-       res.render('createProduct'); 
-    }
+
 }
 
 module.exports = productController;
