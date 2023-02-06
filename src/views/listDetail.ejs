@@ -1,36 +1,35 @@
+<h3> ACA HAY QUE SUBIR LA LISTA DE PRODUCTOS </h3>
 
-    <h3> ACA HAY QUE SUBIR LA LISTA DE PRODUCTOS </h3>
+<section class="actividades_detalladas">
+<% products.forEach(function(product){ %>
 
-
-    <% products.forEach(function(product){ %>
-        <section class = "actividades_detalladas"> 
-            
         <article>
-          <div class="slider-image" 
-            src="/images/Trekking.JPG" alt="Trekking">
-        </div>
-        <p>Información de la actividad:</p>
-        <ul>
-            <li>
-                Nombre: <%=product.name%>
-            </li>
-            <li>
-                Descripción: <%=product.description%>
-            </li>
-            <li>
-                Precio: <%=product.price%>
-            </li>
-            <li>
-                Categoría: <%=product.category%>
-            </li>
-            <li>
-                Fecha de inicio: <%=product.date_start%>
-            </li>
-            <li>
-                Hasta: <%=product.date_finish%>
-            </li>
-        </ul>
+            <div class="slider-image" src="/images/Trekking.JPG" alt="Trekking">
+            </div>
+            <p>Información de la actividad:</p>
+            <ul>
+                <li>
+                    ID: <%=product.id%>
+                </li>
+                <li>
+                    Nombre: <%=product.name%>
+                </li>
+                <li>
+                    Descripción: <%=product.description%>
+                </li>
+                <li>
+                    Precio: <%=product.price%>
+                </li>
+                <li>
+                    Categoría: <%=product.category%>
+                </li>
+                <li>
+                    Fecha de inicio: <%=product.date_start%>
+                </li>
+                <li>
+                    Hasta: <%=product.date_finish%>
+                </li>
+            </ul>
         </article>
         <% }) %>
     </section>
-   

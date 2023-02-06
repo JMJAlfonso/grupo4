@@ -7,6 +7,11 @@ let products = JSON.parse(productsJson);
 
 const productController = {
 
+    listDetail: function(req, res){
+        let product = products.find((product)=> product.id ==req.params.id);    
+        res.render('listDetail', {product})
+    },
+
     createProduct: function (req, res){
      res.render('createProduct', {products: products}); 
     },
