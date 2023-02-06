@@ -35,26 +35,25 @@
                 <h2>Actividades</h2>
                 <h4>¡Que no te podes perder si venis a Villa Pehuenia!</h4>
             </div>
-        </section>
-        <div class="outside">
-        <% products.forEach((product) => { %>
-            <section class="articles">         
-                <article class="article" id="article1">                
-                    <div class="product-div-image" ><img class="product-image" src="../images/<%= product.image %>"></div>                    
-                    <div class="main-article">
-                        <h3> <%= product.name %></h3>                    
-                        <div class="description-container">
-                            <p class="description"><%= product.description %></p>
-                        </div>
-                        <p class="price">$<%= product.price %></p>                 
+        </section>        
+        <section class="articles"> 
+            <% products.forEach((product) => { %>        
+            <article class="article" >                
+                <div class="product-div-image" ><img class="product-image" src="../images/<%= product.image %>"></div>                    
+                <div class="main-article">
+                    <h3> <%= product.name %></h3>                    
+                    <div class="description-container">
+                        <p class="description"><%= product.description %></p>
                     </div>
-                    <div class="article-button">
-                        <a href='/productDetail'>Mas información</a>
-                    </div>                
-                </article>             
-            </section>
-        <% }) %>
-        </div>
+                    <p class="price">$<%= product.price %></p>                 
+                </div>
+                <div class="article-button">
+                    <a href='/productDetail'>Mas información</a>
+                </div>                
+            </article>  
+            <% }) %>           
+        </section>        
+        
         <div class="title-slider">
             <h3> Paisajes & Naturaleza</h3>
         </div>
