@@ -1,14 +1,14 @@
 [
-    {
-        "id": 1,
-    "name": "Trekking",
-    "description": "El trekking consiste en el desarrollo de caminatas por un entorno natural y abierto con fines recreativos. Vamos a acceder desde RP13, recorriendo desde el centro cívico de Villa Pehuenia 12 kilómetros hacia el norte con destino a Paso del Arco.",
-    "image": "Trekking.JPG",
-    "category": "Dificultad Baja",
-    "price": 3000,
-    "dateStart": "25/01/2023, 7:00 AM",
-    "dateFinish": "25/01/2023, 9:00 AM"
-    },
+ {
+  "id": 1,
+  "name": "casa",
+  "description": "El trekking consiste en el desarrollo de caminatas por un entorno natural y abierto con fines recreativos. Vamos a acceder desde RP13, recorriendo desde el centro cívico de Villa Pehuenia 12 kilómetros hacia el norte con destino a Paso del Arco.",
+  "image": "Trekking.JPG",
+  "category": "Dificultad Media",
+  "price": "3000",
+  "dateStart": "2023-02-14T14:59",
+  "dateFinish": "2023-02-22T15:03"
+ },
  {
   "id": 2,
   "name": "Kayac",
