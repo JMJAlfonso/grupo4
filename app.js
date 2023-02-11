@@ -2,10 +2,10 @@
 const express = require('express');
 const app = express();
 const path = require ('path');
-const methodOverride= require('method-override');
+const methodOverride = require('method-override');
 
 const mainRouter = require('./src/routes/main');
-const adminRouter = require('./src/routes/adminRouter.js');
+const adminRouter = require('./src/routes/adminRouter');
 
 
 app.use(express.urlencoded({extended:false}));

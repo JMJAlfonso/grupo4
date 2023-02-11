@@ -5,6 +5,7 @@ const productController = require('../controllers/productController');
 //list es el nombre de la lista de productos
 router.get('/listDetail', productController.listDetail);
 
+
 router.get('/createProduct', productController.createProduct);
 
 router.get('/products/:id',productController.productDetail);

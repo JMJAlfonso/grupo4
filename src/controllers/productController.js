@@ -9,8 +9,8 @@ let products = JSON.parse(productsJson);
 const productController = {
 
     listDetail: function (req, res) {
-
-        res.render('listDetail', { products })
+        //console.log(products);
+        res.render('listDetail', { products: products });
     },
 
     createProduct: function (req, res) {
