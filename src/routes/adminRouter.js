@@ -7,6 +7,7 @@ router.get('/listDetail', productController.listDetail);
 
 
 router.get('/createProduct', productController.createProduct);
+router.post('/createProcess', productController.createProcess);
 
 router.get('/products/:id',productController.productDetail);
 

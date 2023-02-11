@@ -6,6 +6,11 @@ const productFilePath = path.join(__dirname, '../../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
 let products = JSON.parse(productsJson);
 
+function writeFileJson(data){
+    const dataString = JSON.stringify(data);
+    fs.writeFile(path.join(__dirname, '../../data/products.json'), dataString)
+}
+
 const productController = {
 
     listDetail: function (req, res) {
@@ -17,13 +22,43 @@ const productController = {
         res.render('createProduct', { products: products });
     },
 
+    createProcess: function (req, res) {
+        console.log(req.body);
+        const newProduct = {
+            id: products.length + 1,
+            name: req.body.name,
+            description: req.body.description,
+            image: req.body.image,
+            category: req.body.category,
+            price: req.body.price,
+            dateStart: req.body.dateStart,
+            dateFinish: req.body.dateFinish,
+        }
+
+        products.push(newProduct);
+
+        writeFileJson(products);
+
+        res.redirect("/");
+       
+    },
+
+
     productDetail: function (req, res) {
         let product = products.find((product) => product.id == req.params.id);
         res.render('productDetail', { product });
+        /* if(product){
+             res.render('productDetail', { product });
+         }else{
+             res.send("error 404");
+         }*/
     },
+
+
+
     editProduct: function (req, res) {
         let productEdit = products.find((product) => product.id == req.params.id);
-       
+
         res.render('editProduct', { product: productEdit });
     },
     update: function (req, res) {
