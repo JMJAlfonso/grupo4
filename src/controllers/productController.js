@@ -8,7 +8,7 @@ let products = JSON.parse(productsJson);
 
 function writeFileJson(data){
     const dataString = JSON.stringify(data);
-    fs.writeFile(path.join(__dirname, '../../data/products.json'), dataString)
+    fs.writeFileSync(path.join(__dirname, '../../data/products.json'), dataString)
 }
 
 const productController = {
@@ -19,30 +19,30 @@ const productController = {
     },
 
     createProduct: function (req, res) {
-        res.render('createProduct', { products: products });
+        res.render('createProduct');
     },
 
     createProcess: function (req, res) {
-        console.log(req.body);
+        //console.log(req.body);
         const newProduct = {
             id: products.length + 1,
             name: req.body.name,
             description: req.body.description,
-            image: req.body.image,
+            //image: req.body.image,
             category: req.body.category,
             price: req.body.price,
             dateStart: req.body.dateStart,
             dateFinish: req.body.dateFinish,
-        }
+        };
 
         products.push(newProduct);
 
         writeFileJson(products);
 
-        res.redirect("/");
+        res.redirect("/admin/listDetail");
        
     },
-
+    
 
     productDetail: function (req, res) {
         let product = products.find((product) => product.id == req.params.id);
