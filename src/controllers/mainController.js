@@ -29,8 +29,7 @@ const controller = {
         res.render('productCart');
     },
     productDetail: (req, res) => {
-
-        res.render('productDetail');
+        res.render('productDetail', { products: products });
     },
     register: (req, res) => {
         res.render('register');
