@@ -2,13 +2,13 @@ const fs = require("fs");
 const path = require('path');
 const moment = require('moment');
 
-const productFilePath = path.join(__dirname, '../../data/products.json');
+const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
 let products = JSON.parse(productsJson);
 
 function writeFileJson(data){
     const dataString = JSON.stringify(data);
-    fs.writeFileSync(path.join(__dirname, '../../data/products.json'), dataString)
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), dataString)
 }
 
 const productController = {
