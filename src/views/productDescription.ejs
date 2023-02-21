@@ -1,0 +1,65 @@
+<%- include ('partials/head', {style: 'productDetailStyles' , title: 'Detalle del producto' }) %>
+    </head>
+
+    <body>
+        <%- include ('partials/header') %>
+        <main>            
+            <div class="productContainer">
+                        <div class="principalContainer">
+                            <p class="activityTitle">
+                                <%=product.name%>
+                            </p>
+
+                            <div class="productDescription">
+                                <p class="description">
+                                    <%=product.description%>
+                                </p>
+                                <div class="boxImage">
+                                    <img class="slider-image" src="/images/Trekking.JPG" alt="Trekking">
+                                </div>
+                            </div>
+                         
+
+                            <div class="boxDetail">
+                                <p class="detailInfo">Informacion Detallada</p>
+
+                                <section class="boxInfo">
+
+                                    <div class="boxInfoLeft">
+                                        <article>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span class="leftPrice">
+                                                Precio: <%=product.price%>
+                                            </span>
+                                        </article>
+                                        <br>
+                                        <article>
+                                            <i class="fa-solid fa-ban"></i>
+                                            <span class="Dificulty">
+                                               Nivel de dificultad: <%=product.category%>
+                                            </span>
+                                        </article>
+                                    </div>
+
+                                    <div class="boxInfoRight">
+                                        <article>
+                                            <i class="fa-solid fa-route"></i>
+                                            <span class="rightDateStart">
+                                                La actividad inicia el: <%=product.date_start%>
+                                            </span>
+                                        </article>
+                                        <br>
+                                        <article>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span class="rightDateFinish">
+                                                La actividad termina el: <%=product.date_finish%>
+                                            </span>
+                                        </article>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>                    
+                </main>
+    </body>
+    <%- include ('partials/footer') %>

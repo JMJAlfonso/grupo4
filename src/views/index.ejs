@@ -7,7 +7,7 @@
             <div class="text">
                 <h1 class="resumeText">Excursiones y actividades en Villa Pehuenia y alrededores</h1>                
             </div>           
-            <form action="/" autocomplete="on" id="form-index" method="POST">
+            <form action="/userMessage" autocomplete="on" id="form-index" method="POST">
                 <div>
                     <h3>¡Consultanos! Te ayudamos a armar tu viaje</h3>
                 </div>
@@ -48,7 +48,7 @@
                     <p class="price">$<%= product.price %></p>                 
                 </div>
                 <div class="article-button">
-                    <a href='/productDetail'>Mas información</a>
+                    <a href='/productDescription/<%= product.id%>'>Mas información</a>
                 </div>                
             </article>  
             <% }) %>           
