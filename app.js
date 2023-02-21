@@ -6,9 +6,9 @@ const methodOverride = require('method-override');
 
 const mainRouter = require('./src/routes/main');
 const adminRouter = require('./src/routes/adminRouter');
+const userRouter = require('./src/routes/userRouter');
 
-
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false})); //necesario para que las rutas de post,put envien la informacion
 app.use(express.json())
 
 //Configuración
@@ -24,6 +24,7 @@ app.use(express.json());
 //Routers
 app.use('/', mainRouter);
 app.use('/admin', adminRouter);
+app.use('/user',userRouter);
 
 app.listen(3000, () => {
     console.log('Servidor iniciado en http://localhost:3000');

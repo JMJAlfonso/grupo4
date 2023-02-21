@@ -38,15 +38,7 @@ const controller = {
     },
     register: (req, res) => {
         res.render('register');
-    },
-    registerProcess: (req, res) => {
-        let newMessage = req.body;        
-        users.push(newMessage);
-                
-        let usersJson = JSON.stringify(users,null,' ');
-        fs.writeFileSync(messageFilePath,usersJson);
-        res.redirect('/');        
-    },
+    },    
     createProduct: (req, res) => {
         res.render('createProduct');
     },
