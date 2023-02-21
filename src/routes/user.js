@@ -1,5 +1,5 @@
 const express = require ('express');
-const userController = require ('../controllers/userController')
+const usersController = require ('../controllers/usersController')
 const router = express.Router();
 const path = require ('path');
 
@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 
-router.post('/saveInformation',upload.single('userImage'),userController.register);
+router.post('/saveInformation',upload.single('userImage'),usersController.register);
 
 // router.get('/listDetail' , mainController.listDetail);
 
