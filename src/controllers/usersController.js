@@ -8,8 +8,13 @@ let users = JSON.parse(usersJson);
 
 const userController = {
     register: (req, res) => {
-        let user = req.body;                   
-        user.image = req.file.filename;
+        let user = req.body;
+        if(req.file){
+            user.image = req.file.filename;
+        }else{
+            user.image = "defaultImage.png";
+        }                   
+        
         users.push(user);        
         let usersJson = JSON.stringify(users,null,' ');     
              
