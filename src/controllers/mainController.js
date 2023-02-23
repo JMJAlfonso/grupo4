@@ -6,8 +6,7 @@ const products = JSON.parse(fs.readFileSync(productFilePath,'utf-8'));
 const messageFilePath = path.join(__dirname, '../data/messageUsers.json');
 let messagesUsersJSON = fs.readFileSync(messageFilePath,'utf-8');
 let messagesUsers = JSON.parse(messagesUsersJSON);
-const userFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(userFilePath,'utf-8'));
+
 
 
 
