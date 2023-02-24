@@ -12,7 +12,7 @@ const userController = {
         let user = req.body;
         let passwordEncrypt = bcrypt.hashSync(user.password,8);
         user.password = passwordEncrypt;
-        // let compare = bycryptjs.compare(user.password,passwordEncrypt); para comprarar si la password encrypt es igual a lo que se ingreso
+        // let compare = bycryptjs.compareSync(user.password,passwordEncrypt); para comprarar si la password encrypt es igual a lo que se ingreso
         // if(compare){
         //     ...
         // }else{
