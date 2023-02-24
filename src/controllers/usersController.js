@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const bcrypt = require('bcryptjs');
 
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -9,6 +10,14 @@ let users = JSON.parse(usersJson);
 const userController = {
     register: (req, res) => {
         let user = req.body;
+        let passwordEncrypt = bcrypt.hashSync(user.password,8);
+        user.password = passwordEncrypt;
+        // let compare = bycryptjs.compare(user.password,passwordEncrypt); para comprarar si la password encrypt es igual a lo que se ingreso
+        // if(compare){
+        //     ...
+        // }else{
+        //     ...
+        // }         
         if(req.file){
             user.image = req.file.filename;
         }else{

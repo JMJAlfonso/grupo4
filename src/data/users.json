@@ -18,5 +18,15 @@
   "password": "pepe",
   "repeat_password": "pepe",
   "image": "defaultImage.png"
+ },
+ {
+  "name": "ale",
+  "surname": "villegas",
+  "email": "ale@gmail.com",
+  "tel": "+54 9 11432674535",
+  "country": "argentina",
+  "password": "$2a$08$WH3tAskrByJIe6Ne7MfSx.4kX1ONIWI1LXIFazdC7R32Mjzsb8an6",
+  "repeat_password": "pepe",
+  "image": "defaultImage.png"
  }
 ]
