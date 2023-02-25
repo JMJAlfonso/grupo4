@@ -29,7 +29,7 @@ const userController = {
              
         fs.writeFileSync(usersFilePath,usersJson);       
         res.redirect('/');        
-    },
+    },    
 };
 
 module.exports = userController;
