@@ -21,19 +21,7 @@ const controller = {
         let messagesUsersJson = JSON.stringify(messagesUsers,null,' ');
         fs.writeFileSync(messageFilePath,messagesUsersJson);
         res.redirect('/');
-    },
-    login: (req, res) => {
-        res.render('login');
-    },
-    logged: (req,res)=>{
-        if (!req.body.username || !req.body.password){
-            res.redirect('/login');           
-        }else{
-            req.session.username = req.body.username;
-            req.session.password = req.body.password;
-            res.redirect('/');
-        }
-    },
+    },    
     productCart: (req, res) => {
         res.render('productCart');
     },
@@ -43,10 +31,7 @@ const controller = {
     productDescription: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
         res.render('productDescription', { product});
-    },
-    register: (req, res) => {
-        res.render('register');
-    },    
+    },      
     createProduct: (req, res) => {
         res.render('createProduct');
     },

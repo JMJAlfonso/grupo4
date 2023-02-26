@@ -58,16 +58,17 @@
   "password": "$2a$08$UwBJMnZ6QXt9wORkSX1XY.4cziw3RYx6Z7D9G8VP6fWO.oslxIA26",
   "repeat_password": "",
   "image": "defaultImage.png"
- },
+ }, 
  {
-  "name": " ",
-  "surname": " ",
-  "email": "",
-  "tel": " ",
+  "name": " jacky",
+  "surname": "vamosquesepuede",
+  "email": "jacky@conectate.com",
+  "tel": " 1125420394",
   "country": "argentina",
-  "password": "$2a$08$9fCf2SYeIcoN9tUZwek4ouutsLV17AoN55Jponhb5Zji2QAczF4xm",
-  "repeat_password": "",
+  "password": "$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni",
+  "repeat_password": "hola",
   "category": "user",
   "image": "defaultImage.png"
  }
+ 
 ]
