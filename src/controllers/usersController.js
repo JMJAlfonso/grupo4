@@ -10,6 +10,7 @@ let users = JSON.parse(usersJson);
 const userController = {
     register: (req, res) => {
         let user = req.body;
+        user.category = 'user'
         let passwordEncrypt = bcrypt.hashSync(user.password,8);
         user.password = passwordEncrypt;
         // let compare = bycryptjs.compareSync(user.password,passwordEncrypt); para comprarar si la password encrypt es igual a lo que se ingreso

@@ -25,6 +25,15 @@ const controller = {
     login: (req, res) => {
         res.render('login');
     },
+    logged: (req,res)=>{
+        if (!req.body.username || !req.body.password){
+            res.redirect('/login');           
+        }else{
+            req.session.username = req.body.username;
+            req.session.password = req.body.password;
+            res.redirect('/');
+        }
+    },
     productCart: (req, res) => {
         res.render('productCart');
     },

@@ -7,6 +7,7 @@ const path = require ('path');
 
 
 router.get('/', mainController.index);
+router.post('/',mainController.logged);
 router.post('/userMessage', mainController.indexForm);
 router.get('/register', mainController.register);
 router.get('/productDetail', mainController.productDetail);

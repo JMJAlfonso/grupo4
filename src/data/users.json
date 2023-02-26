@@ -1,25 +1,5 @@
 [
  {
-  "name": "pepe",
-  "surname": "pepe",
-  "email": "pepe@gmail.com",
-  "tel": "+54 9 1143563279",
-  "country": "argentina",
-  "password": "pepe",
-  "repeat_password": "pepe",
-  "image": "user-1677174847716.png"
- },
- {
-  "name": "pepe",
-  "surname": "argento",
-  "email": "pepe@gmail.com",
-  "tel": "+54 9 1143563279",
-  "country": "argentina",
-  "password": "pepe",
-  "repeat_password": "pepe",
-  "image": "defaultImage.png"
- },
- {
   "name": "ale",
   "surname": "villegas",
   "email": "ale@gmail.com",
