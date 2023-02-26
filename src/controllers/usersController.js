@@ -11,60 +11,43 @@ const userController = {
     register: (req, res) => {
         res.render('register');
     }, 
-    registerProcess: (req, res) => {
-        let user = req.body;
-        user.category = 'user'
-        let passwordEncrypt = bcryptjs.hashSync(user.password,8);
-        user.password = passwordEncrypt;
-        user.repeat_password = passwordEncrypt;
-              
-        if(req.file){
-            user.image = req.file.filename;
-        }else{
-            user.image = "defaultImage.png";
-        }                   
-        
-        users.push(user);        
-        let usersJson = JSON.stringify(users,null,' ');     
+    registerProcess: (req, res) => {         
              
-        fs.writeFileSync(usersFilePath,usersJson);       
-        res.redirect('/');
-        //     registerProcess: (req, res) => {
-//         const resultValidation = validationResult(req);
+         const resultValidation = validationResult(req);
 
-//         if(resultValidation.errors.length > 0) {
-//             return res.render("register", {
-//                 errors: resultValidation.mapped(),
-//                 oldData: req.body,
-//             });
-//         }
+        if(resultValidation.errors.length > 0) {
+             return res.render("register", {
+                 errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
 
-//         let userInDB = User.findByField("email", req.body.email);
+        let userInDB = User.findByField("email", req.body.email);
 
-//         if (!userInDB) {
-//             return res.render("register", {
-//                 errors: {
-//                     email: {
-//                         msg: "este mail ya esta registrado"
-//                     }
-//                 },
-//                 oldData: req.body
-//             });
-//         }
-//         let userToCreate = {
-//             ...req.body,
-//             password: bcryptjs.hashSync(req.body.password, 10),
-//             avatar: req.file.filename
-//         }
+        if (!userInDB) {
+            return res.render("register", {
+                errors: {
+                    email: {
+                        msg: "este mail ya esta registrado"
+                    }
+                },
+                oldData: req.body
+            });
+        }
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            repeat_password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: User.storeImage(req.file.filename)
+        }
 
-//         User.create(userToCreate); 
-//          return res.render("login");       
-//     },
-//     login: (req, res) => {
-//     res.render("login");
-//     },
-        
+        User.create(userToCreate); 
+         return res.render("login");       
     },
+    login: (req, res) => {
+    res.render("login");
+    },
+
     login: (req, res) => {
         res.render('login');
     },
