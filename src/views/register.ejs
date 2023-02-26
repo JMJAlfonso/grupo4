@@ -5,33 +5,75 @@
 <body>
  
     <%- include ('partials/header') %> 
+
     <main>
        
-        <form action="/user/saveInformation" method="POST" class="create-form" enctype="multipart/form-data">
+        <form action="/user/login" method="POST" class="create-form" enctype="multipart/form-data">
             <div class="caja1">
             <div class="h2">
                 <h2>Registrarse</h2>
             </div>
                     <div class="form-control">
                     <label>Nombre:</label>
-                    <input type="text" name="name" class="control">
+                    <input 
+                    type="text" 
+                    name="name" 
+                    class="control <%= locals.errors && errors.name ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.name : null %> "
+                    >
+                    <% if (locals.errors && errors.name) { %>
+                        <div class= "text-danger">
+                    <%= errors.name.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form-control">
                     <label>Apellido:</label>
-                    <input type="text" name="surname" class="control">
+                    <input 
+                    type="text" 
+                    name="surname" 
+                    class="control <%= locals.errors && errors.surname ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.surname : null %> ">
+                    <% if (locals.errors && errors.surname) { %>
+                        <div class= "text-danger">
+                    <%= errors.surname.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form-control">
                     <label>Email:</label>
-                    <input type="email" name="email" placeholder="nombre@gmail.com" class="control">
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="nombre@gmail.com" 
+                    class="control <%= locals.errors && errors.email ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.email : null %> ">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class= "text-danger">
+                    <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form-control">
                     <label>Celular:</label>
-                    <input type="tel" name="tel" class="control" placeholder="+54 9 11234000">
+                    <input 
+                    type="tel" 
+                    name="tel"
+                    placeholder="+54 9 11234000" 
+                    class="control <%= locals.errors && errors.tel ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.tel : null %> "> 
+                    
+                    <% if (locals.errors && errors.tel) { %>
+                        <div class= "text-danger">
+                    <%= errors.tel.msg %>
+                        </div>
+                    <% } %>
                 </div>
 
                 <div class="form-control">
                     <label>País</label>
-                    <select name="country" class="control">
+                    <select name="country" class="control <%= locals.errors && errors.country ? "is-invalid" : null %>"
+                        value="<%= locals.oldData ? oldData.country : null %> ">
                         <option value="argentina">Argentina</option>
                         <option value="bolivia">Bolivia</option>
                         <option value="brasil">Brasil</option>
@@ -44,19 +86,50 @@
                         <option value="venezuela">Venezuela</option>
                         <option value="guyanaFrancesa">Guyana Francesa </option>
                     </select>
+                    <% if (locals.errors && errors.country) { %>
+                        <div class= "text-danger">
+                    <%= errors.country.msg %>
+                        </div>
+                    <% } %>
                     
                 </div>
                 <div class="form-control">
                     <label for="userImage">Imagen de perfil:</label>
-                    <input type="file" name="userImage" class="control">
+                    <input 
+                    type="file" 
+                    name="userImage" 
+                    class="control <%= locals.errors && errors.userImage ? "is-invalid" : null %>">
+                    <% if (locals.errors && errors.userImage) { %>
+                        <div class= "text-danger">
+                    <%= errors.userImage.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form-control">
                     <label>Contraseña:</label>
-                    <input type="password" name="password" class="control">
+                    <input 
+                    type="password" 
+                    name="password" 
+                    class="control <%= locals.errors && errors.password ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.password : null %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class= "text-danger">
+                    <%= errors.password.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form-control">
                     <label>Confirmar Contraseña:</label>
-                    <input type="repeat_password" name="repeat_password" class="control">
+                    <input 
+                    type="password" 
+                    name="repeat_password" 
+                    class="control <%= locals.errors && errors.repeat_password ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.repeat_password : null %>">
+                    <% if (locals.errors && errors.repeat_password) { %>
+                        <div class= "text-danger">
+                    <%= errors.repeat_password.msg %>
+                        </div>
+                    <% } %>
                 </div>
             <div class="caja2">
                 <button type="submit" class="form-button">Registrarse</button>

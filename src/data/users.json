@@ -8,5 +8,55 @@
   "password": "$2a$08$WH3tAskrByJIe6Ne7MfSx.4kX1ONIWI1LXIFazdC7R32Mjzsb8an6",
   "repeat_password": "pepe",
   "image": "defaultImage.png"
+ },
+ {
+  "name": "pedro ramon",
+  "surname": "sosa",
+  "email": "equel09@hotmail.com",
+  "tel": "1138736205",
+  "country": "argentina",
+  "password": "$2a$08$7m1W7nG/lAbnDjjIcqRRdueuuHmfw2yTPyuuBeHFWOkNzHGQI4Jr6",
+  "repeat_password": "123456789",
+  "image": "user-1677366531434.jpg"
+ },
+ {
+  "name": "",
+  "surname": "",
+  "email": "",
+  "tel": "",
+  "country": "argentina",
+  "password": "$2a$08$0qVXzi.Wam3j.tqtLhkZKeZHoedpwre7.XbDZkYZkdQYsDfA8fmJu",
+  "repeat_password": "",
+  "image": "defaultImage.png"
+ },
+ {
+  "name": "",
+  "surname": "",
+  "email": "",
+  "tel": "",
+  "country": "argentina",
+  "password": "$2a$08$2/19SwFZY.9UYRHCrQ4A6.sHpyCrt7aN2.vWr/Z9qNPqepu99Vnzu",
+  "repeat_password": "",
+  "image": "defaultImage.png"
+ },
+ {
+  "name": "",
+  "surname": "",
+  "email": "",
+  "tel": "",
+  "country": "argentina",
+  "password": "$2a$08$wgBkyL//fIMnIkitSc0pHOa5iUKFfeFkCpliEzVb3ypCuWYgsc1OS",
+  "repeat_password": "",
+  "image": "defaultImage.png"
+ },
+ {
+  "name": "",
+  "surname": "",
+  "email": "",
+  "tel": "",
+  "country": "argentina",
+  "password": "$2a$08$UwBJMnZ6QXt9wORkSX1XY.4cziw3RYx6Z7D9G8VP6fWO.oslxIA26",
+  "repeat_password": "",
+  "image": "defaultImage.png"
  }
 ]

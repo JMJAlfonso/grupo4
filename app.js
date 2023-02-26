@@ -22,6 +22,8 @@ app.use(session({secret:'Secreto!!!'}));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+//session
+//app.use(session({secret: "secreto"}));
 
 //Routers
 
@@ -29,7 +31,7 @@ app.use('/', mainRouter);
 app.use('/admin', adminRouter);
 app.use('/user',userRouter);
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Servidor iniciado en http://localhost:3000');
 });
 
