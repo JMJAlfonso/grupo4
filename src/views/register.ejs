@@ -1,12 +1,12 @@
 <%- include ('partials/head', {style: 'register', title: 'Registro'}) %> 
     
 </head>
-
 <body>
- 
+
     <%- include ('partials/header') %> 
 
     <main>
+
        
         <form action="/user/login" method="POST" class="create-form" enctype="multipart/form-data">
             <div class="caja1">
@@ -14,7 +14,7 @@
                 <h2>Registrarse</h2>
             </div>
                     <div class="form-control">
-                    <label>Nombre:</label>
+                    <label>Nombre:</label>                   
                     <input 
                     type="text" 
                     name="name" 
@@ -28,7 +28,7 @@
                     <% } %>
                 </div>
                 <div class="form-control">
-                    <label>Apellido:</label>
+                    <label>Apellido:</label>                    
                     <input 
                     type="text" 
                     name="surname" 
@@ -41,7 +41,7 @@
                     <% } %>
                 </div>
                 <div class="form-control">
-                    <label>Email:</label>
+                    <label>Email:</label>                    
                     <input 
                     type="email" 
                     name="email" 
@@ -55,14 +55,10 @@
                     <% } %>
                 </div>
                 <div class="form-control">
-                    <label>Celular:</label>
-                    <input 
-                    type="tel" 
-                    name="tel"
-                    placeholder="+54 9 11234000" 
-                    class="control <%= locals.errors && errors.tel ? "is-invalid" : null %>"
-                    value="<%= locals.oldData ? oldData.tel : null %> "> 
-                    
+                    <label>Celular:</label>                    
+                    <input type="tel" name="tel" placeholder="+54 9 11234000" 
+                     class="control <%= locals.errors && errors.tel ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.tel : null %> ">
                     <% if (locals.errors && errors.tel) { %>
                         <div class= "text-danger">
                     <%= errors.tel.msg %>
@@ -71,18 +67,12 @@
                 </div>
 
                 <div class="form-control">
-                    <label>País</label>
+                    <label>País</label>                    
                     <select name="country" class="control <%= locals.errors && errors.country ? "is-invalid" : null %>"
                         value="<%= locals.oldData ? oldData.country : null %> ">
                         <option value="argentina">Argentina</option>
                         <option value="bolivia">Bolivia</option>
                         <option value="brasil">Brasil</option>
-                        <option value="chile">Chile</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="ecuador">Ecuador</option>
-                        <option value="paraguay">Paraguay</option>
-                        <option value="peru">Peru</option>
-                        <option value="uruguay">Uruguay</option>
                         <option value="venezuela">Venezuela</option>
                         <option value="guyanaFrancesa">Guyana Francesa </option>
                     </select>
@@ -91,10 +81,10 @@
                     <%= errors.country.msg %>
                         </div>
                     <% } %>
-                    
+
                 </div>
                 <div class="form-control">
-                    <label for="userImage">Imagen de perfil:</label>
+                    <label for="userImage">Imagen de perfil:</label>                    
                     <input 
                     type="file" 
                     name="userImage" 
@@ -106,7 +96,7 @@
                     <% } %>
                 </div>
                 <div class="form-control">
-                    <label>Contraseña:</label>
+                    <label>Contraseña:</label>                    
                     <input 
                     type="password" 
                     name="password" 
@@ -119,7 +109,7 @@
                     <% } %>
                 </div>
                 <div class="form-control">
-                    <label>Confirmar Contraseña:</label>
+                    <label>Confirmar Contraseña:</label>                    
                     <input 
                     type="password" 
                     name="repeat_password" 
@@ -133,18 +123,3 @@
                 </div>
             <div class="caja2">
                 <button type="submit" class="form-button">Registrarse</button>
-                <div class="pregunta-de-registro">
-                    <label>¿Ya eres miembro? <br>
-                        Inicia tu sesión</label>
-                </div>
-                <button type="gmail" class="form-button">Registrarse con Gmail</button>
-                <button type="facebook" class="form-button">Registrarse con Facebook</button>
-            </div>
-            </div>
-            </div>
-        </div>
-        </form>
-    </main>
-</header>
-
-<%- include ('partials/footer') %> 
