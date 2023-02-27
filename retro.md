@@ -85,3 +85,21 @@
 
 ### Dejar de hacer: 
 - No asistir a las reuniones. 
+
+
+## RETRO SPRINT 5
+
+### Comenzar a hacer: 
+- Contestar en el grupo. Avisar cuando no pueden conectarse.
+
+### Hacer más: 
+- Asistir a las reuniones.
+
+### Continuar haciendo: 
+- Trabajar en equipo, apoyarse mutuamente, ser colaborativos, ayudarse mutuamente. 
+
+### Hacer menos: 
+- No usar trello con frecuencia.
+
+### Dejar de hacer: 
+- No asistir a las reuniones y no avisar.
