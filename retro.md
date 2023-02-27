@@ -66,3 +66,22 @@
 
 ### Dejar de hacer: 
 - Interrumpir cuando habla el otro.
+
+
+
+## RETRO SPRINT 4
+
+### Comenzar a hacer: 
+- Contestar en el grupo. 
+
+### Hacer más: 
+- Hacer reuniones semanales. 
+
+### Continuar haciendo: 
+- Trabajar en equipo. Escuchar al otro cuando habla, ser comunicativo en las reuniones. 
+
+### Hacer menos: 
+- No usar trello con frecuencia.
+
+### Dejar de hacer: 
+- No asistir a las reuniones. 
