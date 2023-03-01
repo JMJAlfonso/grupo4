@@ -13,7 +13,7 @@ const userController = {
     }, 
     registerProcess: (req, res) => {         
              
-         const resultValidation = validationResult(req);
+        const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0) {
              return res.render("register", {
@@ -38,25 +38,26 @@ const userController = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             repeat_password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: User.storeImage(req.file.filename)
+            image: User.storeImage(req.file.filename)
         }
 
         User.create(userToCreate); 
          return res.render("login");       
     },
-    login: (req, res) => {
-    res.render("login");
+    login: (req, res) => {       
+            res.render("login");               
     },
 
     login: (req, res) => {
         res.render('login');
     },
     loginProcess: (req,res)=>{
-        if (!req.body.username || !req.body.password){
+        if (!req.body.email || !req.body.password){
             res.redirect('/login');           
         }else{
             req.session.username = req.body.username;
             req.session.password = req.body.password;
+            req.session.email = req.body.email;
             res.redirect('/');
         }
      //     let userToLogin = User.findByField("email", req.body.email);
