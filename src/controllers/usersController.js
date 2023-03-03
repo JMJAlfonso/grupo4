@@ -10,14 +10,14 @@ let users = JSON.parse(usersJson);
 const userController = {
     register: (req, res) => {
         res.render('register');
-    }, 
-    registerProcess: (req, res) => {         
-             
+    },
+    registerProcess: (req, res) => {
+
         const resultValidation = validationResult(req);
 
-        if(resultValidation.errors.length > 0) {
-             return res.render("register", {
-                 errors: resultValidation.mapped(),
+        if (resultValidation.errors.length > 0) {
+            return res.render("register", {
+                errors: resultValidation.mapped(),
                 oldData: req.body,
             });
         }
@@ -41,26 +41,76 @@ const userController = {
             image: User.storeImage(req.file.filename)
         }
 
-        User.create(userToCreate); 
-         return res.render("login");       
+        User.create(userToCreate);
+        return res.render("login");
     },
-    login: (req, res) => {       
-            res.render("login");               
+
+    login: (req, res) => {
+        res.render("login");
     },
+
 
     login: (req, res) => {
         res.render('login');
     },
-    loginProcess: (req,res)=>{
-        if (!req.body.email || !req.body.password){
-            res.redirect('/login');           
-        }else{
-            req.session.username = req.body.username;
-            req.session.password = req.body.password;
-            req.session.email = req.body.email;
-            res.redirect('/');
+
+    loginProcess: function (req, res) {
+        let errors = validationResult(req);
+    
+        if (errors.isEmpty()) {
+            let usersJSON = fs.readFileSync('users.json', { encoding: utf-8 });
+            let users;
+            if (usersJSON == "") {
+                users = [];
+            } else {
+                users = JSON.parse(usersJSON);
+            }
+            let usuarioAloguearse;
+    
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == req.body.email) {
+                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
+                       usuarioAloguearse = users[i];
+                       break;
+                    }
+                }
+            }
+    
+            if (usuarioAloguearse == undefined) {
+                return res.render('login', {
+                    errors: [
+                        { msg: "Credenciales inválidas" }
+                    ]
+                });
+            }   
+            req.session.usuarioLogueado = usuarioAloguearse;
+            res.render("sucess");
+        } else {
+            return res.render('login', {errors: errors.errors});
         }
-     //     let userToLogin = User.findByField("email", req.body.email);
+    }
+}
+    
+    module.exports = userController;
+    
+    
+    
+
+
+
+
+
+
+
+/*if (!req.body.email || !req.body.password){
+     res.redirect('/login');           
+ }else{
+     req.session.username = req.body.username;
+     req.session.password = req.body.password;
+     req.session.email = req.body.email;
+     res.redirect('/');
+ }*/
+//     let userToLogin = User.findByField("email", req.body.email);
 //     if (!userToLogin) {
 //         return res.render("login", {
 //             errors: {
@@ -68,16 +118,16 @@ const userController = {
 //                     msg: "no se encuentra en nuestra base de datos"
 //                 }
 //             },
-        
+
 //         });
 //     }       
 //     },
-    
-// };   
-    },    
-};
 
-module.exports = userController;
+// };   
+//   },    
+//};
+
+
 
 
 
