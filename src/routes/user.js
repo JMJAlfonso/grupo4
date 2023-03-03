@@ -48,7 +48,7 @@ router.post('/register', validations, upload.single('userImage'), usersControlle
 router.get("/login", usersController.login);
 router.post("/login", 
 [check('email').isEmail().withMessage('Email invalido'),
-check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener mínimo 8 caracteres')],
+check('password').isLength({ min: 2 }).withMessage('La contraseña debe tener mínimo 2 caracteres')],
 usersController.loginProcess);
 
 router.get('/check', function(req, res){
