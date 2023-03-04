@@ -5,7 +5,7 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJson = fs.readFileSync(usersFilePath, "utf-8");
 let users = JSON.parse(usersJson);
 
-function accessAuthorized (req,res,next){
+function adminAccessAuthorized (req,res,next){
         let emailAutorized=false;        
         let userCategory;
         let passwordEncrypt;        
@@ -27,4 +27,4 @@ function accessAuthorized (req,res,next){
     
     next(); 
 }
-module.exports = accessAuthorized;
+module.exports = adminAccessAuthorized;

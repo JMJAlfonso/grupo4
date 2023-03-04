@@ -1,7 +1,7 @@
 const express = require ('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
-const accessAuthorized = require('../middlewares/accessAuthorized');
+const accessAuthorized = require('../middlewares/adminAccessAuthorized');
 //list es el nombre de la lista de productos
 router.get('/listDetail', productController.listDetail);
 
