@@ -58,7 +58,7 @@ const userController = {
         let errors = validationResult(req);
     
         if (errors.isEmpty()) {
-            let usersJSON = fs.readFileSync('users.json', { encoding: "utf-8" });
+            let usersJSON = fs.readFileSync(usersFilePath, "utf-8" );
             let users;
             if (usersJSON == "") {
                 users = [];
@@ -69,7 +69,7 @@ const userController = {
     
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == req.body.email) {
-                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
+                    if (bcryptjs.compareSync(req.body.password, users[i].password)) {
                        usuarioAloguearse = users[i];
                        break;
                     }
@@ -84,7 +84,7 @@ const userController = {
                 });
             }   
             req.session.usuarioLogueado = usuarioAloguearse;
-            res.render("sucess");
+            res.send("sucess");
         } else {
             return res.render('login', {errors: errors.errors});
         }
