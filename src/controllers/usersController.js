@@ -2,10 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
-const User = require("../models/User");
+const User = require("../services/User");
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJson = fs.readFileSync(usersFilePath, "utf-8");
-let users = JSON.parse(usersJson);
+const users = JSON.parse(usersJson);
 
 const userController = {
     register: (req, res) => {
@@ -42,7 +42,7 @@ const userController = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),            
             category : 'user',
-            avatar: User.storeImage(req.file.filename)
+            avatar: User.storeImage(req.file)
         }
         delete userToCreate.repeat_password;
         User.create(userToCreate); 
@@ -56,14 +56,7 @@ const userController = {
     loginProcess: function (req, res) {
         let errors = validationResult(req);
     
-        if (errors.isEmpty()) {
-            let usersJSON = fs.readFileSync(usersFilePath, "utf-8" );
-            let users;
-            if (usersJSON == "") {
-                users = [];
-            } else {
-                users = JSON.parse(usersJSON);
-            }
+        if (errors.isEmpty()) {                     
             let usuarioAloguearse;
     
             for (let i = 0; i < users.length; i++) {

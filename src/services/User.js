@@ -7,7 +7,7 @@ const User = {
         return usersFilePath;
     },
     getData: function () {
-        return JSON.parse(fs.readFileSync(this.filename(), "utf-8"));
+        return JSON.parse(fs.readFileSync(this.filecname(), "utf-8"));
     },
 
     generateId: function (){
@@ -45,9 +45,9 @@ const User = {
         fs.writeFileSync(this.filename(), JSON.stringify(allUsers, null, " "));
         return newUser;
     },
-    storeImage:function(imageFilame){
-        if(imageFilame){
-           return imageFilame;
+    storeImage:function(imageFile){
+        if(imageFile){
+           return imageFile.filename;
         }else{
             return "defaultImage.png";
         }   

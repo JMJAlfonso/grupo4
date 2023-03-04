@@ -6,9 +6,9 @@ const usersJson = fs.readFileSync(usersFilePath, "utf-8");
 let users = JSON.parse(usersJson);
 function adminAccessAuthorized (req,res,next){
     if(req.session.usuarioLogueado && req.session.usuarioLogueado.category== 'admin' ){
-        next();
+        return next();
     }
-    res.redirect('/user/login');
+    return res.redirect('/user/login');
     // //     let emailAutorized=false;        
     // //     let userCategory;
     // //     let passwordEncrypt;        
