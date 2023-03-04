@@ -84,6 +84,8 @@ const userController = {
                 });
             }   
             req.session.usuarioLogueado = usuarioAloguearse;
+            req.session.email = req.body.email;
+            req.session.password = req.body.password;
             res.send("sucess");
         } else {
             return res.render('login', {errors: errors.errors});
