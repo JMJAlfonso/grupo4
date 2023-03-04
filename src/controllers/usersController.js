@@ -14,7 +14,7 @@ const userController = {
     registerProcess: (req, res) => {         
              
          const resultValidation = validationResult(req);
-         console.log(resultValidation.errors);
+
 
         if(resultValidation.errors.length > 0) {
              return res.render("register", {
@@ -22,10 +22,10 @@ const userController = {
                 oldData: req.body,
             });
         }
-        console.log("hola");
+
 
         let userInDB = User.findByField("email", req.body.email);
-        console.log(userInDB);
+    
 
         if (userInDB) {
             return res.render("register", {
