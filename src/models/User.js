@@ -1,16 +1,17 @@
 const fs = require("fs");
+const path = require("path");
 
 const User = {
-    filpath: function(){
+    filename: function(){
         usersFilePath = path.join(__dirname, '../data/users.json')
         return usersFilePath;
     },
     getData: function () {
-        return JSON.parse(fs.readFileSync(this.filename, "utf-8"));
+        return JSON.parse(fs.readFileSync(this.filename(), "utf-8"));
     },
 
     generateId: function (){
-        let allUsers = this.findAll ();
+        let allUsers = this.findAll();
         let lastUsers = allUsers.pop();
         if (lastUsers) {
             return lastUsers.id + 1;
@@ -41,7 +42,7 @@ const User = {
           ...userData
         }
         allUsers.push(newUser);
-        fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, " "));
+        fs.writeFileSync(this.filename(), JSON.stringify(allUsers, null, " "));
         return newUser;
     },
     storeImage:function(imageFilame){

@@ -86,8 +86,18 @@ main a{
 main a:hover{
     color:rgb(113, 167, 189)
 }
-
-
+.inte{
+    height: 115px;
+} 
+.check{
+        text-align: center;
+        color: #D78400;
+        height: 13px;
+        width: 13px;
+}
+.label{
+    width: 13px;
+}
 
 main input:focus, 
 main input:focus-visible
