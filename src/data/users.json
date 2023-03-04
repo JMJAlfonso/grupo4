@@ -1,5 +1,4 @@
 [
- 
  {
   "name": " jacky",
   "surname": "vamosquesepuede",
@@ -10,8 +9,16 @@
   "repeat_password": "hola",
   "category": "user",
   "image": "defaultImage.png"
+ },
+ {
+  "id": null,
+  "name": " prueba",
+  "surname": "  sssssssss",
+  "email": "equel09@hotmail.com",
+  "tel": " 1138415165",
+  "country": "argentina",
+  "password": "$2a$10$3NyMxN2M63Nyz/kr.kDVxey2.uT9DuSWFyrdCbwW7kENDw1WqLDmO",
+  "repeat_password": "$2a$10$Dr8u/Kr2FYd4L7EXASRYlevikQ3sX5FH1EhFWqZmLNkPMRc41o9.C",
+  "avatar": "user-1677942710160.jpg"
  }
-
- 
- 
 ]

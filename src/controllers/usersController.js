@@ -10,21 +10,24 @@ let users = JSON.parse(usersJson);
 const userController = {
     register: (req, res) => {
         res.render('register');
-    },
-    registerProcess: (req, res) => {
+    }, 
+    registerProcess: (req, res) => {         
+             
+         const resultValidation = validationResult(req);
+         console.log(resultValidation.errors);
 
-        const resultValidation = validationResult(req);
-
-        if (resultValidation.errors.length > 0) {
-            return res.render("register", {
-                errors: resultValidation.mapped(),
+        if(resultValidation.errors.length > 0) {
+             return res.render("register", {
+                 errors: resultValidation.mapped(),
                 oldData: req.body,
             });
         }
+        console.log("hola");
 
         let userInDB = User.findByField("email", req.body.email);
+        console.log(userInDB);
 
-        if (!userInDB) {
+        if (userInDB) {
             return res.render("register", {
                 errors: {
                     email: {
@@ -38,18 +41,13 @@ const userController = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             repeat_password: bcryptjs.hashSync(req.body.password, 10),
-            image: User.storeImage(req.file.filename)
+            avatar: User.storeImage(req.file.filename)
         }
 
-        User.create(userToCreate);
-        return res.render("login");
+        User.create(userToCreate); 
+         return res.redirect("/user/login");       
     },
-
-    login: (req, res) => {
-        res.render("login");
-    },
-
-
+    
     login: (req, res) => {
         res.render('login');
     },

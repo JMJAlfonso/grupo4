@@ -10,18 +10,18 @@ const { check } = require('express-validator');
 
 //configuracion de multer para almacenar imaganes
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/images/users'));
+    destination: (req,file,cb)=>{
+        cb(null,path.join(__dirname,'../../public/images/users'));
     },
-    filename: (req, file, cb) => {
-        const newFileName = 'user-' + Date.now() + path.extname(file.originalname);
-        cb(null, newFileName);
+    filename:(req,file,cb)=>{
+        const newFileName ='user-'+ Date.now() + path.extname(file.originalname);
+        cb(null,newFileName);
     }
 });
 //para validar datos con express-validator
 const validations = [
     body("name").notEmpty().withMessage("Tienes que escribir tu nombre"),
-    body("surName").notEmpty().withMessage("Tienes que escribir tu apellido"),
+    body("surname").notEmpty().withMessage("Tienes que escribir tu apellido"),
     body("email").notEmpty().withMessage("Tienes que escribir tu correo electronico").bail().isEmail().withMessage("debes escribir un correo electronico"),
     body("tel").notEmpty().withMessage("Tienes que escribir tu numero de telefono"),
     body("country").notEmpty().withMessage("Tienes que escribir tu pais"),
@@ -31,7 +31,7 @@ const validations = [
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".gif"];
         if (!file) {
-            throw new Error("tienes que subir una imagen")
+            throw new Error("tienes que subir una imagen") 
         } else {
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)) {
@@ -40,11 +40,11 @@ const validations = [
         }
         return true;
     })
-]
-const upload = multer({ storage });
+    ]
+const upload = multer({storage});
 
-router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', validations, upload.single('userImage'), usersController.registerProcess);
+router.get('/register', usersController.register);
+router.post('/register',upload.single('userImage'),validations,usersController.registerProcess);
 router.get("/login", usersController.login);
 router.post("/login", 
 [check('email').isEmail().withMessage('Email invalido'),

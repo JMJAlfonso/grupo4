@@ -31,7 +31,7 @@ app.use('/admin', adminRouter);
 app.use('/user',userRouter);
 
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log('Servidor iniciado en http://localhost:3001');
 });
 

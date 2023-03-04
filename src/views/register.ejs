@@ -23,7 +23,7 @@
                     >
                     <% if (locals.errors && errors.name) { %>
                         <div class= "text-danger">
-                    <%= errors.name.msg %>
+                      <%= errors.name.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -36,7 +36,7 @@
                     value="<%= locals.oldData ? oldData.surname : null %> ">
                     <% if (locals.errors && errors.surname) { %>
                         <div class= "text-danger">
-                    <%= errors.surname.msg %>
+                     <%= errors.surname.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -61,7 +61,7 @@
                     value="<%= locals.oldData ? oldData.tel : null %> ">
                     <% if (locals.errors && errors.tel) { %>
                         <div class= "text-danger">
-                    <%= errors.tel.msg %>
+                     <%= errors.tel.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -78,7 +78,7 @@
                     </select>
                     <% if (locals.errors && errors.country) { %>
                         <div class= "text-danger">
-                    <%= errors.country.msg %>
+                     <%= errors.country.msg %>
                         </div>
                     <% } %>
 
@@ -91,7 +91,7 @@
                     class="control <%= locals.errors && errors.userImage ? "is-invalid" : null %>">
                     <% if (locals.errors && errors.userImage) { %>
                         <div class= "text-danger">
-                    <%= errors.userImage.msg %>
+                     <%= errors.userImage.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -104,7 +104,7 @@
                     value="<%= locals.oldData ? oldData.password : null %>">
                     <% if (locals.errors && errors.password) { %>
                         <div class= "text-danger">
-                    <%= errors.password.msg %>
+                     <%= errors.password.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -117,7 +117,7 @@
                     value="<%= locals.oldData ? oldData.repeat_password : null %>">
                     <% if (locals.errors && errors.repeat_password) { %>
                         <div class= "text-danger">
-                    <%= errors.repeat_password.msg %>
+                     <%= errors.repeat_password.msg %>
                         </div>
                     <% } %>
                 </div>
