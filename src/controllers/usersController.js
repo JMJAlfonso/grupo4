@@ -40,12 +40,11 @@ const userController = {
         let userToCreate = {
             id : User.generateId(),
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            repeat_password: bcryptjs.hashSync(req.body.password, 10),
+            password: bcryptjs.hashSync(req.body.password, 10),            
             category : 'user',
             avatar: User.storeImage(req.file.filename)
         }
-
+        delete userToCreate.repeat_password;
         User.create(userToCreate); 
          return res.redirect("/user/login");       
     },
@@ -83,10 +82,8 @@ const userController = {
                     ]
                 });
             }   
-            req.session.usuarioLogueado = usuarioAloguearse;
-            req.session.email = req.body.email;
-            req.session.password = req.body.password;
-            res.send("sucess");
+            req.session.usuarioLogueado = usuarioAloguearse;            
+            res.redirect('/');
         } else {
             return res.render('login', {errors: errors.errors});
         }
