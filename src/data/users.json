@@ -1,5 +1,6 @@
 [
  {
+  "id": 1,
   "name": " jacky",
   "surname": "vamosquesepuede",
   "email": "jacky@conectate.com",
@@ -8,7 +9,18 @@
   "password": "$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni",
   "repeat_password": "hola",
   "category": "user",
-  "image": "defaultImage.png"
+  "avatar": "defaultImage.png"
+ },
+ {
+  "id": 2,
+  "name": " pepe",
+  "surname": "pepe",
+  "email": "pepe@gmail.com",
+  "tel": "  1156374894",
+  "country": "argentina",
+  "password": "$2a$10$JSrRa9T2dBkRd/96OxFla.HQvzcC/XTsyWALV4jkdJolfuU51kzZe",
+  "repeat_password": "$2a$10$UYpxRzYWs4KEftSBk8rsuuIzAEfkCmGaALE6jGx3JPS2h.19aST/S",
+  "category": "user",
+  "avatar": "user-1677955920567.jpg"
  }
- 
 ]

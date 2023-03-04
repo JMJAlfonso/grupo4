@@ -38,9 +38,11 @@ const userController = {
             });
         }
         let userToCreate = {
+            id : User.generateId(),
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             repeat_password: bcryptjs.hashSync(req.body.password, 10),
+            category : 'user',
             avatar: User.storeImage(req.file.filename)
         }
 
