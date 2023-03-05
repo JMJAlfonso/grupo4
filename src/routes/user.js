@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
         cb(null, newFileName);
     }
 });
-//para validar datos con express-validator
+
 
 const upload = multer({ storage });
 

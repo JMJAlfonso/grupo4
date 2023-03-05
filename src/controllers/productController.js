@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require('path');
-const moment = require('moment');
+const { validationResult } = require("express-validator");
 
 const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
@@ -24,12 +24,35 @@ const productController = {
 
     createProcess: function (req, res) {
         //console.log(req.body);
+        const resultValidation = validationResult(req);
+
+
+        if (resultValidation.errors.length > 0) {
+            return res.render("createProduct", {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
+        let userInDB = User.findByField("name", req.body.name);
+
+
+        if (userInDB) {
+            return res.render("createProduct", {
+                errors: {
+                    email: {
+                        msg: "este producto ya esta registrado"
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
         const newProduct = {
             id: products.length + 1,
             name: req.body.name,
             description: req.body.description,
             //image: req.body.image,
-            category: req.body.category,
+            dificulty: req.body.dificulty,
             price: req.body.price,
             dateStart: req.body.dateStart,
             dateFinish: req.body.dateFinish,
@@ -76,7 +99,7 @@ const productController = {
             name: req.body.name ? req.body.name : productToEdit.name,
             description: req.body.description ? req.body.description : productToEdit.description,
             image: req.body.image ? req.body.image : productToEdit.image,
-            category: req.body.category ? req.body.category : productToEdit.category,
+            dificulty: req.body.dificulty ? req.body.dificulty : productToEdit.dificulty,
             price: req.body.price ? req.body.price : productToEdit.price,
             dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
             dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,

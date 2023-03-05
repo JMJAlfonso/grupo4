@@ -6,10 +6,25 @@ const accessAuthorized = require('../middlewares/adminAccessAuthorized');
 router.get('/listDetail', productController.listDetail);
 
 //falta validar informacion de productos !!!
-router.get('/createProduct', accessAuthorized,productController.createProduct); 
-router.post('/createProcess',accessAuthorized,productController.createProcess);
+const validation = require('../validation/productValidation');
 
-router.get('/product/:id',accessAuthorized,productController.productDetail);
+//configuracion de multer para almacenar imaganes
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../../public/images/products'));
+    },
+    filename: (req, file, cb) => {
+        const newFileName = 'product-'+ file.originalname + Date.now() + path.extname(file.originalname);
+        cb(null, newFileName);
+    }
+});
+const upload = multer({ storage });
+
+router.get('/createProduct', accessAuthorized,productController.createProduct); 
+router.post('/createProcess',accessAuthorized,upload.single('image'),validation.newProduct,productController.createProcess);
+
+router.get('/products/:id',accessAuthorized,productController.productDetail);
 
 router.get('/products/:id/edit',accessAuthorized,productController.editProduct);
 router.put('/products/:id',accessAuthorized,productController.update);
