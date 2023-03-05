@@ -18,9 +18,19 @@
   "email": "pepe@gmail.com",
   "tel": "  1156374894",
   "country": "argentina",
-  "password": "$2a$10$JSrRa9T2dBkRd/96OxFla.HQvzcC/XTsyWALV4jkdJolfuU51kzZe",
-  "repeat_password": "$2a$10$UYpxRzYWs4KEftSBk8rsuuIzAEfkCmGaALE6jGx3JPS2h.19aST/S",
+  "password": "$2a$10$JSrRa9T2dBkRd/96OxFla.HQvzcC/XTsyWALV4jkdJolfuU51kzZe",  
   "category": "user",
   "avatar": "user-1677955920567.jpg"
+ },
+ {
+  "id": 3,
+  "name": " pepe",
+  "surname": "argento",
+  "email": "pepe_argento@gmail.com",
+  "tel": " 1125420394",
+  "country": "argentina",
+  "password": "$2a$10$nzIk1uponWl.fvrwnTvkN.sNn3Js81NcqIFoK1tMrKSU7/pM9gE5K",
+  "category": "user",
+  "avatar": "defaultImage.png"
  }
 ]

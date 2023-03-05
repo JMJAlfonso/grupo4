@@ -10,22 +10,22 @@ const users = JSON.parse(usersJson);
 const userController = {
     register: (req, res) => {
         res.render('register');
-    }, 
-    registerProcess: (req, res) => {         
-             
-         const resultValidation = validationResult(req);
+    },
+    registerProcess: (req, res) => {
+
+        const resultValidation = validationResult(req);
 
 
-        if(resultValidation.errors.length > 0) {
-             return res.render("register", {
-                 errors: resultValidation.mapped(),
+        if (resultValidation.errors.length > 0) {
+            return res.render("register", {
+                errors: resultValidation.mapped(),
                 oldData: req.body,
             });
         }
 
 
         let userInDB = User.findByField("email", req.body.email);
-    
+
 
         if (userInDB) {
             return res.render("register", {
@@ -38,55 +38,58 @@ const userController = {
             });
         }
         let userToCreate = {
-            id : User.generateId(),
+            id: User.generateId(),
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),            
-            category : 'user',
+            password: bcryptjs.hashSync(req.body.password, 10),
+            category: 'user',
             avatar: User.storeImage(req.file)
         }
         delete userToCreate.repeat_password;
-        User.create(userToCreate); 
-         return res.redirect("/user/login");       
+        User.create(userToCreate);
+        return res.redirect("/user/login");
     },
-    
+
     login: (req, res) => {
         res.render('login');
     },
 
     loginProcess: function (req, res) {
         let errors = validationResult(req);
-    
-        if (errors.isEmpty()) {                     
+
+        if (errors.isEmpty()) {
             let usuarioAloguearse;
-    
+
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == req.body.email) {
                     if (bcryptjs.compareSync(req.body.password, users[i].password)) {
-                       usuarioAloguearse = users[i];
-                       break;
+                        usuarioAloguearse = users[i];
+                        break;
                     }
                 }
             }
-    
+
             if (usuarioAloguearse == undefined) {
                 return res.render('login', {
                     errors: [
                         { msg: "Credenciales inválidas" }
                     ]
                 });
-            }   
-            req.session.usuarioLogueado = usuarioAloguearse;            
+            }
+            req.session.usuarioLogueado = usuarioAloguearse;
             res.redirect('/');
         } else {
-            return res.render('login', {errors: errors.errors});
+            return res.render('login', { errors: errors.errors });
         }
-    }
+    },
+    productCart: (req, res) => {
+        res.render('productCart');
+    },
 }
-    
-    module.exports = userController;
-    
-    
-    
+
+module.exports = userController;
+
+
+
 
 
 
@@ -95,7 +98,7 @@ const userController = {
 
 
 /*if (!req.body.email || !req.body.password){
-     res.redirect('/login');           
+     res.redirect('/login');
  }else{
      req.session.username = req.body.username;
      req.session.password = req.body.password;
@@ -112,11 +115,11 @@ const userController = {
 //             },
 
 //         });
-//     }       
+//     }
 //     },
 
-// };   
-//   },    
+// };
+//   },
 //};
 
 

@@ -6,7 +6,7 @@ const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
 let products = JSON.parse(productsJson);
 
-function writeFileJson(data){
+function writeFileJson(data) {
     const dataString = JSON.stringify(data);
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), dataString)
 }
@@ -40,9 +40,9 @@ const productController = {
         writeFileJson(products);
 
         res.redirect("/admin/listDetail");
-       
+
     },
-    
+
 
     productDetail: function (req, res) {
         let product = products.find((product) => product.id == req.params.id);

@@ -21,15 +21,12 @@ const controller = {
         fs.writeFileSync(messageFilePath,messagesUsersJson);
         res.redirect('/');
     },    
-    productCart: (req, res) => {
-        res.render('productCart');
-    },
-    productDetail: (req, res) => {
+    productsDetail: (req, res) => {
         res.render('productDetail', { products: products });
     },
-    productDescription: (req, res) => {
+    productDetail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
-        res.render('productDescription', { product});
+        res.render('productDetail', { product});
     },      
     createProduct: (req, res) => {
         res.render('createProduct');

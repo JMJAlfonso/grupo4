@@ -7,7 +7,7 @@ const User = {
         return usersFilePath;
     },
     getData: function () {
-        return JSON.parse(fs.readFileSync(this.filecname(), "utf-8"));
+        return JSON.parse(fs.readFileSync(this.filename(), "utf-8"));
     },
 
     generateId: function (){

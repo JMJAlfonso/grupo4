@@ -9,7 +9,7 @@ router.get('/listDetail', productController.listDetail);
 router.get('/createProduct', accessAuthorized,productController.createProduct); 
 router.post('/createProcess',accessAuthorized,productController.createProcess);
 
-router.get('/products/:id',accessAuthorized,productController.productDetail);
+router.get('/product/:id',accessAuthorized,productController.productDetail);
 
 router.get('/products/:id/edit',accessAuthorized,productController.editProduct);
 router.put('/products/:id',accessAuthorized,productController.update);

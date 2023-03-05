@@ -3,7 +3,8 @@
 
     <body>
         <%- include ('partials/header') %>
-        <main>            
+        <main>
+            <% products.forEach( (product)=> { %>
             <div class="productContainer">
                         <div class="principalContainer">
                             <p class="activityTitle">
@@ -18,7 +19,12 @@
                                     <img class="slider-image" src="/images/products/<%=product.image%>" alt="Trekking">
                                 </div>
                             </div>
-                         
+
+                            <!-- <div class="activityDificulty">
+                                <div class="barra">
+                                    <div class="proceso" style="--w:40%">40%</div>
+                                </div>
+                            </div> -->
 
                             <div class="boxDetail">
                                 <p class="detailInfo">Informacion Detallada</p>
@@ -59,7 +65,8 @@
                                 </section>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <% }) %>
                 </main>
     </body>
     <%- include ('partials/footer') %>
