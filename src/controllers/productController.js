@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require('path');
 const { validationResult } = require("express-validator");
+const { Console } = require("console");
 
 const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
@@ -19,14 +20,14 @@ const productController = {
     },
 
     createProduct: function (req, res) {
+        
         res.render('createProduct');
     },
 
     createProcess: function (req, res) {
         //console.log(req.body);
         const resultValidation = validationResult(req);
-
-
+        console.log(resultValidation.mapped());
         if (resultValidation.errors.length > 0) {
             return res.render("createProduct", {
                 errors: resultValidation.mapped(),

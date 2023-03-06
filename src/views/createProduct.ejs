@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-control">
                             <label>Dificultad</label>
-                            <select name="dificulty" class="control <%= locals.errors && errors.dificulty ? "is-invalid" : null %>" value="<%= locals.oldData ? oldData.dificulty : null %> ">
+                            <select name="dificulty" class="control <%= locals.errors && errors.dificulty ? "is-invalid" : null %>" value="<%= locals.oldData ? oldData.dificulty : null %>">
                                 <option value="Dificultad Baja">Dificultad Baja</option>
                                 <option value="Dificultad Media">Dificultad Media</option>
                                 <option value="Dificultad Alta">Dificultad Alta</option>
@@ -67,23 +67,23 @@
 
                         <div class="form-control">
                             <label>Fecha y Hora de INICIO:</label>
-                            <input type="datetime-local" name="datetime-init" placeholder=""
-                                class="control <%= locals.errors && errors.datetime-init ? "is-invalid" : null %>" 
-                                value="<%= locals.oldData ? oldData.datetime-init : null %>">
-                            <% if (locals.errors && errors.datetime-init) { %>
+                            <input type="datetime-local" name="dateStart" placeholder=""
+                                class="control <%= locals.errors && errors.dateStart ? "is-invalid" : null %>" 
+                                value="<%= locals.oldData ? oldData.dateStart : null %>">
+                            <% if (locals.errors && errors.dateStart) { %>
                                 <div class="text-danger">
-                                    <%= errors.datetime-init.msg %>
+                                    <%= errors.dateStart.msg %>
                                 </div>
                                 <% } %>
                         </div>
                         <div class="form-control">
                             <label>Fecha y Hora de FINALIZACION:</label>
-                            <input type="datetime-local" name="datetime-finish" placeholder=""
-                                class="control <%= locals.errors && errors.datetime-finish ? "is-invalid" : null %>"
-                                value="<%= locals.oldData ? oldData.datetime-finish : null %>">
-                            <% if (locals.errors && errors.datetime-finish) { %>
+                            <input type="datetime-local" name="dateFinish" placeholder=""
+                                class="control <%= locals.errors && errors.dateFinish ? "is-invalid" : null %>"
+                                value="<%= locals.oldData ? oldData.dateFinish : null %>">
+                            <% if (locals.errors && errors.dateFinish) { %>
                                 <div class="text-danger">
-                                    <%= errors.datetime-finish.msg %>
+                                    <%= errors.dateFinish.msg %>
                                 </div>
                             <% } %>
                         </div>
