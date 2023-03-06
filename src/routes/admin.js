@@ -20,12 +20,10 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage });
-
+router.get('/listDetail', accessAuthorized,productController.listDetail);
 router.get('/createProduct', accessAuthorized,productController.createProduct); 
 router.post('/createProcess',accessAuthorized,upload.single('image'),validation.newProduct,productController.createProcess);
-
 router.get('/products/:id',accessAuthorized,productController.productDetail);
-
 router.get('/products/:id/edit',accessAuthorized,productController.editProduct);
 router.put('/products/:id',accessAuthorized,productController.update);
 router.get('/products/:id/delete',accessAuthorized,productController.deleteProduct);
