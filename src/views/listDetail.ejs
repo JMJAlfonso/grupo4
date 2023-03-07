@@ -1,37 +1,48 @@
-<h3> ACA HAY QUE SUBIR LA LISTA DE PRODUCTOS </h3>
+<%- include ('partials/head', {style: 'listDetailStyles' , title: 'Lista de actividades' }) %>
 
-<section class="actividades_detalladas">
-<% products.forEach((product) => { %>
+    </head>
 
-        <article>
-            <div class="slider-image" src="/images/<%= product.image %>" alt="<%= product.name %>">
-            </div>
-            <p>Información de la actividad:</p>
-            <ul>
-                <li>
-                    ID: <%=product.id%>
-                </li>
-                <li>
-                    Nombre: <%=product.name%>
-                </li>
-                <li>
-                    Descripción: <%=product.description%>
-                </li>
-                <li>
-                    Precio: <%=product.price%>
-                </li>
-                <li>
-                    Categoría: <%=product.dificulty%>
-                </li>
-                <li>
-                    Fecha de inicio: <%=product.dateStart%>
-                </li>
-                <li>
-                    Hasta: <%=product.dateFinish%>
-                </li>
-            </ul>
-        </article>
-        <br>
-        <% }) %>
-        <a href="/"><button>Volver al Home</button></a>
-    </section>
+    <body>
+        <%- include ('partials/header') %>
+            <main>
+
+                <h3> LISTA DE ACTIVIDADES </h3>
+
+                <section class="actividades_detalladas">
+                    <% products.forEach((product)=> { %>
+
+                        <article>
+                            <div class="slider-image" src="/images/<%= product.image %>" alt="<%= product.name %>">
+                            </div>
+                            <p>Información de la actividad:</p>
+                            <ul>
+                                <li>
+                                    ID: <%=product.id%>
+                                </li>
+                                <li>
+                                    Nombre: <%=product.name%>
+                                </li>
+                                <li>
+                                    Descripción: <%=product.description%>
+                                </li>
+                                <li>
+                                    Precio: <%=product.price%>
+                                </li>
+                                <li>
+                                    Categoría: <%=product.dificulty%>
+                                </li>
+                                <li>
+                                    Fecha de inicio: <%=product.dateStart%>
+                                </li>
+                                <li>
+                                    Hasta: <%=product.dateFinish%>
+                                </li>
+                            </ul>
+                        </article>
+                        <br>
+                        <% }) %>
+                            <a href="/"><button>Volver al Home</button></a>
+                </section>
+            </main>
+    </body>
+    <%- include ('partials/footer') %>
