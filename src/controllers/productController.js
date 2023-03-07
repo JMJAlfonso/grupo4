@@ -27,7 +27,7 @@ const productController = {
     createProcess: function (req, res) {
         //console.log(req.body);
         const resultValidation = validationResult(req);
-        console.log(resultValidation.mapped());
+        
         if (resultValidation.errors.length > 0) {
             return res.render("createProduct", {
                 errors: resultValidation.mapped(),
@@ -66,8 +66,6 @@ const productController = {
         res.redirect("/admin/listDetail");
 
     },
-
-
     productDetail: function (req, res) {
         let product = products.find((product) => product.id == req.params.id);
         res.render('productDetail', { product });
@@ -77,9 +75,6 @@ const productController = {
              res.send("error 404");
          }*/
     },
-
-
-
     editProduct: function (req, res) {
         let productEdit = products.find((product) => product.id == req.params.id);
 

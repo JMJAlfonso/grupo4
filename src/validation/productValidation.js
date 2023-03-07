@@ -5,7 +5,7 @@ const validations = {
         body("name").notEmpty().withMessage("Tienes que escribir el nombre de producto"),
         body("description").notEmpty().withMessage("Tienes que escribir una descripción"),        
         body("dificulty").notEmpty().withMessage("Tienes que completar la dificultad de la actividad"),
-        body("price").notEmpty().withMessage("Tienes que escribir tu contraseña").isInt().withMessage("debes escribir un valor numerico"),
+        body("price").notEmpty().withMessage("Tienes que escribir el precio").isInt().withMessage("debes escribir un valor numerico"),
         body("datetime-init").isDate().withMessage("Tienes que completar el horario de inicio"),
         body("datetime-finish").isDate().withMessage("Tienes que completar el horario de finalizacion"),
         body("image").custom((value, { req }) => {
