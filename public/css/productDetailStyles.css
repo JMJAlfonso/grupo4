@@ -130,12 +130,12 @@ body {
   }
 
   .boxInfoLeft {
-    padding: 40px;
+    padding: 40px 0;
     width: 49%;
   }
 
   .boxInfoRight {
-    padding: 40px;
+    padding: 40px 0;
     width: 49%;
   }
 

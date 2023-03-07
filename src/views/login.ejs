@@ -1,4 +1,4 @@
-<%- include ('partials/head', {style: 'style' , title: 'Iniciar Sesion' }) %>
+<%- include ('partials/head', {style: 'loginStyles' , title: 'Iniciar Sesion' }) %>
     </head>
 
     <body>
@@ -19,8 +19,10 @@
                         <div class="containerPrincipal">
 
                             <div class="form-group">
-                                <h1>¡BIENVENIDOS!</h1>
-                                <form action="/user/login" method="post">
+                                <div class="welcome">
+                                    <h1 class="welcomeh1">¡BIENVENIDOS!</h1>
+                                </div>
+                                <form action="/user/login" method="post" class="formuserpass">
                                     <input id="usuario" type="text" class="form-control" name="email"
                                         placeholder="email">
 
@@ -31,7 +33,7 @@
                                 </form>
                                 <div class="check">
                                     <input type="checkbox" class="check" value="first_checkbox">
-                                    <label>recordame</label>
+                                    <label class="remember">recordame</label>
                                 </div>
                                 <a href="/user/register" class="cuenta">¿No tienes Cuenta? <b>Registrate</b></a>
 

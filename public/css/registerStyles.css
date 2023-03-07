@@ -47,19 +47,21 @@ padding: 8px 10px;
 }
 
 .form-button{
-
+border: none;
 color:white;
 background-color: #D78400;
 font-size: 18px;
 padding: 5px 10px;
-border-radius: 10px;
+border-radius: 5px;
 font-family: 'Rubik';
 margin: 5px;
-position: relative;
-
- 
+position: relative; 
   
 
+}
+.form-button:hover{
+    color:rgba(2, 9, 70, 0.65);
+    font-weight: 400;
 }
 
 .pregunta-de-registro{

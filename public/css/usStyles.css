@@ -21,13 +21,13 @@
   }
 
   .description{
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    width: 50%;
     text-align: center;
-    width: 15.7em;
-    height: 22em;
     font-size: 24px;
     background: rgba(2, 9, 70, 0.65);
     color: white;
-    margin: auto;
-    margin-bottom: 30px;
     border-radius: 15px;
   }
