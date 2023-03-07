@@ -13,24 +13,24 @@
                         </div>
                         <div class="form-control">
                             <label>Nombre de la actividad:</label>
-                            <input type="text" name="name" class="control <%= locals.errors && errors.name ? "is-invalid" : null %>"
-                             value="<%= locals.oldData ? oldData.name : null %>">
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="text-danger">
-                                    <%= errors.name.msg %>
-                                </div>
-                            <% } %>
+                            <input type="text" name="name" class="control <%= locals.errors && errors.name ? "is-invalid" : null %>" 
+                            value="<%= locals.oldData ? oldData.name : null %>">
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger">
+                                        <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
                         </div>
                         <div class="form-control">
                             <label>Descripción:</label>
-                            <textarea type="text" name="description" placeholder="Detalle de la actividad" rows="5"
+                            <textarea name="description" placeholder="Detalle de la actividad" rows="5"
                                 style="width: 100%;" class="control <%= locals.errors && errors.description ? "is-invalid" : null %>">
                                 <%= locals.oldData ? oldData.description : null %></textarea>
                             <% if (locals.errors && errors.description) { %>
                                 <div class="text-danger">
                                     <%= errors.description.msg %>
                                 </div>
-                            <% } %>
+                                <% } %>
                         </div>
                         <div class="form-control">
                             <label>Imagen:</label>
@@ -39,64 +39,63 @@
                                 <div class="text-danger">
                                     <%= errors.image.msg %>
                                 </div>
-                            <% } %>
+                                <% } %>
                         </div>
                         <div class="form-control">
                             <label>Dificultad</label>
-                            <select name="dificulty" class="control <%= locals.errors && errors.dificulty ? "is-invalid" : null %>" 
+                            <select name="dificulty" class="control <%= locals.errors && errors.dificulty ? "is-invalid" : null %>"
                                 value="<%= locals.oldData ? oldData.dificulty : null %>">
-                                <option value="Dificultad Baja">Dificultad Baja</option>
-                                <option value="Dificultad Media">Dificultad Media</option>
-                                <option value="Dificultad Alta">Dificultad Alta</option>
-                                <option value="Dificultad Extrema">Dificultad Extrema</option>
+                                    <option value="Dificultad Baja">Dificultad Baja</option>
+                                    <option value="Dificultad Media">Dificultad Media</option>
+                                    <option value="Dificultad Alta">Dificultad Alta</option>
+                                    <option value="Dificultad Extrema">Dificultad Extrema</option>
                             </select>
                             <% if (locals.errors && errors.dificulty) { %>
                                 <div class="text-danger">
                                     <%= errors.dificulty.msg %>
                                 </div>
-                            <% } %>
+                                <% } %>
                         </div>
 
                         <div class="form-control">
                             <label>Precio $</label>
-                            <input type="number" name="price" class="control <%= locals.errors && errors.price ? "is-invalid" : null %>" 
-                            value="<%= locals.oldData ? oldData.price : null %> ">
-                            <% if (locals.errors && errors.price) { %>
-                                <div class="text-danger">
-                                    <%= errors.price.msg %>
-                                </div>
-                            <% } %>
+                            <input type="number" name="price" class="control <%= locals.errors && errors.price ? "is-invalid" : null %>"
+                            value="<%= locals.oldData ? oldData.price : null %>">
+                                <% if (locals.errors && errors.price) { %>
+                                    <div class="text-danger">
+                                        <%= errors.price.msg %>
+                                    </div>
+                                    <% } %>
                         </div>
 
                         <div class="form-control">
                             <label>Fecha y Hora de INICIO:</label>
                             <input type="datetime-local" name="dateStart" placeholder=""
-                                class="control <%= locals.errors && errors.dateStart ? "is-invalid" : null %>" 
-                                value="<%= locals.oldData ? oldData.dateStart : null %>">
-                            <% if (locals.errors && errors.dateStart) { %>
-                                <div class="text-danger">
-                                    <%= errors.dateStart.msg %>
-                                </div>
-                                <% } %>
+                                class="control <%= locals.errors && errors.dateStart ? "is-invalid" : null %>"
+                            value="<%= locals.oldData ? oldData.dateStart : null %>">
+                                <% if (locals.errors && errors.dateStart) { %>
+                                    <div class="text-danger">
+                                        <%= errors.dateStart.msg %>
+                                    </div>
+                                    <% } %>
                         </div>
                         <div class="form-control">
                             <label>Fecha y Hora de FINALIZACION:</label>
                             <input type="datetime-local" name="dateFinish" placeholder=""
                                 class="control <%= locals.errors && errors.dateFinish ? "is-invalid" : null %>"
-                                value="<%= locals.oldData ? oldData.dateFinish : null %>">
-                            <% if (locals.errors && errors.dateFinish) { %>
-                                <div class="text-danger">
-                                    <%= errors.dateFinish.msg %>
-                                </div>
-                            <% } %>
+                            value="<%= locals.oldData ? oldData.dateFinish : null %>">
+                                <% if (locals.errors && errors.dateFinish) { %>
+                                    <div class="text-danger">
+                                        <%= errors.dateFinish.msg %>
+                                    </div>
+                                    <% } %>
                         </div>
 
 
                         <div class="caja2">
                             <button type="submit" class="form-button">Cargar</button>
                             <button type="reset" class="form-button">Limpiar</button>
-                            <div 
-                                class="pregunta-de-registro">
+                            <div class="pregunta-de-registro">
                             </div>
 
 

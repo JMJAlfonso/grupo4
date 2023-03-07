@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require('path');
 const { validationResult } = require("express-validator");
-const { Console } = require("console");
-
+const Product = require("../services/Product");
 const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
 let products = JSON.parse(productsJson);
@@ -25,19 +24,20 @@ const productController = {
     },
 
     createProcess: function (req, res) {
-        //console.log(req.body);
+        console.log(req.body);
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0) {
+            console.log(resultValidation.mapped());
             return res.render("createProduct", {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
             });
         }
-        let userInDB = User.findByField("name", req.body.name);
+        let productInDB = Product.findByField("name", req.body.name);
 
 
-        if (userInDB) {
+        if (productInDB) {
             return res.render("createProduct", {
                 errors: {
                     email: {
@@ -61,7 +61,7 @@ const productController = {
 
         products.push(newProduct);
 
-        writeFileJson(products);
+        writeFileJson(products,null, ' ');
 
         res.redirect("/admin/listDetail");
 

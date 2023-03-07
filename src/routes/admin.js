@@ -1,11 +1,10 @@
 const express = require ('express');
 const router = express.Router();
+const path = require('path');
 const productController = require('../controllers/productController');
 const accessAuthorized = require('../middlewares/adminAccessAuthorized');
-//list es el nombre de la lista de productos
-router.get('/listDetail', productController.listDetail);
 
-//falta validar informacion de productos !!!
+// validar informacion de productos !!!
 const validation = require('../validation/productValidation');
 
 //configuracion de multer para almacenar imaganes
