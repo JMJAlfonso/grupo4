@@ -78,14 +78,6 @@
         "price": 6000,
         "dateStart": "17/02/2023, 07:00 AM",
         "dateFinish": "17/02/2023, 13:00 PM"
-    },
-    {
-        "id": 9,
-        "name": "asfasf",
-        "description": "                              asfasf  ",
-        "dificulty": "Dificultad Media",
-        "price": "124124",
-        "dateStart": "2023-03-06T12:57",
-        "dateFinish": "2023-03-06T13:57"
-    }
+    }    
+       
 ]

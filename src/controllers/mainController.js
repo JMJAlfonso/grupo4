@@ -22,7 +22,7 @@ const controller = {
         res.redirect('/');
     },    
     productsDetail: (req, res) => {
-        res.render('productDetail', { products: products });
+        res.render('productsDetail', { products: products });
     },
     productDetail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
