@@ -13,8 +13,8 @@ const validations = {
         }),        
         body("dificulty").notEmpty().withMessage("Tienes que completar la dificultad de la actividad"),
         body("price").notEmpty().withMessage("Tienes que escribir el precio").isInt().withMessage("debes escribir un valor numerico"),
-        // body("dateStart").isDate().withMessage("Tienes que completar el horario de inicio"),
-        // body("dateFinish").isDate({format:'YYY-MMM-DDD',delimiters:['/', '-'], strictMode:false }).withMessage("Tienes que completar el horario de finalizacion"),
+        body("dateStart").isISO8601().withMessage("Tienes que completar el horario de inicio"),
+        body("dateFinish").isISO8601().withMessage("Tienes que completar el horario de finalizacion"),
         body("image").custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = [".JPG",".jpg", ".png", ".gif"];
