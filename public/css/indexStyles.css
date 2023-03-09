@@ -48,6 +48,9 @@ div.input-form-index > input{
     font-size: 8px;
     height: 1.5em;
 }
+.button-form-index{
+  text-align: center;
+}
 .input-form-index,.button-form-index{
   margin-top: 5%;  
 }
