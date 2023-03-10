@@ -32,16 +32,5 @@
   "password": "$2a$10$nzIk1uponWl.fvrwnTvkN.sNn3Js81NcqIFoK1tMrKSU7/pM9gE5K",
   "category": "user",
   "avatar": "defaultImage.png"
- },
- {
-  "id": 4,
-  "name": "fabian",
-  "surname": "te apuesto a que registra",
-  "email": "fabilsoylomas@gmail.com",
-  "tel": " 1169696969",
-  "country": "argentina",
-  "password": "$2a$10$ZtgjyWkHNbVWUAD6nWZBL.J46YF3XFxiCKcjDhMg6UP/VTq/9qkd2",
-  "category": "user",
-  "avatar": "defaultImage.png"
  }
 ]
