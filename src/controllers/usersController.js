@@ -6,6 +6,7 @@ const User = require("../services/User");
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJson = fs.readFileSync(usersFilePath, "utf-8");
 const users = JSON.parse(usersJson);
+const db = require('../../database/models');
 
 const userController = {
     register: (req, res) => {
