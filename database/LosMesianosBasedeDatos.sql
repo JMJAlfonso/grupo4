@@ -47,8 +47,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`users` (
   `roles_id` INT NOT NULL,
   `countries_Id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_users_roles1_idx` (`roles_id` ASC) VISIBLE,
-  INDEX `fk_users_country1_idx` (`countries_Id` ASC) VISIBLE,
+  INDEX `fk_users_roles1_idx` (`roles_id` ASC),
+  INDEX `fk_users_country1_idx` (`countries_Id` ASC),
   CONSTRAINT `fk_users_roles1`
     FOREIGN KEY (`roles_id`)
     REFERENCES `mydb`.`roles` (`id`)
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`activities` (
   `datetime` DATETIME NULL,
   `dificulties_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_Activity_Dificulty1_idx` (`dificulties_id` ASC) VISIBLE,
+  INDEX `fk_Activity_Dificulty1_idx` (`dificulties_id` ASC),
   CONSTRAINT `fk_Activity_Dificulty1`
     FOREIGN KEY (`dificulties_id`)
     REFERENCES `mydb`.`dificulties` (`id`)
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`activity_images` (
   `name` TEXT NULL,
   `activities_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_Images_Activity1_idx` (`activities_id` ASC) VISIBLE,
+  INDEX `fk_Images_Activity1_idx` (`activities_id` ASC),
   CONSTRAINT `fk_Images_Activity1`
     FOREIGN KEY (`activities_id`)
     REFERENCES `mydb`.`activities` (`id`)
