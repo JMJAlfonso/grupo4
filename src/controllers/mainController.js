@@ -5,13 +5,19 @@ const products = JSON.parse(fs.readFileSync(productFilePath,'utf-8'));
 const messageFilePath = path.join(__dirname, '../data/messageUsers.json');
 let messagesUsersJSON = fs.readFileSync(messageFilePath,'utf-8');
 let messagesUsers = JSON.parse(messagesUsersJSON);
+const db = require('../../database/models');
 
-
-
+//Se deja listo index como ejemplo para trabajar con la base de datos
 
 const controller = {
-    index: (req, res) => {
+    index: /*async*/ (req, res) => {        
         res.render('index', {products: products});
+        /*try {  
+            const products = await db.Movies.findAll();   
+            res.render('index',{products})
+        } catch (error) {
+            res.send(error);
+        } */
     },
     indexForm: (req, res) => {
         let newMessage = req.body;        

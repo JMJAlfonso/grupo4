@@ -5,6 +5,7 @@ const Product = require("../services/Product");
 const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
 let products = JSON.parse(productsJson);
+const db = require('../../database/models');
 
 function writeFileJson(data) {
     const dataString = JSON.stringify(data);
