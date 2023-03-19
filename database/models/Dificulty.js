@@ -1,15 +1,16 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Dificulties';
+    let alias = 'Dificulty';
 
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
-            foreignKey: true
-        },
-        name: {
-            type: dataTypes.TEXT
-        }
+            primaryKey: true,
+          },
+          name: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          }
 }
 
     let config = {

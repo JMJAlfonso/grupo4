@@ -1,29 +1,30 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Activities';
+    let alias = 'Activity';
 
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
-            foreignKey: true
-        },
-        name: {
-            type: dataTypes.TEXT
-        },
-        description: {
-            type: dataTypes.TEXT
-        },
-        price: {
-            type: dataTypes.DECIMAL(11,2)
-        },
-        datetime: {
-            type: dataTypes.DATETIME
-        },
-        dificulties_id: {
-            type: dataTypes.INTEGER
-        }
+            primaryKey: true,
+          },
+          name: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          },
+          description: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          },
+          price: {
+            type: dataTypes.DECIMAL(11,2),
+            allowNull: false
+          },
+          datetime: {
+            type: dataTypes.DATE,
+            allowNull: false,
+            // defaultValue: dataTypes.literal('CURRENT_TIMESTAMP')
+          }
 }
-
     let config = {
         tableName: '',
         timestamps: false
@@ -31,12 +32,12 @@ module.exports = function (sequelize, dataTypes) {
 
     let Activity = sequelize.define(alias, cols, config);
 
-    Activity.associate = function (models) {
-        Activity.belongsTo(models.Dificulty, {
-            as: 'activities',
-            foreignKey: 'dificulties_id'
-        })
-    }
+    // Activity.associate = function (models) {
+    //     Activity.belongsTo(models.Dificulty, {
+    //         as: 'activities',
+    //         foreignKey: 'dificulties_id'
+    //     })
+    // }
 
     return Activity;
 }

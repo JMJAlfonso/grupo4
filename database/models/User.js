@@ -1,30 +1,28 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Users';
+    let alias = 'User';
 
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
-            foreignKey: true
-        },
-        name: {
-            type: dataTypes.TEXT
-        },
-        surname: {
-            type: dataTypes.TEXT
-        },
-        email: {
-            type: dataTypes.TEXT
-        },
-        password: {
-            type: dataTypes.TEXT
-        },
-        roles_id: {
-            type: dataTypes.INTEGER
-        },
-        countries_id: {
-            type: dataTypes.INTEGER
-        } 
+            primaryKey: true,
+          },
+          name: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          },
+          surname: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          },
+          email: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          },
+          password: {
+            type: dataTypes.TEXT,
+            allowNull: false
+          }
     };
 
     let config = {
@@ -34,19 +32,19 @@ module.exports = function (sequelize, dataTypes) {
 
     let User = sequelize.define(alias, cols, config);
 
-    User.associate = function (models) {
-        User.belongsTo(models.Roles, {
-            as: 'roles',
-            foreignKey: 'user_id'
-        })
-    },
+    // User.associate = function (models) {
+    //     User.belongsTo(models.Roles, {
+    //         as: 'roles',
+    //         foreignKey: 'user_id'
+    //     })
+    // },
 
-    User.associate = function (models) {
-        User.belongsTo(models.Countries, {
-            as: 'countries',
-            foreignKey: 'user_id'
-        })
-    }
+    // User.associate = function (models) {
+    //     User.belongsTo(models.Countries, {
+    //         as: 'countries',
+    //         foreignKey: 'user_id'
+    //     })
+    // }
 
     return User;
 }

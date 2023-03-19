@@ -1,17 +1,20 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Countries';
+    let alias = 'Country';
 
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
-            foreignKey: true
+            primaryKey: true,
+          },
+    
+          name: {
+          type: dataTypes.TEXT,
+          allowNull: false
         },
-        name: {
-            type: dataTypes.TEXT
-        },
-        code: {
-            type: dataTypes.CHAR(3)
+          code: {
+          type: dataTypes.CHAR,
+    
         }
 }
 

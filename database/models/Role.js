@@ -1,14 +1,14 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Roles';
+    let alias = 'Role';
 
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
-            foreignKey: true
+            primaryKey: true,
         },
         name: {
-            type: dataTypes.TEXT
+            type: dataTypes.STRING(45)
         }
 }
 
@@ -17,8 +17,8 @@ module.exports = function (sequelize, dataTypes) {
         timestamps: false
     };
 
-    let Rol = sequelize.define(alias, cols, config);
+    let Role = sequelize.define(alias, cols, config);
 
 
-    return Rol;
+    return Role;
 }
