@@ -9,22 +9,19 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('countries', {
+    await queryInterface.createTable('dificulties', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
-
       name: {
-      type: Sequelize.TEXT,
-      allowNull: false
-    },
-      code: {
-      type: Sequelize.CHAR,
+        type: Sequelize.TEXT,
+        allowNull: false
+      },
+    });
 
-    }
-})},
+  },
 
   async down(queryInterface, Sequelize) {
     /**
@@ -33,6 +30,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('countries')
+    await queryInterface.dropTable('dificulties');
   }
 };

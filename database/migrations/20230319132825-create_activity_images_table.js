@@ -1,7 +1,5 @@
 'use strict';
 
-const { text } = require('express');
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -11,7 +9,7 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('users', {
+    await queryInterface.createTable('activity_images', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -21,32 +19,14 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      surname: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
-      email: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
-      password: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
-      roles_id: {
+      activities_id: {
         type: Sequelize.INTEGER,
-        references:{
-          model: "roles",
+        references: {
+          model: "activities",
           key: "id"
         }
       },
-      countries_id: {
-        type: Sequelize.INTEGER,
-        references:{
-          model: "countries",
-          key: "id"
-        }
-      },
+
 
     });
   },
@@ -58,6 +38,8 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('users');
+    await queryInterface.dropTable('activity_images');
   }
 };
+
+

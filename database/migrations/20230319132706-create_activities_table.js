@@ -1,7 +1,5 @@
 'use strict';
 
-const { text } = require('express');
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -11,7 +9,7 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('users', {
+    await queryInterface.createTable('activities', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -21,34 +19,28 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      surname: {
+      description: {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      email: {
-        type: Sequelize.TEXT,
+      price: {
+        type: Sequelize.DECIMAL(11,2),
         allowNull: false
       },
-      password: {
-        type: Sequelize.TEXT,
-        allowNull: false
+      datetime: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       },
-      roles_id: {
+      dificulties_id: {
         type: Sequelize.INTEGER,
         references:{
-          model: "roles",
+          model: "dificulties",
           key: "id"
         }
       },
-      countries_id: {
-        type: Sequelize.INTEGER,
-        references:{
-          model: "countries",
-          key: "id"
-        }
-      },
-
     });
+
   },
 
   async down(queryInterface, Sequelize) {
@@ -58,6 +50,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('users');
+    await queryInterface.dropTable('activities')
   }
 };
