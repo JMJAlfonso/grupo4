@@ -22,7 +22,7 @@ module.exports = function (sequelize, dataTypes) {
           datetime: {
             type: dataTypes.DATE,
             allowNull: false,
-            // defaultValue: dataTypes.literal('CURRENT_TIMESTAMP')
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
           }
 }
     let config = {
