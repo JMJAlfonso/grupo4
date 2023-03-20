@@ -9,8 +9,7 @@ const userRouter = require('./src/routes/user');
 const session = require('express-session');
 
 
-app.use(express.urlencoded({extended:false})); //necesario para que las rutas de post,put envien la informacion
-app.use(express.json())
+
 
 //Configuración
 app.set('view engine', 'ejs');

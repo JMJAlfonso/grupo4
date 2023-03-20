@@ -11,7 +11,7 @@
                 <section class="actividades_detalladas">
                     <% products.forEach((product)=> { %>
 
-                        <article>
+                        <article class="article">
                             <div class="slider-image" src="/images/<%= product.image %>" alt="<%= product.name %>">
                             </div>
                             <p>Información de la actividad:</p>
@@ -38,10 +38,15 @@
                                     Hasta: <%=product.dateFinish%>
                                 </li>
                             </ul>
+                            <a href="/admin/products/<%=product.id%>/edit"><button>Editar producto</button></a>
+                            <a href="/admin/products/<%=product.id%>/delete"><button>Eliminar producto</button></a>
                         </article>
                         <br>
                         <% }) %>
+                        <div class="buttons">
+                            <a href="/admin/createProduct"><button>Crear nuevo producto</button></a>
                             <a href="/"><button>Volver al Home</button></a>
+                        </div>
                 </section>
             </main>
     </body>

@@ -27,12 +27,24 @@ const controller = {
         fs.writeFileSync(messageFilePath,messagesUsersJson);
         res.redirect('/');
     },    
-    productsDetail: (req, res) => {
+    productsDetail: /* async */ (req, res) => {
         res.render('productsDetail', { products: products });
+         /*try {  
+            const products = await db.Movies.findAll();   
+            res.render('index',{products})
+        } catch (error) {
+            res.send(error);
+        } */
     },
-    productDetail: (req, res) => {
+    productDetail: /* async */ (req, res) => {
         let product = products.find(product => product.id == req.params.id);
         res.render('productDetail', { product });
+        /*try {  
+            const product = await db.Movies.findByPK(req.params.id);   
+            res.render('index',{product})
+        } catch (error) {
+            res.send(error);
+        } */
     },      
     createProduct: (req, res) => {
         res.render('createProduct');

@@ -14,9 +14,15 @@ function writeFileJson(data) {
 
 const productController = {
 
-    listDetail: function (req, res) {
+    listDetail: /* async */ function (req, res) {
         //console.log(products);
         res.render('listDetail', { products: products });
+          /*try {  
+            const products = await db.Movies.findAll();   
+            res.render('index',{products})
+        } catch (error) {
+            res.send(error);
+        } */
     },
 
     createProduct: function (req, res) {
@@ -67,14 +73,16 @@ const productController = {
         res.redirect("/admin/listDetail");
 
     },
-    productDetail: function (req, res) {
+    productDetail: /* async */ function (req, res) {
         let product = products.find((product) => product.id == req.params.id);
         res.render('productDetail', { product });
-        /* if(product){
-             res.render('productDetail', { product });
-         }else{
-             res.send("error 404");
-         }*/
+         /*try {  
+            const product = await db.Movies.findByPK(req.params.id);   
+            res.render('index',{product})
+        } catch (error) {
+            res.send(error);
+        } */
+        
     },
     editProduct: function (req, res) {
         let productEdit = products.find((product) => product.id == req.params.id);
