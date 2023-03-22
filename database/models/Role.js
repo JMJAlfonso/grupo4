@@ -13,7 +13,7 @@ module.exports = function (sequelize, dataTypes) {
 }
 
     let config = {
-        tableName: '',
+        tableName: 'roles',
         timestamps: false
     };
 

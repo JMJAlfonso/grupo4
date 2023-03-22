@@ -26,25 +26,25 @@ module.exports = function (sequelize, dataTypes) {
     };
 
     let config = {
-        tableName: '',
+        tableName: 'users',
         timestamps: false
     };
 
     let User = sequelize.define(alias, cols, config);
 
-    // User.associate = function (models) {
-    //     User.belongsTo(models.Roles, {
-    //         as: 'roles',
-    //         foreignKey: 'user_id'
-    //     })
-    // },
+    User.associate = function (models) {
+        User.belongsTo(models.Roles, {
+            as: 'roles',
+            foreignKey: 'user_id'
+        })
+    },
 
-    // User.associate = function (models) {
-    //     User.belongsTo(models.Countries, {
-    //         as: 'countries',
-    //         foreignKey: 'user_id'
-    //     })
-    // }
+    User.associate = function (models) {
+        User.belongsTo(models.Country, {
+            as: 'countries',
+            foreignKey: 'user_id'
+        })
+    }
 
     return User;
 }

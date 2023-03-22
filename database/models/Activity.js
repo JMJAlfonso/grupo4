@@ -26,18 +26,18 @@ module.exports = function (sequelize, dataTypes) {
           }
 }
     let config = {
-        tableName: '',
+        tableName: 'activities',
         timestamps: false
     };
 
     let Activity = sequelize.define(alias, cols, config);
 
-    // Activity.associate = function (models) {
-    //     Activity.belongsTo(models.Dificulty, {
-    //         as: 'activities',
-    //         foreignKey: 'dificulties_id'
-    //     })
-    // }
+    Activity.associate = function (models) {
+        Activity.belongsTo(models.Dificulty, {
+            as: 'activities',
+            foreignKey: 'dificulties_id'
+        })
+    }
 
     return Activity;
 }

@@ -1,4 +1,5 @@
 //Módulos
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require ('path');
@@ -7,7 +8,7 @@ const mainRouter = require('./src/routes/main');
 const adminRouter = require('./src/routes/admin');
 const userRouter = require('./src/routes/user');
 const session = require('express-session');
-
+ 
 
 
 
@@ -29,9 +30,9 @@ app.use('/', mainRouter);
 app.use('/admin', adminRouter);
 app.use('/user',userRouter);
 
-
+const port = process.env.PORT || 3000 ;
 app.listen(3000, () => {
-    console.log('Servidor iniciado en http://localhost:3000');
+    console.log(`Servidor iniciado en http://localhost:${port}`);
 });
 
 
