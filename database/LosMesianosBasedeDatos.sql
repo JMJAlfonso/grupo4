@@ -18,7 +18,7 @@ USE `mydb` ;
 -- Table `mydb`.`roles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`roles` (
-  `id` INT NOT NULL,
+  `id` INT  AUTO_INCREMENT,
   `name` TEXT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -28,7 +28,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`countries`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`countries` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT  AUTO_INCREMENT,
   `name` TEXT NULL,
   `code` CHAR(3) NULL,
   PRIMARY KEY (`id`))
@@ -39,7 +39,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT  AUTO_INCREMENT,
   `name` TEXT NOT NULL,
   `surname` TEXT NOT NULL,
   `email` TEXT NULL,
@@ -66,7 +66,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`dificulties`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`dificulties` (
-  `id` INT NOT NULL,
+  `id` INT  AUTO_INCREMENT,
   `name` TEXT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -76,7 +76,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`activities`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`activities` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT  AUTO_INCREMENT,
   `name` TEXT NULL,
   `description` TEXT NULL,
   `price` DECIMAL(11,2) NOT NULL,
@@ -96,7 +96,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`activity_images`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`activity_images` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT  AUTO_INCREMENT,
   `name` TEXT NULL,
   `activities_id` INT NOT NULL,
   PRIMARY KEY (`id`),
