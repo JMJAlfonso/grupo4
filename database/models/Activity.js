@@ -28,7 +28,12 @@ module.exports = function (sequelize, dataTypes) {
       type: dataTypes.DATE,
       allowNull: false,
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-    }
+    },
+    dificulties_id:{
+      type:dataTypes.INTEGER,
+      foreignKey:true,
+      allowNull:false
+    },
   }
   let config = {
     tableName: 'activities',

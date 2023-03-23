@@ -31,7 +31,7 @@ const productController = {
     },
 
     createProcess: async function (req, res) {
-        console.log(req.body);
+        
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
@@ -54,16 +54,21 @@ const productController = {
             //         oldData: req.body
             //     });
             // }
-            const newProduct = {
-                name: req.body.name,
-                description: req.body.description,
-                //image: req.body.image,
-                dificulty: req.body.dificulty,
-                price: req.body.price,
-                dateStart: req.body.dateStart,
-                dateFinish: req.body.dateFinish,
-            };
-            await db.Activity.create(newProduct);
+            const newDificulty = {
+                name:req.body.dificulty
+            }
+            const newD = await db.Dificulty.create(newDificulty);
+            console.log(newD.name);
+            // const newProduct = {
+            //     name: req.body.name,
+            //     description: req.body.description,
+            //     //image: req.body.image,                
+            //     price: req.body.price,
+            //     dateStart: req.body.dateStart,
+            //     dateFinish: req.body.dateFinish,
+            //     dificulties_id: newD.id,
+            // };
+            // await db.Activity.create(newProduct);
             return res.redirect("/admin/listDetail");
         } catch (error) {
             res.send(error);
