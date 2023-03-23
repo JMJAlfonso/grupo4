@@ -59,16 +59,16 @@ const productController = {
             }
             const newD = await db.Dificulty.create(newDificulty);
             console.log(newD.name);
-            // const newProduct = {
-            //     name: req.body.name,
-            //     description: req.body.description,
-            //     //image: req.body.image,                
-            //     price: req.body.price,
-            //     dateStart: req.body.dateStart,
-            //     dateFinish: req.body.dateFinish,
-            //     dificulties_id: newD.id,
-            // };
-            // await db.Activity.create(newProduct);
+            const newProduct = {
+                name: req.body.name,
+                description: req.body.description,
+                //image: req.body.image,                
+                price: req.body.price,
+                dateStart: req.body.dateStart,
+                dateFinish: req.body.dateFinish,
+                dificulties_id: newD.id,
+            };
+            await db.Activity.create(newProduct);
             return res.redirect("/admin/listDetail");
         } catch (error) {
             res.send(error);
