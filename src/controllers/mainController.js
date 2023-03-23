@@ -13,7 +13,7 @@ const controller = {
     index: /*async*/ (req, res) => {        
         res.render('index', {products: products});
         /*try {  
-            const products = await db.Movies.findAll();   
+            const products = await db.mydb.findAll();   
             res.render('index',{products})
         } catch (error) {
             res.send(error);
@@ -30,7 +30,7 @@ const controller = {
     productsDetail: /* async */ (req, res) => {
         res.render('productsDetail', { products: products });
          /*try {  
-            const products = await db.Movies.findAll();   
+            const products = await db.mydb.findAll();   
             res.render('index',{products})
         } catch (error) {
             res.send(error);
@@ -40,12 +40,12 @@ const controller = {
         let product = products.find(product => product.id == req.params.id);
         res.render('productDetail', { product });
         /*try {  
-            const product = await db.Movies.findByPK(req.params.id);   
+            const product = await db.mydb.findByPK(req.params.id);   
             res.render('index',{product})
         } catch (error) {
             res.send(error);
         } */
-    },      
+    },    
     createProduct: (req, res) => {
         res.render('createProduct');
     },
