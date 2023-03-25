@@ -61,14 +61,18 @@ const productController = {
             console.log(newD.name);
             const newProduct = {
                 name: req.body.name,
-                description: req.body.description,
-                //image: req.body.image,                
+                description: req.body.description,                
                 price: req.body.price,
                 dateStart: req.body.dateStart,
                 dateFinish: req.body.dateFinish,
                 dificulties_id: newD.id,
             };
-            await db.Activity.create(newProduct);
+            const newActivity = await db.Activity.create(newProduct);
+            await db.Activity_image.create({
+                name:req.file.filename,
+                activities_id:newActivity.id
+            }
+            )
             return res.redirect("/admin/listDetail");
         } catch (error) {
             res.send(error);
