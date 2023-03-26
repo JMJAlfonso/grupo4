@@ -10,7 +10,7 @@ const db = require('../../database/models');
 
 const userController = {
     register: (req, res) => {
-        res.render('register');
+        res.render(' ');
     },
     registerProcess: (req, res) => {
 
@@ -25,8 +25,8 @@ const userController = {
         }
 
 
+        //let userInDB = db.User.findOne({ where: { email: 'req.body.email;' } });
         let userInDB = User.findByField("email", req.body.email);
-
 
         if (userInDB) {
             return res.render("register", {
@@ -38,18 +38,31 @@ const userController = {
                 oldData: req.body
             });
         }
-        let userToCreate = {
-            id: User.generateId(),
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            category: 'user',
-            avatar: User.storeImage(req.file)
-        }
-        delete userToCreate.repeat_password;
-        User.create(userToCreate);
-        return res.redirect("/user/login");
-    },
 
+    
+    let userToCreate = {
+        id: User.generateId(),
+        ...req.body,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        category: 'user',
+        avatar: User.storeImage(req.file)
+    }
+    delete userToCreate.repeat_password;
+    User.create(userToCreate);
+    return res.redirect("/user/login");
+},
+//     let userRole = db.Role.create({name: 'user'})
+    //     let userToCreate = {
+    //         id: User.generateId(),
+    //         ...req.body,
+    //         password: bcryptjs.hashSync(req.body.password, 10),
+    //         roles_id: userRole.id,
+    //         avatar: User.storeImage(req.file)
+    //     }
+    //     delete userToCreate.repeat_password;
+    //     User.create(userToCreate);
+    //     return res.redirect("/user/login");
+    // },
     login: (req, res) => {
         res.render('login');
     },
