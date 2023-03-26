@@ -107,7 +107,7 @@ const productController = {
         //let productEdit = products.find((product) => product.id == req.params.id);
         try {
             const productToEdit = await db.Activity.findByPK(req.params.id);
-            res.render('editProduct', { product: productEdit })
+            res.render('editProduct', { product: productToEdit })
         } catch (error) {
             res.send(error);
         }
