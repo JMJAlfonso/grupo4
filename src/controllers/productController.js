@@ -4,8 +4,9 @@ const { validationResult } = require("express-validator");
 const Product = require("../services/Product");
 const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
-let products = JSON.parse(productsJson);
+//let products = JSON.parse(productsJson);
 const db = require('../../database/models');
+
 
 function writeFileJson(data) {
     const dataString = JSON.stringify(data);
@@ -14,15 +15,15 @@ function writeFileJson(data) {
 
 const productController = {
 
-    listDetail: /* async */ function (req, res) {
+    listDetail: async function (req, res) {
         //console.log(products);
-        res.render('listDetail', { products: products });
-        /*try {  
-          const products = await db.mydb.findAll();   
-          res.render('index',{products})
-      } catch (error) {
-          res.send(error);
-      } */
+        //res.render('listDetail', { products: products });
+        try {
+            const products = await db.Activity.findAll();
+            res.render('listDetail', { products })
+        } catch (error) {
+            res.send(error);
+        }
     },
 
     createProduct: function (req, res) {
@@ -31,7 +32,7 @@ const productController = {
     },
 
     createProcess: async function (req, res) {
-        
+
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
@@ -42,37 +43,40 @@ const productController = {
             });
         }
         try {
-            //const productInDB = await db.Activity.findOne({ where: { name: 'req.body.name' } });
+            const productInDB = await db.Activity.findOne({ where: { name: 'req.body.name' } });
 
-            // if (productInDB) {
-            //     return res.render("createProduct", {
-            //         errors: {
-            //             email: {
-            //                 msg: "este producto ya esta registrado"
-            //             }
-            //         },
-            //         oldData: req.body
-            //     });
-            // }
-            const newDificulty = {
-                name:req.body.dificulty
+            if (productInDB) {
+                return res.render("createProduct", {
+                    errors: {
+                        email: {
+                            msg: "este producto ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                });
             }
+            const newDificulty = {
+                name: req.body.dificulty
+            }
+
             const newD = await db.Dificulty.create(newDificulty);
-            console.log(newD.name);
+
             const newProduct = {
                 name: req.body.name,
-                description: req.body.description,                
+                description: req.body.description,
                 price: req.body.price,
                 dateStart: req.body.dateStart,
                 dateFinish: req.body.dateFinish,
                 dificulties_id: newD.id,
             };
-            const newActivity = await db.Activity.create(newProduct);
-            await db.Activity_image.create({
-                name:req.file.filename,
-                activities_id:newActivity.id
+            const newProd = await db.Activity.create(newProduct);
+
+            const newImage = {
+                name: upload.single('image'),
+                activities_id: newProd.id
             }
-            )
+            console.log(req.body.image);
+            const newImg = await db.Activity_image.create(newImage);
             return res.redirect("/admin/listDetail");
         } catch (error) {
             res.send(error);
@@ -85,43 +89,60 @@ const productController = {
 
         // writeFileJson(products,null, ' ');
 
-        
+
 
     },
-    productDetail: /* async */ function (req, res) {
-        let product = products.find((product) => product.id == req.params.id);
-        res.render('productDetail', { product });
-        /*try {  
-           const product = await db.mydb.findByPK(req.params.id);   
-           res.render('index',{product})
-       } catch (error) {
-           res.send(error);
-       } */
+    productDetail: async function (req, res) {
+        //let product = products.find((product) => product.id == req.params.id);
+        //res.render('productDetail', { product });
+        try {
+            const product = await db.Activity.findByPK(req.params.id);
+            res.render('productDetail', { product })
+        } catch (error) {
+            res.send(error);
+        }
 
     },
-    editProduct: function (req, res) {
-        let productEdit = products.find((product) => product.id == req.params.id);
+    editProduct: async function (req, res) {
+        //let productEdit = products.find((product) => product.id == req.params.id);
+        try {
+            const productToEdit = await db.Activity.findByPK(req.params.id);
+            res.render('editProduct', { product: productEdit })
+        } catch (error) {
+            res.send(error);
+        }
 
-        res.render('editProduct', { product: productEdit });
+        //res.render('editProduct', { product: productEdit });
     },
-    update: /* async */ function (req, res) {
-        let indexToEdit;
-        let productToEdit = products.find((product, index) => {
-            if (product.id == req.params.id) {
-                indexToEdit = index;
-                return true;
-            } else {
-                return false;
-            }
-        });
-        /*try {  
-        const productToEdit = await db.mydb.findByPK(req.params.id);   
-        res.render('index',{product})
-    } catch (error) {
-        res.send(error);
-    } */
+    update: async function (req, res) {
+        try {
+            const productToEdit = await db.Activity.findByPK(req.params.id);
+            productToEdit = await db.Activity.update({
+                ...productToEdit,
+                name: req.body.name ? req.body.name : productToEdit.name,
+                description: req.body.description ? req.body.description : productToEdit.description,
+                image: req.body.image ? req.body.image : productToEdit.image,
+                dificulty: req.body.dificulty ? req.body.dificulty : productToEdit.dificulty,
+                price: req.body.price ? req.body.price : productToEdit.price,
+                dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
+                dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,
+            }, { where: { id: 'req.params.id' } });
+            return res.redirect('/');
+        } catch (error) {
+            res.send(error);
+        }
 
-        // const productToEdit =  db.mydb.update({
+        // let indexToEdit;
+        // let productToEdit = products.find((product, index) => {
+        //     if (product.id == req.params.id) {
+        //         indexToEdit = index;
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // });
+
+        // productToEdit = {
         //     ...productToEdit,
         //     name: req.body.name ? req.body.name : productToEdit.name,
         //     description: req.body.description ? req.body.description : productToEdit.description,
@@ -130,37 +151,34 @@ const productController = {
         //     price: req.body.price ? req.body.price : productToEdit.price,
         //     dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
         //     dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,
-        // },{where: { id: 'req.params.id'}});
-
-        productToEdit = {
-            ...productToEdit,
-            name: req.body.name ? req.body.name : productToEdit.name,
-            description: req.body.description ? req.body.description : productToEdit.description,
-            image: req.body.image ? req.body.image : productToEdit.image,
-            dificulty: req.body.dificulty ? req.body.dificulty : productToEdit.dificulty,
-            price: req.body.price ? req.body.price : productToEdit.price,
-            dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
-            dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,
+        // }
+        // products[indexToEdit] = productToEdit;
+        // console.log(products[indexToEdit])
+        // fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '));
+        // res.redirect('/');
+    },
+    delete: async function (req, res) {
+        try {
+            const product = await db.Activity.findByPK(req.params.id);
+            res.render('deleteProduct', { product })
+        } catch (error) {
+            res.send(error);
         }
-        products[indexToEdit] = productToEdit;
-        console.log(products[indexToEdit])
-        fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '));
-        res.redirect('/');
+        // let productEdit = products.find((product) => product.id == req.params.id);
+        // res.render('deleteProduct', { product: productEdit });
     },
-    deleteProduct: function (req, res) {
-        let productEdit = products.find((product) => product.id == req.params.id);
-        res.render('deleteProduct', { product: productEdit });
-    },
-    delete: /* async */ function (req, res) {
-        const productsFiltered = products.filter((product) => product.id != req.params.id)
-        fs.writeFileSync(productFilePath, JSON.stringify(productsFiltered, null, ' '));
-        /*try {  
-        const productToEdit = await db.mydb.findByPK(req.params.id);   
-        res.render('index',{product})
-    } catch (error) {
-        res.send(error);
-    } */
-        res.redirect('/');
+    destroy: async function (req, res) {
+        try {
+            await db.Activity_image.destroy({ where: { activities_id: 'req.params.id' } });
+
+            res.redirect('/admin/listDetail')
+        } catch (error) {
+            res.send(error);
+        }
+
+        //  const productsFiltered = products.filter((product) => product.id != req.params.id)
+        // fs.writeFileSync(productFilePath, JSON.stringify(productsFiltered, null, ' '));
+        // res.redirect('/');
     },
 }
 

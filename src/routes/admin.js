@@ -25,8 +25,8 @@ router.post('/createProcess',accessAuthorized,upload.single('image'),validation.
 router.get('/products/:id',accessAuthorized,productController.productDetail);
 router.get('/products/:id/edit',accessAuthorized,productController.editProduct);
 router.put('/products/:id',accessAuthorized,productController.update);
-router.get('/products/:id/delete',accessAuthorized,productController.deleteProduct);
-router.delete('/products/:id',accessAuthorized,productController.delete)
+router.get('/products/:id/delete',accessAuthorized,productController.delete);
+router.delete('/products/:id',accessAuthorized,productController.destroy)
 
 
 

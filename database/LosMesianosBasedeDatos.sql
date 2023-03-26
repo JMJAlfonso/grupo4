@@ -52,12 +52,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`users` (
   CONSTRAINT `fk_users_roles1`
     FOREIGN KEY (`roles_id`)
     REFERENCES `mydb`.`roles` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE  CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_users_country1`
     FOREIGN KEY (`countries_Id`)
     REFERENCES `mydb`.`countries` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE  CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -86,9 +86,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`activities` (
   PRIMARY KEY (`id`),
   INDEX `fk_Activity_Dificulty1_idx` (`dificulties_id` ASC),
   CONSTRAINT `fk_Activity_Dificulty1`
-    FOREIGN KEY (`dificulties_id`)
+    FOREIGN KEY (`dificulties_id`) 
     REFERENCES `mydb`.`dificulties` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`activity_images` (
   CONSTRAINT `fk_Images_Activity1`
     FOREIGN KEY (`activities_id`)
     REFERENCES `mydb`.`activities` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
