@@ -22,6 +22,10 @@ module.exports = function (sequelize, dataTypes) {
           password: {
             type: dataTypes.TEXT,
             allowNull: false
+          },
+          avatar: {
+            type: dataTypes.TEXT,
+            allowNull: false
           }
     };
 

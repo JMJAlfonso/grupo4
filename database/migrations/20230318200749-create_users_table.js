@@ -33,6 +33,10 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
+      avatar: {
+        type: Sequelize.TEXT,
+        allowNull: false
+      },
       roles_id: {
         type: Sequelize.INTEGER,
         references:{

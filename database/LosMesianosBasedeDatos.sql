@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`users` (
   `surname` TEXT NOT NULL,
   `email` TEXT NULL,
   `password` TEXT NULL,
+  `avatar` text NOT NULL,
   `roles_id` INT NOT NULL,
   `countries_Id` INT NOT NULL,
   PRIMARY KEY (`id`),

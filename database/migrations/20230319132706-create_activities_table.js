@@ -27,7 +27,12 @@ module.exports = {
         type: Sequelize.DECIMAL(11,2),
         allowNull: false
       },
-      datetime: {
+      dateStart: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
+      dateFinish: {
         type: Sequelize.DATE,
         allowNull: false,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
