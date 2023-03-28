@@ -9,7 +9,7 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('activity_images', {
+    await queryInterface.createTable('activities', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -19,16 +19,33 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      activities_id: {
+      description: {
+        type: Sequelize.TEXT,
+        allowNull: false
+      },
+      price: {
+        type: Sequelize.DECIMAL(11,2),
+        allowNull: false
+      },
+      dateStart: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
+      dateFinish: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
+      dificulties_id: {
         type: Sequelize.INTEGER,
-        references: {
-          model: "activities",
+        references:{
+          model: "dificulties",
           key: "id"
         }
       },
-
-
     });
+
   },
 
   async down(queryInterface, Sequelize) {
@@ -38,8 +55,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('activity_images');
+    await queryInterface.dropTable('activities')
   }
 };
-
-

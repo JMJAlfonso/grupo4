@@ -1,7 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const db = require('../../database/models');
 
 const Product = {
+    activity_images: function(id){
+       const images =  db.activity_images.findAll({ where: { activities_id: id } })
+        return images;
+    },
     filename: function(){
         productFilePath = path.join(__dirname, '../data/products.json')
         return productFilePath;

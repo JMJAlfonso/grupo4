@@ -1,28 +1,33 @@
-<%- include ('partials/head', {style: 'indexStyles', title: 'Inicio'}) %> 
-</head>
-<body>
-    <%- include ('partials/header') %>
-    <main>
-        <section class="who-we-are">
-            <div class="text">
-                <h1 class="resumeText">Excursiones y actividades en Villa Pehuenia y alrededores</h1>                
-            </div>           
-            <form action="/userMessage" autocomplete="on" id="form-index" method="POST">
-                <div>
-                    <h3>¡Consultanos! Te ayudamos a armar tu viaje</h3>
-                </div>
-                <div class="input-form-index">
-                    <input id="txfName" type="text" name="name" placeholder="Tu nombre" required minlength="4" style="width: 100%;" required oninvalid="" >
-                </div>
-                <span class="feedback" ></span>
-                <div class="input-form-index">
-                    <input id="txfEmail" type="email" name="email" placeholder="Tu correo electronico" style="width: 100%;" required >
-                </div>
-                <div class="input-form-index">
-                    <input id="txfWhats" type="tel" name="whatsapp" placeholder="Whatsapp" style="width: 100%;" required >
-                </div>
-                <div class="input-form-index">
-                    <textarea id="txfMess" type="text" name="message" placeholder="Tu mensaje" required rows="5" style="width: 100%;"></textarea required>
+<%- include ('partials/head', {style: 'indexStyles' , title: 'Inicio' }) %>
+    </head>
+
+    <body>
+        <%- include ('partials/header') %>
+            <main>
+                <section class="who-we-are">
+                    <div class="text">
+                        <h1 class="resumeText">Excursiones y actividades en Villa Pehuenia y alrededores</h1>
+                    </div>
+                    <form action="/userMessage" autocomplete="on" id="form-index" method="POST">
+                        <div>
+                            <h3>¡Consultanos! Te ayudamos a armar tu viaje</h3>
+                        </div>
+                        <div class="input-form-index">
+                            <input id="txfName" type="text" name="name" placeholder="Tu nombre" required minlength="4"
+                                style="width: 100%;" required oninvalid="">
+                        </div>
+                        <span class="feedback"></span>
+                        <div class="input-form-index">
+                            <input id="txfEmail" type="email" name="email" placeholder="Tu correo electronico"
+                                style="width: 100%;" required>
+                        </div>
+                        <div class="input-form-index">
+                            <input id="txfWhats" type="tel" name="whatsapp" placeholder="Whatsapp" style="width: 100%;"
+                                required>
+                        </div>
+                        <div class="input-form-index">
+                            <textarea id="txfMess" type="text" name="message" placeholder="Tu mensaje" required rows="5"
+                                style="width: 100%;"></textarea required>
                 </div>                     
                 <span class="feedback" ></span>
                 <div class="button-form-index">                    
@@ -37,9 +42,13 @@
             </div>
         </section>        
         <section class="articles"> 
-            <% products.forEach((product) => { %>        
-            <article class="article" >                
-                <div class="product-div-image" ><img class="product-image" src="../images/products/<%= product.image %>"></div>                    
+            <% products.forEach((product,index) => { %>                      
+            <article class="article" > 
+                <% images.forEach((image) => { %>
+                   <% if (image.activities_id == product.id) %>
+                        <% const productImage = image.name;  %>
+                <% }) %>                 
+                <div class="product-div-image" ><img class="product-image" src="/images/products/<%=productImage %>"></div>                    
                 <div class="main-article">
                     <h3> <%= product.name %></h3>                    
                     <div class="description-container">
