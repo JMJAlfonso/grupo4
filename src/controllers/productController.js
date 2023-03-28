@@ -96,7 +96,7 @@ const productController = {
         //let product = products.find((product) => product.id == req.params.id);
         //res.render('productDetail', { product });
         try {
-            const product = await db.Activity.findByPK(req.params.id);
+            const product = await db.Activity.findByPk(req.params.id);
             res.render('productDetail', { product })
         } catch (error) {
             res.send(error);
@@ -106,7 +106,7 @@ const productController = {
     editProduct: async function (req, res) {
         //let productEdit = products.find((product) => product.id == req.params.id);
         try {
-            const productToEdit = await db.Activity.findByPK(req.params.id);
+            const productToEdit = await db.Activity.findByPk(req.params.id);
             res.render('editProduct', { product: productToEdit })
         } catch (error) {
             res.send(error);
@@ -116,7 +116,7 @@ const productController = {
     },
     update: async function (req, res) {
         try {
-            const productToEdit = await db.Activity.findByPK(req.params.id);
+            const productToEdit = await db.Activity.findByPk(req.params.id);
             productToEdit = await db.Activity.update({
                 ...productToEdit,
                 name: req.body.name ? req.body.name : productToEdit.name,
@@ -159,7 +159,7 @@ const productController = {
     },
     delete: async function (req, res) {
         try {
-            const product = await db.Activity.findByPK(req.params.id);
+            const product = await db.Activity.findByPk(req.params.id);
             res.render('deleteProduct', { product })
         } catch (error) {
             res.send(error);
@@ -169,7 +169,7 @@ const productController = {
     },
     destroy: async function (req, res) {
         try {
-            await db.Activity_image.destroy({ where: { activities_id: 'req.params.id' } });
+            await db.Activity.destroy({ where: { id: req.params.id } });
 
             res.redirect('/admin/listDetail')
         } catch (error) {
