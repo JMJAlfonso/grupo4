@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Dificulty';
+    let alias = 'Dificulties';
 
     let cols = {
         id: {
@@ -19,6 +19,13 @@ module.exports = function (sequelize, dataTypes) {
     };
 
     let Dificulty = sequelize.define(alias, cols, config);
+
+    Dificulty.associate = function (models) {        
+        Dificulty.hasMany(models.Activities,{
+          as: 'activities',
+          foreignKey:'dificulties_id'
+        });
+      }
 
     return Dificulty;
 }

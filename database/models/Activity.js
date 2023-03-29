@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-  let alias = 'Activity';
+  let alias = 'Activities';
 
   let cols = {
     id: {
@@ -43,10 +43,14 @@ module.exports = function (sequelize, dataTypes) {
   let Activity = sequelize.define(alias, cols, config);
 
   Activity.associate = function (models) {
-    Activity.belongsTo(models.Dificulty, {
-      as: 'activities',
+    Activity.belongsTo(models.Dificulties, {
+      as: 'dificulties',
       foreignKey: 'dificulties_id'
-    })
+    }),
+    Activity.hasMany(models.Activity_images,{
+      as: 'activity_images',
+      foreignKey:'activities_id'
+    });
   }
 
   return Activity;

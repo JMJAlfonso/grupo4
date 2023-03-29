@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'User';
+    let alias = 'Users';
 
     let cols = {
         id: {
@@ -40,14 +40,11 @@ module.exports = function (sequelize, dataTypes) {
         User.belongsTo(models.Roles, {
             as: 'roles',
             foreignKey: 'user_id'
-        })
-    },
-
-    User.associate = function (models) {
-        User.belongsTo(models.Country, {
-            as: 'countries',
-            foreignKey: 'user_id'
-        })
+        }),
+        User.belongsTo(models.Countries, {
+          as: 'countries',
+          foreignKey: 'countries_id'
+      })
     }
 
     return User;

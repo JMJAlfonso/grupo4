@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Activity_image';
+    let alias = 'Activity_images';
 
     let cols = {
         id: {
@@ -28,11 +28,10 @@ module.exports = function (sequelize, dataTypes) {
     let Activity_image = sequelize.define(alias, cols, config);
 
     Activity_image.associate = function (models) {
-        Activity_image.belongsTo(models.Activity, {
-          as: 'activity',
-          foreignKey: 'Activities_id'
+        Activity_image.belongsTo(models.Activities, {
+          as: 'activities',
+          foreignKey: 'activities_id'
         })
     }
-
     return Activity_image;
 }

@@ -43,12 +43,8 @@
         </section>        
         <section class="articles"> 
             <% products.forEach((product,index) => { %>                      
-            <article class="article" > 
-                <% images.forEach((image) => { %>
-                   <% if (image.activities_id == product.id) %>
-                        <% const productImage = image.name;  %>
-                <% }) %>                 
-                <div class="product-div-image" ><img class="product-image" src="/images/products/<%=productImage %>"></div>                    
+            <article class="article" >                                                    
+                <div class="product-div-image" ><img class="product-image" src="/images/products/<%=product.image %>"></div>                    
                 <div class="main-article">
                     <h3> <%= product.name %></h3>                    
                     <div class="description-container">

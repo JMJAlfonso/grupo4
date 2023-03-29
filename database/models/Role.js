@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Role';
+    let alias = 'Roles';
 
     let cols = {
         id: {
@@ -18,6 +18,13 @@ module.exports = function (sequelize, dataTypes) {
     };
 
     let Role = sequelize.define(alias, cols, config);
+
+    Role.associate = function (models) {        
+        Role.belongsTo(models.Users, {
+          as: 'users',
+          foreignKey: 'roles_id'
+      })
+    }
 
 
     return Role;

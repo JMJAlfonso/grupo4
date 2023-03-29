@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'Country';
+    let alias = 'Countries';
 
     let cols = {
         id: {
@@ -24,6 +24,13 @@ module.exports = function (sequelize, dataTypes) {
     };
 
     let Country = sequelize.define(alias, cols, config);
+
+    Country.associate = function (models) {      
+      Country.hasMany(models.Users,{
+        as: 'users',
+        foreignKey:'activities_id'
+      });
+    }
 
     return Country;
 }

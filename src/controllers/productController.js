@@ -19,7 +19,7 @@ const productController = {
         //console.log(products);
         //res.render('listDetail', { products: products });
         try {
-            const products = await db.Activity.findAll();
+            const products = await db.Activity.findAll();            
             res.render('listDetail', { products })
         } catch (error) {
             res.send(error);
