@@ -10,26 +10,27 @@ module.exports = {
     {
       name: 'Dificultad Media',
     },
+    {
+      name: 'Dificultad Extrema'
+    },
+    {
+      name: 'Dificultad Extrema'
+    },
+    {
+      name: 'Dificultad Alta'
+    },
+    {
+      name: 'Dificultad Baja'
+    },
+    {
+      name: 'Dificultad Media'
+    },
+    {
+      name: 'Dificultad Alta'
+    }
     ],
-      {
-        name: 'Dificultad Extrema'
-      },
-      {
-        name: 'Dificultad Extrema'
-      },
-      {
-        name: 'Dificultad Alta'
-      },
-      {
-        name: 'Dificultad Baja'
-      },
-      {
-        name: 'Dificultad Media'
-      },
-      {
-        name: 'Dificultad Alta'
-      }
-    );
+
+      {});
 
   },
 

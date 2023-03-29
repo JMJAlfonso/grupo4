@@ -29,7 +29,7 @@ module.exports = function (sequelize, dataTypes) {
 
     Activity_image.associate = function (models) {
         Activity_image.belongsTo(models.Activities, {
-          as: 'activities',
+          as: 'activity',
           foreignKey: 'activities_id'
         })
     }
