@@ -11,7 +11,9 @@ module.exports = {
         surname: 'vamosquesepuede',
         email: 'jacky@conectate.com',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
-        avatar: 'messi.jpg'
+        avatar: 'messi.jpg',
+        roles_id:1,
+        countries_id:1
       }
     ], {});
 

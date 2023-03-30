@@ -7,27 +7,35 @@ module.exports = {
 
     await queryInterface.bulkInsert('activity_images', [{
       name: 'Trekking.JPG',
+      activities_id: 1,
     },
     {
       name: 'kayac.JPG',
+      activities_id: 2,
     },
     {
-      name: 'paracaidismo.JPG'
+      name: 'paracaidismo.JPG',
+      activities_id: 3,
     },
     {
-      name: 'Parapente.JPG'
+      name: 'Parapente.JPG',
+      activities_id: 4,
     },
     {
-      name: 'Rappel.JPG'
+      name: 'Rappel.JPG',
+      activities_id: 5,
     },
     {
-      name: 'cabalgata.JPG'
+      name: 'cabalgata.JPG',
+      activities_id: 6,
     },
     {
-      name: 'ciclismo.JPG'
+      name: 'ciclismo.JPG',
+      activities_id: 7,
     },
     {
-      name: 'Espeleismo.JPG'
+      name: 'Espeleismo.JPG',
+      activities_id: 8,
     }], {});
 
   },
