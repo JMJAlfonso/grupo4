@@ -124,7 +124,7 @@ const productController = {
     },
     delete: async function (req, res) {
         try {
-            const product = await db.Activity.findByPk(req.params.id);
+            const product = await db.Activities.findByPk(req.params.id);
             res.render('deleteProduct', { product })
         } catch (error) {
             res.send(error);
@@ -133,7 +133,7 @@ const productController = {
     },
     destroy: async function (req, res) {
         try {
-            await db.Activity.destroy({ where: { id: req.params.id } });
+            await db.Activities.destroy({ where: { id: req.params.id } });
 
             res.redirect('/admin/listDetail')
         } catch (error) {

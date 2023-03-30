@@ -28,24 +28,21 @@ const controller = {
         fs.writeFileSync(messageFilePath, messagesUsersJson);
         res.redirect('/');
     },
-    productsDetail: /* async */ (req, res) => {
-        res.render('productsDetail', { products: products });
-        /*try {  
-           const products = await db.mydb.findAll();   
+    productsDetail:  async  (req, res) => {       
+        try {  
+           const products = await db.Activities.findAll();   
            res.render('index',{products})
        } catch (error) {
            res.send(error);
-       } */
+       } 
     },
-    productDetail: /* async */ (req, res) => {
-        let product = products.find(product => product.id == req.params.id);
-        res.render('productDetail', { product });
-        /*try {  
-            const product = await db.mydb.findByPK(req.params.id);   
+    productDetail:  async  (req, res) => {        
+        try {  
+            const product = await db.Activities.findByPK(req.params.id);   
             res.render('index',{product})
         } catch (error) {
             res.send(error);
-        } */
+        } 
     },
     createProduct: (req, res) => {
         res.render('createProduct');

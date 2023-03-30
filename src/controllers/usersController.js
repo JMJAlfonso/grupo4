@@ -25,7 +25,7 @@ const userController = {
         }
 
 
-        //let userInDB = db.User.findOne({ where: { email: 'req.body.email;' } });
+        //let userInDB = db.Users.findOne({ where: { email: 'req.body.email;' } });
         let userInDB = User.findByField("email", req.body.email);
 
         if (userInDB) {
@@ -51,7 +51,7 @@ const userController = {
     User.create(userToCreate);
     return res.redirect("/user/login");
 },
-//     let userRole = db.Role.create({name: 'user'})
+//     let userRole = db.Roles.create({name: 'user'})
     //     let userToCreate = {
     //         id: User.generateId(),
     //         ...req.body,
