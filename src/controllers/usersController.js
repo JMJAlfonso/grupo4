@@ -10,7 +10,7 @@ const db = require('../../database/models');
 
 const userController = {
     register: (req, res) => {
-        res.render(' ');
+        res.render('register');
     },
     registerProcess: (req, res) => {
 
