@@ -15,9 +15,9 @@ function writeFileJson(data) {
 
 const productController = {
 
-    listDetail: async function (req, res) {       
+    listDetail: async function (req, res) {
         try {
-            const products = await db.Activities.findAll({include:'dificulties'});                                  
+            const products = await db.Activities.findAll({ include: 'dificulties' });
             res.render('listDetail', { products })
         } catch (error) {
             res.send(error);
@@ -82,7 +82,7 @@ const productController = {
 
     },
     productDetail: async function (req, res) {
-       
+
         try {
             const product = await db.Activities.findByPk(req.params.id);
             res.render('productDetail', { product })
@@ -92,7 +92,7 @@ const productController = {
 
     },
     editProduct: async function (req, res) {
-        
+
         try {
             const productToEdit = await db.Activities.findByPk(req.params.id);
             res.render('editProduct', { product: productToEdit })
@@ -100,7 +100,7 @@ const productController = {
             res.send(error);
         }
 
-        
+
     },
     update: async function (req, res) {
         try {
@@ -120,7 +120,7 @@ const productController = {
             res.send(error);
         }
 
-        
+
     },
     delete: async function (req, res) {
         try {
@@ -129,7 +129,7 @@ const productController = {
         } catch (error) {
             res.send(error);
         }
-       
+
     },
     destroy: async function (req, res) {
         try {

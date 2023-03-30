@@ -29,10 +29,10 @@ module.exports = function (sequelize, dataTypes) {
       allowNull: false,
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     },
-    dificulties_id:{
-      type:dataTypes.INTEGER,
-      foreignKey:true,
-      allowNull:false
+    dificulties_id: {
+      type: dataTypes.INTEGER,
+      foreignKey: true,
+      allowNull: false
     },
   }
   let config = {
@@ -47,10 +47,10 @@ module.exports = function (sequelize, dataTypes) {
       as: 'dificulties',
       foreignKey: 'dificulties_id'
     }),
-    Activity.hasMany(models.Activity_images,{
-      as: 'activity_images',
-      foreignKey:'activities_id'
-    });
+      Activity.hasMany(models.Activity_images, {
+        as: 'activity_images',
+        foreignKey: 'activities_id'
+      });
   }
 
   return Activity;
