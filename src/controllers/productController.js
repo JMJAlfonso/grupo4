@@ -17,7 +17,7 @@ const productController = {
 
     listDetail: async function (req, res) {       
         try {
-            const products = await db.Activities.findAll();            
+            const products = await db.Activities.findAll({include:'dificulties'});                                  
             res.render('listDetail', { products })
         } catch (error) {
             res.send(error);
