@@ -6,6 +6,7 @@ const productFilePath = path.join(__dirname, '../data/products.json');
 const productsJson = fs.readFileSync(productFilePath, "utf-8");
 //let products = JSON.parse(productsJson);
 const db = require('../../database/models');
+const { where } = require("sequelize");
 
 
 function writeFileJson(data) {
@@ -57,7 +58,7 @@ const productController = {
                 name: req.body.dificulty
             }
 
-            const newD = await db.Dificulty.create(newDificulty);
+            const newD = await db.Dificulties.create(newDificulty);
 
             const newProduct = {
                 name: req.body.name,
@@ -67,14 +68,13 @@ const productController = {
                 dateFinish: req.body.dateFinish,
                 dificulties_id: newD.id,
             };
-            const newProd = await db.Activities.create(newProduct);
 
-            const newImage = {
-                name: upload.single('image'),
-                activities_id: newProd.id
+            const newActivity = await db.Activities.create(newProduct);
+            await db.Activity_images.create({
+                name: req.file.filename,
+                activities_id: newActivity.id
             }
-            console.log(req.body.image);
-            const newImg = await db.Activities_image.create(newImage);
+            )
             return res.redirect("/admin/listDetail");
         } catch (error) {
             res.send(error);
@@ -94,7 +94,7 @@ const productController = {
     editProduct: async function (req, res) {
 
         try {
-            const productToEdit = await db.Activities.findByPk(req.params.id);
+            const productToEdit = await db.Activities.findByPk(req.params.id, { include: ['activity_images', 'dificulties'] });
             res.render('editProduct', { product: productToEdit })
         } catch (error) {
             res.send(error);
@@ -104,16 +104,24 @@ const productController = {
     },
     update: async function (req, res) {
         try {
-            const productToEdit = await db.Activities.findByPk(req.params.id);
+            const productToEdit = await db.Activities.findByPk(req.params.id, { include: ['activity_images', 'dificulties'] });
+
+            await db.Dificulties.update({
+                name: req.body.dificulties ? req.body.dificulties : productToEdit.dificulties.name
+            }, { where: { id: 'req.params.id' } })
+
+            await db.Activity_images.update({
+                name: req.file.filename ? req.file.filename :productToEdit.Activity_images.name,                
+            }, { where: { id: 'req.params.id' } })
+
             productToEdit = await db.Activities.update({
                 ...productToEdit,
                 name: req.body.name ? req.body.name : productToEdit.name,
-                description: req.body.description ? req.body.description : productToEdit.description,
-                image: req.body.image ? req.body.image : productToEdit.image,
-                dificulty: req.body.dificulty ? req.body.dificulty : productToEdit.dificulty,
+                description: req.body.description ? req.body.description : productToEdit.description,               
                 price: req.body.price ? req.body.price : productToEdit.price,
                 dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
-                dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,
+                dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,              
+                
             }, { where: { id: 'req.params.id' } });
             return res.redirect('/');
         } catch (error) {

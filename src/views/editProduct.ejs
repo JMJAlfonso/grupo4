@@ -14,7 +14,7 @@
                     </div>                   
                     <div class="form-control">
                         <label>Nombre de la actividad:</label>
-                        <input type="text" name="name" class="control" value="<%= product.name %>">
+                        <input type="text" name="name" class="control" value="<%= product.name%>">
                     </div>
                     <div class="form-control">
                         <label>Descripción:</label>
@@ -23,15 +23,15 @@
                     </div>
                 <div class="form-control">
                     <label>Imagen: <%= product.image %> </label>
-                    <input type="file" name="image" class="control" value="<%= product.image %>">
+                    <input type="file" name="image" class="control" value="<%= product.activity_images.name %>">
                 </div>
                 <div class="form-control">
                     <label>Dificultad:  </label>
-                    <select name="category" class="control">
-                        <option <%=product.category === "Dificultad Baja" && "selected" %> value="Dificultad Baja">Dificultad Baja</option>
-                        <option <%=product.category === "Dificultad Media" && "selected" %> value="Dificultad Media">Dificultad Media</option>
-                        <option <%=product.category === "Dificultad Alta" && "selected" %> value="Dificultad Alta">Dificultad Alta</option>
-                        <option <%=product.category === "Dificultad Extrema" && "selected" %> value="Dificultad Extrema">Dificultad Extrema</option> 
+                    <select name="dificulties" class="control">
+                        <option <%=product.dificulties.name === "Dificultad Baja" && "selected" %> value="Dificultad Baja">Dificultad Baja</option>
+                        <option <%=product.dificulties.name === "Dificultad Media" && "selected" %> value="Dificultad Media">Dificultad Media</option>
+                        <option <%=product.dificulties.name === "Dificultad Alta" && "selected" %> value="Dificultad Alta">Dificultad Alta</option>
+                        <option <%=product.dificulties.name === "Dificultad Extrema" && "selected" %> value="Dificultad Extrema">Dificultad Extrema</option> 
                     </select>
                 </div>
 
