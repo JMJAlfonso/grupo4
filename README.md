@@ -1,5 +1,25 @@
 # **Grupo 4**
-___
+## INSTALACION 
+1. Clonar
+```
+git clone https://github.com/JMJAlfonso/grupo4-losMessianos.git
+```
+2. Instalar dependencias
+```
+npm install
+```
+3. Configurar archivo `.env` .Podes copiar el .env.example y configurar tus credenciales de base de datos.
+
+4. Crear la base de datos `mydb` con MySQLWorkbench o tu administrador de base de datos.
+5. Abrir una terminal y correr los siguientes comandos para crear la estructura de la base de datos:
+```
+npm run migrate
+npm run seed:all
+```
+6. Para iniciar el proyecto en modo desarrollo se debe correr con el siguiente comando:  
+```
+npm init
+```
 ## **Participantes:** 
 
 - Loza, Fabian Gustavo: Me considero responsable, algo perfeccionista, pero positivo. Estudié Administración y Sistemas. 
@@ -64,3 +84,4 @@ al igual que los Aventureros, son practicantes de algún deporte de aventura, pe
 ## [Figma: Prototipo Baja/Media](https://acortar.link/ov0h9k)
 
 ## [Trello](https://trello.com/b/ruszGwNJ/turismo-aventura-los-messianos)
+
