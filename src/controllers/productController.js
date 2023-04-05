@@ -111,11 +111,10 @@ const productController = {
             }, { where: { id: 'req.params.id' } })
 
             await db.Activity_images.update({
-                name: req.file.filename ? req.file.filename : productToEdit.Activity_images.name,
+                name: req.file.filename ? req.file.filename : productToEdit.Activity_images[0].name,
             }, { where: { id: 'req.params.id' } })
 
-            productToEdit = await db.Activities.update({
-                ...productToEdit,
+            productToEdit = await db.Activities.update({                
                 name: req.body.name ? req.body.name : productToEdit.name,
                 description: req.body.description ? req.body.description : productToEdit.description,
                 price: req.body.price ? req.body.price : productToEdit.price,
@@ -140,7 +139,7 @@ const productController = {
 
     },
     destroy: async function (req, res) {
-        try {
+        try {           
             await db.Activities.destroy({ where: { id: req.params.id } });
 
             res.redirect('/admin/listDetail')

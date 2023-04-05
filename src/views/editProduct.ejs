@@ -10,7 +10,7 @@
             <form action="/admin/products/<%=product.id %>?_method=PUT" method="POST" class="create-form">
                 <div class="caja1">
                     <div class="h2">
-                        <h2>Formulario para editar actividad <%= product.name%></h2>
+                        <h2>Formulario para editar actividad </h2>
                     </div>                   
                     <div class="form-control">
                         <label>Nombre de la actividad:</label>
@@ -23,7 +23,7 @@
                     </div>
                 <div class="form-control">
                     <label>Imagen: <%= product.image %> </label>
-                    <input type="file" name="image" class="control" value="<%= product.activity_images.name %>">
+                    <input type="file" name="image" class="control" value="<%= product.activity_images[0].name %>">
                 </div>
                 <div class="form-control">
                     <label>Dificultad:  </label>

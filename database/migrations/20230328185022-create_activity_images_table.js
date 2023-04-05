@@ -24,7 +24,8 @@ module.exports = {
         references: {
           model: "activities",
           key: "id"
-        }
+        },
+        onDelete: 'CASCADE'
       },
 
 
