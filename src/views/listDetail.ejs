@@ -12,13 +12,16 @@
                     <% products.forEach((product)=> { %>
 
                         <article class="article">
-                            <div class="slider-image" src="/images/<%= product.image %>" alt="<%= product.name %>">
+                            <div class="slider-image">
                             </div>
                             <p>Información de la actividad:</p>
                             <ul>
 
                                 <li>
                                     Nombre: <%=product.name%>
+                                </li>
+                                <li>
+                                    Imagen: <%=product.activity_images[0].name%>
                                 </li>
                                 <li>
                                     Descripción: <%=product.description%>

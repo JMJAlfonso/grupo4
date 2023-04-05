@@ -18,7 +18,7 @@ const productController = {
 
     listDetail: async function (req, res) {
         try {
-            const products = await db.Activities.findAll({ include: 'dificulties' });
+            const products = await db.Activities.findAll({ include: ['dificulties', 'activity_images'] });
             res.render('listDetail', { products })
         } catch (error) {
             res.send(error);
@@ -111,17 +111,17 @@ const productController = {
             }, { where: { id: 'req.params.id' } })
 
             await db.Activity_images.update({
-                name: req.file.filename ? req.file.filename :productToEdit.Activity_images.name,                
+                name: req.file.filename ? req.file.filename : productToEdit.Activity_images.name,
             }, { where: { id: 'req.params.id' } })
 
             productToEdit = await db.Activities.update({
                 ...productToEdit,
                 name: req.body.name ? req.body.name : productToEdit.name,
-                description: req.body.description ? req.body.description : productToEdit.description,               
+                description: req.body.description ? req.body.description : productToEdit.description,
                 price: req.body.price ? req.body.price : productToEdit.price,
                 dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
-                dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,              
-                
+                dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,
+
             }, { where: { id: 'req.params.id' } });
             return res.redirect('/');
         } catch (error) {

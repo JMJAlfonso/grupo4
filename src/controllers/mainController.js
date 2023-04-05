@@ -31,8 +31,8 @@ const controller = {
     },
     productsDetail:  async  (req, res) => {       
         try {  
-           const products = await db.Activities.findAll();   
-           res.render('index',{products})
+           const products = await db.Activities.findAll({ include: ['dificulties', 'activity_images'] });   
+           res.render('productsDetail',{products})
        } catch (error) {
            res.send(error);
        } 
