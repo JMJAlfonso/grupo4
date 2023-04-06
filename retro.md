@@ -103,3 +103,20 @@
 
 ### Dejar de hacer: 
 - No asistir a las reuniones y no avisar.
+
+## RETRO SPRINT 6
+
+### Comenzar a hacer: 
+- 
+
+### Hacer más: 
+- 
+
+### Continuar haciendo: 
+-
+
+### Hacer menos: 
+-
+
+### Dejar de hacer: 
+- 

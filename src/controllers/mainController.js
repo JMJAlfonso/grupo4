@@ -39,8 +39,8 @@ const controller = {
     },
     productDetail:  async  (req, res) => {        
         try {  
-            const product = await db.Activities.findByPK(req.params.id);   
-            res.render('index',{product})
+            const product = await db.Activities.findByPk(req.params.id,{ include: ['dificulties', 'activity_images'] });   
+            res.render('productDetail',{product})
         } catch (error) {
             res.send(error);
         } 

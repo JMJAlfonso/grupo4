@@ -109,20 +109,20 @@ const productController = {
 
             await db.Dificulties.update({
                 name: req.body.dificulties ? req.body.dificulties : productToEdit.dificulties.name
-            }, { where: { id: 'req.params.id' } })
+            }, { where: { id: req.params.id } })
 
             await db.Activity_images.update({
-                name: req.file.filename ? req.file.filename : productToEdit.Activity_images[0].name,
-            }, { where: { id: 'req.params.id' } })
+                name: req.file?.filename ? req.file.filename : productToEdit.activity_images[0].name,
+            }, { where: { id: req.params.id } })
 
-            productToEdit = await db.Activities.update({
+            await db.Activities.update({
                 name: req.body.name ? req.body.name : productToEdit.name,
                 description: req.body.description ? req.body.description : productToEdit.description,
                 price: req.body.price ? req.body.price : productToEdit.price,
                 dateStart: req.body.dateStart ? req.body.dateStart : productToEdit.dateStart,
                 dateFinish: req.body.dateFinish ? req.body.dateFinish : productToEdit.dateFinish,
 
-            }, { where: { id: 'req.params.id' } });
+            }, { where: { id: req.params.id } });
             return res.redirect('/');
         } catch (error) {
             res.send(error);
@@ -142,7 +142,7 @@ const productController = {
     destroy: async function (req, res) {
         try {
             //const productImage = await db.Activity_images.findAll({ where: { activities_id: 'req.params.id' } });
-            
+
 
             // console.log(productImage);
             // const path = './images/products/'+productImage.name;           

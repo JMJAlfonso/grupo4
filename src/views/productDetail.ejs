@@ -15,7 +15,7 @@
                                     <%=product.description%>
                                 </p>
                                 <div class="boxImage">
-                                    <img class="slider-image" src="/images/products/<%=product.image%>" alt="Trekking">
+                                    <img class="slider-image" src="/images/products/<%=product.activity_images[0].name%>" alt="Trekking">
                                 </div>
                             </div>
                          
@@ -36,7 +36,7 @@
                                         <article>
                                             <i class="fa-solid fa-dumbbell"></i>
                                             <span class="Dificulty">
-                                               Nivel de dificultad: <%=product.dificulty%>
+                                               Nivel de dificultad: <%=product.dificulties.name%>
                                             </span>
                                         </article>
                                     </div>
