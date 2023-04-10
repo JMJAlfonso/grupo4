@@ -10,11 +10,12 @@ const validation = require('../validation/userValidation');
 //configuracion de multer para almacenar imaganes
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/images/users'));
+        const folder = path.join(__dirname, '../public/img/user');
+        cb(null, folder);
     },
     filename: (req, file, cb) => {
-        const newFileName = 'user-' + Date.now() + path.extname(file.originalname);
-        cb(null, newFileName);
+        const fileName = `${Date.now()}-user${path.extname(file.originalname)}`;
+        cb(null, fileName);
     }
 });
 

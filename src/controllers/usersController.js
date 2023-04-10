@@ -39,19 +39,37 @@ const userController = {
             });
         }
 
-    
-    let userToCreate = {
-        id: User.generateId(),
-        ...req.body,
-        password: bcryptjs.hashSync(req.body.password, 10),
-        category: 'user',
-        avatar: User.storeImage(req.file)
-    }
-    delete userToCreate.repeat_password;
-    User.create(userToCreate);
-    return res.redirect("/user/login");
-},
-//     let userRole = db.Roles.create({name: 'user'})
+    },
+
+    create: async (req, res) => {
+        try {
+            let userToCreate = {
+                name: req.body.name,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                avatar: req.file.filename ? req.file.filename : 'default-avatar.png'
+            }
+            delete userToCreate.repeat_password;
+            await db.User.create(user);
+            res.redirect('/user/login');
+        } catch (error) {
+            res.send(error);
+        }
+    },
+    list: async (req, res) => {
+        try {
+            const users = await db.User.findAll({
+                include: ['role'],
+                attributes: {
+                    exclude: ['password', 'roles_id']
+                }
+            });
+            res.render('users', { users });
+        } catch (error) {
+            res.send(error);
+        }
+    },
+    //     let userRole = db.Roles.create({name: 'user'})
     //     let userToCreate = {
     //         id: User.generateId(),
     //         ...req.body,
@@ -66,41 +84,54 @@ const userController = {
     login: (req, res) => {
         res.render('login');
     },
-
-    loginProcess: function (req, res) {
-        let errors = validationResult(req);
-
-        if (errors.isEmpty()) {
-            let usuarioAloguearse;
-
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email) {
-                    if (bcryptjs.compareSync(req.body.password, users[i].password)) {
-                        usuarioAloguearse = users[i];
-                        break;
-                    }
+    loginProcess: async (req, res) => {
+        try {
+            const user = await db.User.findOne({
+                include: ['role'],
+                where: {
+                    email: req.body.email
                 }
+            });
+            if (!user) {
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
+            if (!bcrypt.compareSync(req.body.password, user.password)) {
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+            }
+            req.session.user = {
+                id: user.id,
+                email: user.email,
+                role: user.role.name,
+                name: user.name,
+                avatar: user.avatar
+            };
+            res.redirect('/user');
+        } catch (error) {
+            res.send(error);
+        }
+    },
+    logout: (req, res) => {
+        delete req.session.user;
+        res.redirect('/');
+    },
+    profile: async (req, res) => {
+        try {
+            const user = await db.User.findByPk(req.session.user.id, {
+                attributes: { exclude: ['password'] },
+                include: ['role']
+            });
+            res.render('profile', { user: user.dataValues });
+        } catch (error) {
 
-            if (usuarioAloguearse == undefined) {
-                return res.render('login', {
-                    errors: [
-                        { msg: "Credenciales inválidas" }
-                    ]
-                });
-            }
-            req.session.usuarioLogueado = usuarioAloguearse;
-            res.redirect('/');
-        } else {
-            return res.render('login', { errors: errors.errors });
         }
     },
     productCart: (req, res) => {
         res.render('productCart');
     },
-}
+};
 
 module.exports = userController;
+
 
 
 
