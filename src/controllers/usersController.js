@@ -25,9 +25,8 @@ const userController = {
         }
 
 
-        //let userInDB = db.Users.findOne({ where: { email: 'req.body.email;' } });
-        let userInDB = User.findByField("email", req.body.email);
-
+        let userInDB = db.Users.findOne({ where: { email: req.body.email } });
+  
         if (userInDB) {
             return res.render("register", {
                 errors: {
@@ -43,14 +42,34 @@ const userController = {
 
     create: async (req, res) => {
         try {
+            const resultValidation = validationResult(req);
+            if (!resultValidation.isEmpty()) {
+                return res.render("register", {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                });
+            }
+            let userInDB = await db.User.findOne({ where: { email: req.body.email } });
+
+            if (userInDB) {
+                return res.render("register", {
+                    errors: {
+                        email: {
+                            msg: "este mail ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
             let userToCreate = {
                 name: req.body.name,
+                surname: req.body.surname,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
+                password: bcryptjs.hashSync(req.body.password, 10),
                 avatar: req.file.filename ? req.file.filename : 'default-avatar.png'
             }
             delete userToCreate.repeat_password;
-            await db.User.create(user);
+            await db.User.create(userToCreate);
             res.redirect('/user/login');
         } catch (error) {
             res.send(error);
@@ -142,30 +161,7 @@ module.exports = userController;
 
 
 
-/*if (!req.body.email || !req.body.password){
-     res.redirect('/login');
- }else{
-     req.session.username = req.body.username;
-     req.session.password = req.body.password;
-     req.session.email = req.body.email;
-     res.redirect('/');
- }*/
-//     let userToLogin = User.findByField("email", req.body.email);
-//     if (!userToLogin) {
-//         return res.render("login", {
-//             errors: {
-//                 email: {
-//                     msg: "no se encuentra en nuestra base de datos"
-//                 }
-//             },
 
-//         });
-//     }
-//     },
-
-// };
-//   },
-//};
 
 
 

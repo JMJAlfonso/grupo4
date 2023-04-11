@@ -6,11 +6,12 @@ const multer = require('multer');
 const guestMiddleware = require('../middlewares/guestMiddlewares');
 const userMiddleware = require('../middlewares/userMiddlewares');
 const validation = require('../validation/userValidation');
+const authorizationMiddleware = require('../middlewares/authorization');
 
 //configuracion de multer para almacenar imaganes
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const folder = path.join(__dirname, '../public/img/user');
+        const folder = path.join(__dirname, '../../public/images/users');
         cb(null, folder);
     },
     filename: (req, file, cb) => {
@@ -22,11 +23,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+router.get('/', authorizationMiddleware, usersController.list);
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', upload.single('userImage'), validation.register, usersController.registerProcess);
+router.post('/register', upload.single('userImage'), validation.register, usersController.create);
 router.get("/login", guestMiddleware,usersController.login);
-router.get('/productCart',userMiddleware, usersController.productCart);
 router.post("/login",validation.login, usersController.loginProcess);
+router.get('/productCart',userMiddleware, usersController.productCart);
+router.get('/logout', usersController.logout);
+router.get('/profile', authorizationMiddleware, usersController.profile);
 
 router.get('/check', function (req, res) {
     if (!req.session.usuarioLogueado ) {
