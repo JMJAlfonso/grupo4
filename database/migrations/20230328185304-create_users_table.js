@@ -29,6 +29,10 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
+      tel: {
+        type: Sequelize.TEXT,
+        allowNull: false
+      },      
       password: {
         type: Sequelize.TEXT,
         allowNull: false

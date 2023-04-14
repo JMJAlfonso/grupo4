@@ -61,13 +61,28 @@ const userController = {
                     oldData: req.body
                 });
             }
+            const newRole = {
+                name: 'user'
+            }
+
+            const newR = await db.Roles.create(newRole);
+
+            const newCountry = {
+                name: req.body.country
+            }
+
+            const newC = await db.Countries.create(newCountry);
+
             let userToCreate = {
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
+                tel: req.body.tel,
                 password: bcryptjs.hashSync(req.body.password, 10),
-                avatar: req.file.filename ? req.file.filename : 'default-avatar.png'
-            }
+                avatar: req.file.filename ? req.file.filename : 'default-avatar.png',
+                roles_id: newR.id,
+                countries_id: newC.id,                
+            }            
             delete userToCreate.repeat_password;
             await db.User.create(userToCreate);
             res.redirect('/user/login');
@@ -106,25 +121,27 @@ const userController = {
     loginProcess: async (req, res) => {
         try {
             const user = await db.User.findOne({
-                include: ['role'],
+                include: ['roles'],
                 where: {
                     email: req.body.email
                 }
             });
+            console.log(user);
             if (!user) {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
-            if (!bcrypt.compareSync(req.body.password, user.password)) {
+            if (!bcryptjs.compareSync(req.body.password, user.password)) {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
             req.session.user = {
                 id: user.id,
-                email: user.email,
-                role: user.role.name,
                 name: user.name,
+                email: user.email,                
+                role: user.roles.name,                
+                surname: user.surname,
                 avatar: user.avatar
             };
-            res.redirect('/user');
+            res.redirect('/');
         } catch (error) {
             res.send(error);
         }
@@ -137,7 +154,7 @@ const userController = {
         try {
             const user = await db.User.findByPk(req.session.user.id, {
                 attributes: { exclude: ['password'] },
-                include: ['role']
+                include: ['roles']
             });
             res.render('profile', { user: user.dataValues });
         } catch (error) {
