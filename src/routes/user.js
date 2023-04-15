@@ -25,7 +25,7 @@ const upload = multer({ storage });
 
 router.get('/', authorizationMiddleware, usersController.list);
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', upload.single('userImage'), validation.register, usersController.create);
+router.post('/register', upload.single('userAvatar'), validation.register, usersController.create);
 router.get("/login", guestMiddleware,usersController.login);
 router.post("/login",validation.login, usersController.loginProcess);
 router.get('/productCart',userMiddleware, usersController.productCart);

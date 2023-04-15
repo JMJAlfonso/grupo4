@@ -3,11 +3,13 @@ const path = require('path');
 
 const validations = {
     newProduct: [
-        body("name").notEmpty().withMessage("Tienes que escribir el nombre de producto"),
+        body("name").notEmpty().withMessage("Tienes que escribir el nombre de producto")
+        .isLength({ min: 5 }).withMessage("Debe contener al menos 5 caracteres"),
         body("description").isString().withMessage('tiene que contener letras').notEmpty().withMessage("Tienes que escribir una descripción")
+        .isLength({ min: 20 }).withMessage("Debe contener al menos 20 caracteres")
         .custom((value, { req })=>{//se puede resumir en un return value.trim()
             if(!value.trim()){
-                throw new Error("La descripcion no puede estar vacia.");;
+                throw new Error("La descripcion no puede estar vacia.");
             }
             return true;
         }),        
@@ -17,7 +19,7 @@ const validations = {
         body("dateFinish").isISO8601().withMessage("Tienes que completar el horario de finalizacion"),
         body("image").custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = [".JPG",".jpg", ".png", ".gif"];
+            let acceptedExtensions = [".JPG",".jpg",'.jpeg', ".png", ".gif"];
             if (!file){
                 throw new Error("Tienes que subir una imagen");
             }else {

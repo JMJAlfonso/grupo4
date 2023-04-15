@@ -3,16 +3,16 @@ const {body, check} = require('express-validator');
 
 const validations = {
     register: [
-        body("name").notEmpty().withMessage("Tienes que escribir tu nombre"),
-        body("surname").notEmpty().withMessage("Tienes que escribir tu apellido"),
+        body("name").notEmpty().withMessage("Tienes que escribir tu nombre").isLength({ min: 2 }),
+        body("surname").notEmpty().withMessage("Tienes que escribir tu apellido").isLength({ min: 2 }),
         body("email").notEmpty().withMessage("Tienes que escribir tu correo electronico").bail().isEmail().withMessage("debes escribir un correo electronico"),
         body("tel").notEmpty().withMessage("Tienes que escribir tu numero de telefono"),
         body("country").notEmpty().withMessage("Tienes que escribir tu pais"),
-        body("password").notEmpty().withMessage("Tienes que escribir tu contraseña"),
-        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmacion de contraseña"),
-        body("userImage").custom((value, { req }) => {
+        body("password").notEmpty().withMessage("Tienes que escribir tu contraseña").isLength({ min: 8 }),
+        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmacion de contraseña").custom((value, {req}) => value === req.body.password).withMessage("The passwords do not match"),
+        body("userAvatar").custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = [".jpg", ".png", ".gif"];
+            let acceptedExtensions = [".jpg", ".png",'.jpeg',".gif"];
             if (file) {
                 let fileExtension = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtension)) {
