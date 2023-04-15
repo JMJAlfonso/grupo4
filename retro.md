@@ -107,16 +107,16 @@
 ## RETRO SPRINT 6
 
 ### Comenzar a hacer: 
-- 
+- Contestar a los compañeros en el grupo.
 
 ### Hacer más: 
-- 
+- Participar en las reuniones.
 
 ### Continuar haciendo: 
--
+- Trabajo grupal.
 
 ### Hacer menos: 
--
+- No actualizar el Trello. 
 
 ### Dejar de hacer: 
-- 
+- Desaparecerse.
