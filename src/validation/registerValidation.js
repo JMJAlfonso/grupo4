@@ -1,6 +1,12 @@
-const path = require ('path')
+/*const path = require ('path')
 const {body} = require('express-validator');
 
+window.addEventListener("submit", function(){
+    let form = this.document.querySelector(".registerValidationCopy");
+    
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+ 
 const validations = {
     register: [
         body("name").notEmpty().withMessage("Tienes que escribir tu nombre").isLength({ min: 2 }),
@@ -21,7 +27,11 @@ const validations = {
             }
             return true;
         })
-    ],
-    
-}
+      ]
+    };
+
+    // Resto del código...
+  });
+});
+
 module.exports = validations;

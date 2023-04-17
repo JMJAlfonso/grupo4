@@ -5,10 +5,10 @@
 
     <%- include ('partials/header') %> 
 
-    <main>
+  
 
-       
-        <form action="/user/register" method="POST" class="create-form" enctype="multipart/form-data" class="reservation">
+    <main>      
+        <form action="/user/register" method="POST" class="create-form" enctype="multipart/form-data" >
             <div class="caja1">
             <div class="h2">
                 <h2>Registrarse</h2>
@@ -123,3 +123,9 @@
                 </div>
             <div class="caja2">
                 <button type="submit" class="form-button">Registrarse</button>
+            </main>
+            <%- include('./partials/footer') %>
+        </body>
+                <script src="../validation/registerValidationCopy.js"></script>
+                </html>
+
