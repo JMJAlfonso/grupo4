@@ -35,8 +35,7 @@ const productController = {
 
         const resultValidation = validationResult(req);
 
-        if (resultValidation.errors.length > 0) {
-            console.log(resultValidation.mapped());
+        if (resultValidation.errors.length > 0) {            
             return res.render("createProduct", {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
