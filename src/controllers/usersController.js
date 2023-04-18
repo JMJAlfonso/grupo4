@@ -125,8 +125,7 @@ const userController = {
                 where: {
                     email: req.body.email
                 }
-            });
-            console.log(user);
+            });           
             if (!user) {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }

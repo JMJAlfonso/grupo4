@@ -1,19 +1,22 @@
 window.onload = function () {
 
     const form = document.querySelector('.create-form');
-
+    console.log('hola');
     form.name.focus();
 
     form.addEventListener('submit', (e) => {
-        e.defaultPrevented();
+        e.preventDefault();
+        const allErrorLabels = document.querySelectorAll('.show-error-message');
+        allErrorLabels.forEach(element =>{
+            element.innerHTML = '';
+        })
         const errors = [];
+
         if (!form.name.value) {
             errors.push({ name: 'name', message: 'El campo nombre no puede estar vacio' });
 
         }
-        if (form.name.value.length < 5 || form.name.value === '') {
-            console.log(form.name.value);
-            console.log('Estoy en la validacion del front end');
+        if (form.name.value.length < 5 || form.name.value === '') {           
             errors.push({ name: 'name', message: 'El campo nombre debe tener al menos 5 caracteres' });
         }
         if (form.description.value.length < 20) {
@@ -32,6 +35,7 @@ window.onload = function () {
         }
         errors.forEach(error => {
             const errorLabel = document.getElementById(`error-${error.name}`)
+            errorLabel.classList.add('show-error-message');
             errorLabel.innerText = error.message;
         })
         if (errors.length === 0) {
