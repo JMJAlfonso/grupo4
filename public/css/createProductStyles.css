@@ -6,7 +6,14 @@ body{
     font-size: 15px;
     line-height: 23px;
 }
-
+.is-invalid{
+    color: #842029;
+    border: 2px solid red
+}
+.error-message{
+    color: #842029;
+    display: none;
+}
 .show-error-message {
     display: block;
 }
