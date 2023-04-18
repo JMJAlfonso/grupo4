@@ -1,6 +1,9 @@
-<%- include ('partials/head', {style: 'loginStyles' , title: 'Iniciar Sesion' }) %>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'loginStyles' , title: 'Iniciar Sesion' }) %>
 
+    </head>
     <body>
         <%- include ('partials/header') %>
 
@@ -13,36 +16,38 @@
                         </li>
                         <%}%>
                 </ul>
-                <% } %>
+            <% } %>
 
-                    <main>
-                        <div class="containerPrincipal">
+        <main>
+            <div class="containerPrincipal">
 
-                            <div class="form-group">
-                                <div class="welcome">
-                                    <h1 class="welcomeh1">¡BIENVENIDOS!</h1>
-                                </div>
-                                <form action="/user/login" method="post" class="formuserpass">
-                                    <input id="usuario" type="text" class="form-control" name="email"
-                                        placeholder="email">
+                <div class="form-group">
+                    <div class="welcome">
+                        <h1 class="welcomeh1">¡BIENVENIDOS!</h1>
+                    </div>
+                    <form action="/user/login" method="post" class="formuserpass">
+                        <input id="usuario" type="text" class="form-control" name="email"
+                            placeholder="email">
 
-                                    <input id="contraseña" type="password" class="form-control" name="password"
-                                        placeholder="contraseña">
+                        <input id="contraseña" type="password" class="form-control" name="password"
+                            placeholder="contraseña">
 
-                                    <button type="submit" class="boton">iniciar sesion</button>
-                                </form>
-                                <div class="check">
-                                    <input type="checkbox" class="check" value="first_checkbox">
-                                    <label class="remember">recordame</label>
-                                </div>
-                                <a href="/user/register" class="cuenta">¿No tienes Cuenta? <b>Registrate</b></a>
+                        <button type="submit" class="boton">iniciar sesion</button>
+                    </form>
+                    <div class="check">
+                        <input type="checkbox" class="check" value="first_checkbox">
+                        <label class="remember">recordame</label>
+                    </div>
+                    <a href="/user/register" class="cuenta">¿No tienes Cuenta? <b>Registrate</b></a>
 
-                                <a href="/recovery" class="olvidar">¿Olvidaste tu contraseña?</a>
-                                <a href="https://www.facebook.com"><button id="facebook">Ingresa con
-                                        Facebook</button></a>
-                                <a href="https://www.gmail.com"><button id="gmail">Ingresa con Gmail</button></a>
+                    <a href="/recovery" class="olvidar">¿Olvidaste tu contraseña?</a>
+                    <a href="https://www.facebook.com"><button id="facebook">Ingresa con
+                            Facebook</button></a>
+                    <a href="https://www.gmail.com"><button id="gmail">Ingresa con Gmail</button></a>
 
-                            </div>
-                        </div>
-                    </main>
-                    <%- include ('partials/footer') %>
+                </div>
+            </div>
+        </main>
+        <%- include ('partials/footer') %>
+    </body>
+</html>        

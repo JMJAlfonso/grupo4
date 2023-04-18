@@ -1,62 +1,65 @@
-<%- include ('partials/head', {style: 'editProductStyles' , title: 'Editar actividad' }) %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'editProductStyles' , title: 'Editar actividad' }) %>
+    </head>
+    <body>
 
-</head>
+        <%- include ('partials/header') %>
+            <main>
 
-<body>
-
-    <%- include ('partials/header') %>
-        <main>
-
-            <form action="/admin/products/<%=product.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
-                <div class="caja1">
-                    <div class="h2">
-                        <h2>Formulario para editar actividad </h2>
-                    </div>                   
+                <form action="/admin/products/<%=product.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+                    <div class="caja1">
+                        <div class="h2">
+                            <h2>Formulario para editar actividad </h2>
+                        </div>                   
+                        <div class="form-control">
+                            <label>Nombre de la actividad:</label>
+                            <input type="text" name="name" class="control" value="<%= product.name%>">
+                            <p class="error-message" id="error-name"></p>
+                        </div>
+                        <div class="form-control">
+                            <label>Descripción:</label>
+                            <textarea type="text" name="description" placeholder="text-description" 
+                                rows="5" style="width: 100%;"  ><%= product.description %></textarea required>
+                        </div>
                     <div class="form-control">
-                        <label>Nombre de la actividad:</label>
-                        <input type="text" name="name" class="control" value="<%= product.name%>">
+                        <label>Imagen: </label>
+                        <input type="file" name="image" class="control" value="<%= product.activity_images[0].name %>">
                     </div>
                     <div class="form-control">
-                        <label>Descripción:</label>
-                        <textarea type="text" name="description" placeholder="text-description" 
-                            rows="5" style="width: 100%;"  ><%= product.description %></textarea required>
+                        <label>Dificultad:  </label>
+                        <select name="dificulties" class="control">
+                            <option <%=product.dificulties.name === "Dificultad Baja" && "selected" %> value="Dificultad Baja">Dificultad Baja</option>
+                            <option <%=product.dificulties.name === "Dificultad Media" && "selected" %> value="Dificultad Media">Dificultad Media</option>
+                            <option <%=product.dificulties.name === "Dificultad Alta" && "selected" %> value="Dificultad Alta">Dificultad Alta</option>
+                            <option <%=product.dificulties.name === "Dificultad Extrema" && "selected" %> value="Dificultad Extrema">Dificultad Extrema</option> 
+                        </select>
                     </div>
-                <div class="form-control">
-                    <label>Imagen: </label>
-                    <input type="file" name="image" class="control" value="<%= product.activity_images[0].name %>">
-                </div>
-                <div class="form-control">
-                    <label>Dificultad:  </label>
-                    <select name="dificulties" class="control">
-                        <option <%=product.dificulties.name === "Dificultad Baja" && "selected" %> value="Dificultad Baja">Dificultad Baja</option>
-                        <option <%=product.dificulties.name === "Dificultad Media" && "selected" %> value="Dificultad Media">Dificultad Media</option>
-                        <option <%=product.dificulties.name === "Dificultad Alta" && "selected" %> value="Dificultad Alta">Dificultad Alta</option>
-                        <option <%=product.dificulties.name === "Dificultad Extrema" && "selected" %> value="Dificultad Extrema">Dificultad Extrema</option> 
-                    </select>
-                </div>
 
-                <div class="form-control">
-                    <label>Precio $</label>
-                    <input type="number" name="price" class="control" value="<%= product.price %>">
+                    <div class="form-control">
+                        <label>Precio $</label>
+                        <input type="number" name="price" class="control" value="<%= product.price %>">
+                    </div>
+                    
+                    <div class="form-control">
+                        <label>Fecha y Hora de INICIO: </label>
+                        <input type="datetime-local" name="dateStart" class="control" value="<%= new Date(product.dateStart).toISOString().split('.')[0]%>">
+                    </div>
+                    <div class="form-control">
+                        <label>Fecha y Hora de FINALIZACION: </label>
+                        <input type="datetime-local" name="dateFinish"  class="control" value="<%= new Date(product.dateFinish).toISOString().split('.')[0]%>" >                    
+                    </div>      
+                    
+                    
+                    <div class="caja2">
+                        <button type="submit" class="form-button">Editar</button>             
+                    </div>
+                    </div>
                 </div>
-                
-                <div class="form-control">
-                    <label>Fecha y Hora de INICIO: </label>
-                    <input type="datetime-local" name="dateStart" class="control" value="<%= new Date(product.dateStart).toISOString().split('.')[0]%>">
-                </div>
-                <div class="form-control">
-                    <label>Fecha y Hora de FINALIZACION: </label>
-                    <input type="datetime-local" name="dateFinish"  class="control" value="<%= new Date(product.dateFinish).toISOString().split('.')[0]%>" >                    
-                </div>      
-                
-                
-                <div class="caja2">
-                    <button type="submit" class="form-button">Editar</button>             
-                </div>
-                </div>
-            </div>
-            </form>
-         </main>
-    </header>
-
-<%- include ('partials/footer') %> 
+                </form>
+            </main>    
+        <%- include ('partials/footer') %>
+        <script src="/js/activitiesAddValidation.js"></script>
+    </body>
+</html>

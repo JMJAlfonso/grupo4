@@ -1,12 +1,10 @@
-<%- include ('partials/head', {style: 'registerStyles', title: 'Registro'}) %> 
-    
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'registerStyles', title: 'Registro'}) %> 
+    </head>
 <body>
-
     <%- include ('partials/header') %> 
-
-  
-
     <main>      
         <form action="/user/register" method="POST" class="create-form" enctype="multipart/form-data" >
             <div class="caja1">
@@ -125,7 +123,7 @@
                 <button type="submit" class="form-button">Registrarse</button>
             </main>
             <%- include('./partials/footer') %>
-        </body>
-                <script src="../validation/registerValidationCopy.js"></script>
-                </html>
+            <script src="../validation/registerValidationCopy.js"></script>
+        </body>                
+    </html>
 

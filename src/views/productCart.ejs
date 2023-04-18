@@ -1,227 +1,231 @@
-<%- include ('partials/head', {style: 'productCartStyles', title: 'Carrito de Compras'}) %> 
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'productCartStyles', title: 'Carrito de Compras'}) %> 
+    </head>
+    <body>
+        <%- include ('partials/header') %> 
+        <main>
 
-<body>
-    <%- include ('partials/header') %> 
-    <main>
+            <div class="cart-container">
 
-        <div class="cart-container">
+                <div class="file-txt">
+                    <ul class="list-txt">
+                        <li>Actividad</li>
+                    </ul>
+                    <ul class="product-txt">
+                        <li>Cantidad</li>
+                        <li>Subtotal</li>
+                        <li>Cancel</li>
+                    </ul>
+                </div>
 
-            <div class="file-txt">
-                <ul class="list-txt">
-                    <li>Actividad</li>
-                </ul>
-                <ul class="product-txt">
-                    <li>Cantidad</li>
-                    <li>Subtotal</li>
-                    <li>Cancel</li>
-                </ul>
-            </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                    <img class="product-image" src="/images/products/Espeleismo.jpg" alt="product-image">
+                    </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                        <img class="product-image" src="/images/products/kayac.jpg" alt="product-image">
+                        </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                        <img class="product-image" src="/images/products/paracaidismo.jpg" alt="product-image">
+                        </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                        <img class="product-image" src="/images/products/parapente.jpg" alt="product-image">
+                        </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                        <img class="product-image" src="/images/products/rappel.jpg" alt="product-image">
+                        </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                        <img class="product-image" src="/images/products/ciclismo.jpg" alt="product-image">
+                        </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-image-div">
+                        <img class="product-image" src="/images/products/rafting.jpg" alt="product-image">
+                        </div>
+                    <div class="description">
+                        <h4>18/12/2022 a las 14:00 hs.</h4>
+                    </div>
+                    <div class="box">
+                        <div class="box-container">
+                            <div class="box-amount">
+                                <select name="Cantidad" id="cantidad">
+                                    <option value="1persona" selected>1 persona</option>
+                                    <option value="2persona">2 personas</option>
+                                    <option value="3persona">3 personas</option>
+                                    <option value="4persona">4 personas</option>
+                                    <option value="5persona">5 personas</option>
+                                    <option value="6persona">6 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-container-subtotal">
+                            <div class="box-subtotal"><h4>Subtotal</h4></div>
+                        </div>
+                        <div class="box-container-x">
+                            <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="product-container">
-                <div class="product-image-div">
-                <img class="product-image" src="/images/products/Espeleismo.jpg" alt="product-image">
-                </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
+                <div class="product-total">
+                    <div class="total-products">TOTAL</div>
+                    <div class="go-pay">
+                        <a href="/">IR A PAGAR</a>
                     </div>
                 </div>
-            </div>
-            <div class="product-container">
-                <div class="product-image-div">
-                    <img class="product-image" src="/images/products/kayac.jpg" alt="product-image">
-                    </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-image-div">
-                    <img class="product-image" src="/images/products/paracaidismo.jpg" alt="product-image">
-                    </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-image-div">
-                    <img class="product-image" src="/images/products/parapente.jpg" alt="product-image">
-                    </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-image-div">
-                    <img class="product-image" src="/images/products/rappel.jpg" alt="product-image">
-                    </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-image-div">
-                    <img class="product-image" src="/images/products/ciclismo.jpg" alt="product-image">
-                    </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-container">
-                <div class="product-image-div">
-                    <img class="product-image" src="/images/products/rafting.jpg" alt="product-image">
-                    </div>
-                <div class="description">
-                    <h4>18/12/2022 a las 14:00 hs.</h4>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <div class="box-amount">
-                            <select name="Cantidad" id="cantidad">
-                                <option value="1persona" selected>1 persona</option>
-                                <option value="2persona">2 personas</option>
-                                <option value="3persona">3 personas</option>
-                                <option value="4persona">4 personas</option>
-                                <option value="5persona">5 personas</option>
-                                <option value="6persona">6 personas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="box-container-subtotal">
-                        <div class="box-subtotal"><h4>Subtotal</h4></div>
-                    </div>
-                    <div class="box-container-x">
-                        <a href="#"><div class="box-cancel"><i class="fa-regular fa-square-minus"></i></div></a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-total">
-                <div class="total-products">TOTAL</div>
-                <div class="go-pay">
-                    <a href="/">IR A PAGAR</a>
-                </div>
             </div>
-
-        </div>
-    </main>
-    <%- include ('partials/footer') %> 
+        </main>
+        <%- include ('partials/footer') %> 
+    </body>
+</html>    
