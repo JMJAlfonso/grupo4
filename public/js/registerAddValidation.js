@@ -22,11 +22,19 @@ window.onload = function () {
         }
         if (!form.surname.value) {
             errors.push({ name: 'name', message: 'El campo nombre no puede estar vacio' });
-            form.name.classList.add('is-invalid');
+            form.surname.classList.add('is-invalid');
         }
         if (form.surname.value.length < 2 || form.name.value === '') {           
             errors.push({ name: 'name', message: 'El campo nombre debe tener al menos 2 caracteres' });
-            form.name.classList.add('is-invalid');
+            form.surname.classList.add('is-invalid');
+        }
+        if (!form.tel.value) {
+            errors.push({ name: 'name', message: 'El campo nombre no puede estar vacio' });
+            form.tel.classList.add('is-invalid');
+        }
+        if (form.tel.value.length < 10 || form.name.value === '') {           
+            errors.push({ name: 'name', message: 'El campo nombre debe tener al menos 2 caracteres' });
+            form.tel.classList.add('is-invalid');
         }
 
         const path = form.image.value;
