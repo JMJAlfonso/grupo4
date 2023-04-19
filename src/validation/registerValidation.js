@@ -1,25 +1,24 @@
-/*const path = require ('path')
 const {body} = require('express-validator');
+const path = require('path');
 
-window.addEventListener("submit", function(){
-    let form = this.document.querySelector(".registerValidationCopy");
-    
-    form.addEventListener("submit", function(e){
-        e.preventDefault();
- 
 const validations = {
-    register: [
-        body("name").notEmpty().withMessage("Tienes que escribir tu nombre").isLength({ min: 2 }),
-        body("surname").notEmpty().withMessage("Tienes que escribir tu apellido").isLength({ min: 2 }),
-        body("email").notEmpty().withMessage("Tienes que escribir tu correo electronico").bail().isEmail().withMessage("Debes escribir un correo electronico"),
-        body("tel").notEmpty().withMessage("Tienes que escribir tu número de teléfono"),
-        body("country").notEmpty().withMessage("Tienes que escribir tu pais"),
+    newRegister: [
+        body("name").notEmpty().withMessage("Tienes que escribir tu nombre")
+        .isLength({ min: 2 }).withMessage("Debe contener al menos 2 caracteres"),
+        body("surname").notEmpty().withMessage("Tienes que escribir tu apellido")
+        .isLength({ min: 2 }).withMessage("Debe contener al menos 2 caracteres"),
+        body("email").notEmpty().withMessage("Tienes que escribir tu email")
+        .isLength({ min: 2 }).withMessage("Debe ser un email válido"),
+        body("tel").notEmpty().withMessage("Tienes que escribir tu numero de telefono"),
         body("password").notEmpty().withMessage("Tienes que escribir tu contraseña").isLength({ min: 8 }),
-        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmacion de contraseña").custom((value, {req}) => value === req.body.password).withMessage("Las contraseñas no coinciden"),
-        body("userAvatar").custom((value, { req }) => {
+        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmacion de contraseña").custom((value, {req}) => value === req.body.password).withMessage("The passwords do not match"),
+
+        body("image").custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = [".jpg", ".png",'.jpeg',".gif"];
-            if (file) {
+            let acceptedExtensions = [".JPG",".jpg",'.jpeg', ".png", ".gif"];
+            if (!file){
+                throw new Error("Tienes que subir una imagen");
+            }else {
                 let fileExtension = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtension)) {
                     throw new Error(`las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
@@ -27,11 +26,6 @@ const validations = {
             }
             return true;
         })
-      ]
-    };
-
-    // Resto del código...
-  });
-});
-
+    ],    
+}
 module.exports = validations;
