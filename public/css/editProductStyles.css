@@ -7,11 +7,6 @@ body{
     line-height: 23px;
 }
 
-
-*{  
- box-sizing: border-box;
-}
-
 .is-invalid{
     color: #842029;
     border: 2px solid red
@@ -23,6 +18,11 @@ body{
 .show-error-message {
     display: block;
 }
+
+*{  
+ box-sizing: border-box;
+}
+
 
 h2{
     text-align: center;
