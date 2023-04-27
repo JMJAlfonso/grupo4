@@ -9,14 +9,14 @@ const validations = {
         .isLength({ min: 20 }).withMessage("Debe contener al menos 20 caracteres")
         .custom((value, { req })=>{//se puede resumir en un return value.trim()
             if(!value.trim()){
-                throw new Error("La descripcion no puede estar vacia.");
+                throw new Error("La descripción no puede estar vacía.");
             }
             return true;
         }),        
         body("dificulty").notEmpty().withMessage("Tienes que completar la dificultad de la actividad"),
-        body("price").notEmpty().withMessage("Tienes que escribir el precio").isInt().withMessage("debes escribir un valor numerico"),
+        body("price").notEmpty().withMessage("Tienes que escribir el precio").isInt().withMessage("debes escribir un valor numérico"),
         body("dateStart").isISO8601().withMessage("Tienes que completar el horario de inicio"),
-        body("dateFinish").isISO8601().withMessage("Tienes que completar el horario de finalizacion"),
+        body("dateFinish").isISO8601().withMessage("Tienes que completar el horario de finalización"),
         body("image").custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = [".JPG",".jpg",'.jpeg', ".png", ".gif"];

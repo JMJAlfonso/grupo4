@@ -87,6 +87,7 @@
 - No asistir a las reuniones. 
 
 
+
 ## RETRO SPRINT 5
 
 ### Comenzar a hacer: 
@@ -104,6 +105,8 @@
 ### Dejar de hacer: 
 - No asistir a las reuniones y no avisar.
 
+
+
 ## RETRO SPRINT 6
 
 ### Comenzar a hacer: 
@@ -120,3 +123,22 @@
 
 ### Dejar de hacer: 
 - Desaparecerse.
+
+
+
+## RETRO SPRINT 7
+
+### Comenzar a hacer: 
+- 
+
+### Hacer más: 
+- 
+
+### Continuar haciendo: 
+- 
+
+### Hacer menos: 
+-  
+
+### Dejar de hacer: 
+- 

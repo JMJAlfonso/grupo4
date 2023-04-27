@@ -5,11 +5,11 @@ const validations = {
     register: [
         body("name").notEmpty().withMessage("Tienes que escribir tu nombre").isLength({ min: 2 }),
         body("surname").notEmpty().withMessage("Tienes que escribir tu apellido").isLength({ min: 2 }),
-        body("email").notEmpty().withMessage("Tienes que escribir tu correo electronico").bail().isEmail().withMessage("debes escribir un correo electronico"),
-        body("tel").notEmpty().withMessage("Tienes que escribir tu numero de telefono"),
-        body("country").notEmpty().withMessage("Tienes que escribir tu pais"),
+        body("email").notEmpty().withMessage("Tienes que escribir tu correo electrónico").bail().isEmail().withMessage("debes escribir un correo electronico"),
+        body("tel").notEmpty().withMessage("Tienes que escribir tu numero de teléfono"),
+        body("country").notEmpty().withMessage("Tienes que escribir tu país"),
         body("password").notEmpty().withMessage("Tienes que escribir tu contraseña").isLength({ min: 8 }),
-        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmacion de contraseña").custom((value, {req}) => value === req.body.password).withMessage("The passwords do not match"),
+        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmación de contraseña").custom((value, {req}) => value === req.body.password).withMessage("The passwords do not match"),
         body("userAvatar").custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = [".jpg", ".png",'.jpeg',".gif"];
@@ -23,7 +23,7 @@ const validations = {
         })
     ],
     login: [
-        check('email').isEmail().withMessage('Email invalido'),
+        check('email').isEmail().withMessage('Email inválido'),
         check('password').isLength({ min: 2 }).withMessage('La contraseña debe tener mínimo 2 caracteres')
     ]
 }

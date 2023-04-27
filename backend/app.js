@@ -36,8 +36,8 @@ app.use('/api/users',apiUsersRoutes);
 app.use('/api/products',apiProductsRoutes);
 //End Routes API
 
-const port = process.env.PORT || 3000 ;
-app.listen(3000, () => {
+const port = process.env.PORT || 3001 ;
+app.listen(3001, () => {
     console.log(`Servidor iniciado en http://localhost:${port}`);
 });
 
