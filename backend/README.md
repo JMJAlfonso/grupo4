@@ -1,4 +1,3 @@
-# **Grupo 4**
 ## INSTALACION 
 1. Clonar
 ```
