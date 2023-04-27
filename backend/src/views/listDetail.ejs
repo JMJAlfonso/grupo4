@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'listDetailStyles' , title: 'Lista de actividades' }) %>
+    </head>
+    <body>
+        <%- include ('partials/header') %>
+        <main>
+
+            <h3> LISTA DE ACTIVIDADES </h3>
+
+            <section class="actividades_detalladas">
+                <% products.forEach((product)=> { %>
+
+                    <article class="article">
+                        <div class="slider-image">
+                        </div>
+                        <p>Información de la actividad:</p>
+                        <ul>
+
+                            <li>
+                                Nombre: <%=product.name%>
+                            </li>
+                            <li>
+                                Imagen: <%=product.activity_images[0].name%>
+                            </li>
+                            <li>
+                                Descripción: <%=product.description%>
+                            </li>
+                            <li>
+                                Precio: $<%=product.price%>
+                            </li>
+                            <li>
+                                Categoría: <%=product.dificulties.name%>
+                            </li>
+                            <li>
+                                Fecha de inicio: <%=product.dateStart%>
+                            </li>
+                            <li>
+                                Fecha de finalización: <%=product.dateFinish%>
+                            </li>
+                        </ul>
+                        <a href="/admin/products/<%=product.id%>/edit"><button>Editar producto</button></a>
+                        <a href="/admin/products/<%=product.id%>/delete"><button>Eliminar producto</button></a>
+                    </article>
+                    <br>
+                    <% }) %>
+                        <div class="buttons">
+                            <a href="/admin/createProduct"><button>Crear nuevo producto</button></a>
+                            <a href="/"><button>Volver al Home</button></a>
+                        </div>
+            </section>
+        </main>    
+        <%- include ('partials/footer') %>
+    </body>
+</html>
