@@ -14,57 +14,58 @@
                     </p>
 
                     <div class="productDescription">
-                        <p class="description">
-                            <%=product.dificulties.name%>
-                        </p>
                         <div class="boxImage">
                             <img class="slider-image" src="/images/products/<%=product.activity_images[0].name %>" alt="Trekking">
                         </div>
-                    </div>
+                        <p class="description">
+                            <%=product.description%>
+                        </p>
+                    
 
-                    <!-- <div class="activityDificulty">
-                        <div class="barra">
-                            <div class="proceso" style="--w:40%">40%</div>
+                            <!-- <div class="activityDificulty">
+                                <div class="barra">
+                                    <div class="proceso" style="--w:40%">40%</div>
+                                </div>
+                            </div> -->
+
+                        <div class="boxDetail">
+                            <p class="detailInfo">Informacion Detallada</p>
+
+                            <section class="boxInfo">
+
+                                <div class="boxInfoLeft">
+                                    <article>
+                                        <i class="fa-solid fa-money-bill-wave"></i> 
+                                        <span class="leftPrice">
+                                            Precio: $<%=product.price%>
+                                        </span>
+                                    </article>
+                                    <br>
+                                    <article>
+                                        <i class="fa-solid fa-dumbbell"></i>
+                                        <span class="Dificulty">
+                                            Nivel de dificultad: <%=product.dificulties.name%>
+                                        </span>
+                                    </article>
+                                </div>
+
+                                <div class="boxInfoRight">
+                                    <article>
+                                        <i class="fa-solid fa-play"></i>
+                                        <span class="rightDateStart">
+                                            La actividad inicia el: <%=product.dateStart%>
+                                        </span>
+                                    </article>
+                                    <br>
+                                    <article>
+                                        <i class="fa-solid fa-stop"></i>
+                                        <span class="rightDateFinish">
+                                            La actividad termina el: <%=product.dateFinish%>
+                                        </span>
+                                    </article>
+                                    </div>
+                            </section>
                         </div>
-                    </div> -->
-
-                    <div class="boxDetail">
-                        <p class="detailInfo">Informacion Detallada</p>
-
-                        <section class="boxInfo">
-
-                            <div class="boxInfoLeft">
-                                <article>
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span class="leftPrice">
-                                        Precio: $<%=product.price%>
-                                    </span>
-                                </article>
-                                <br>
-                                <article>
-                                    <i class="fa-solid fa-ban"></i>
-                                    <span class="Dificulty">
-                                        Nivel de dificultad: <%=product.dificulty%>
-                                    </span>
-                                </article>
-                            </div>
-
-                            <div class="boxInfoRight">
-                                <article>
-                                    <i class="fa-solid fa-route"></i>
-                                    <span class="rightDateStart">
-                                        La actividad inicia el: <%=product.dateStart%>
-                                    </span>
-                                </article>
-                                <br>
-                                <article>
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    <span class="rightDateFinish">
-                                        La actividad termina el: <%=product.dateFinish%>
-                                    </span>
-                                </article>
-                            </div>
-                        </section>
                     </div>
                 </div>
             </div>
