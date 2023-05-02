@@ -163,6 +163,21 @@ const userController = {
     productCart: (req, res) => {
         res.render('productCart');
     },
+
+    userList: async (req, res) => {
+        try {
+            const users = await db.User.findAll({
+                include: ['roles', 'countries'],
+                attributes: {
+                    exclude: ['password', 'roles_id', 'countries_id']
+                }
+            });
+
+            res.render('users', {users} )
+        } catch (error) {
+            res.send(error)
+        }
+    }
 };
 
 module.exports = userController;

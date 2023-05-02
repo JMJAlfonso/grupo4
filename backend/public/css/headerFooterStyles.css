@@ -260,6 +260,11 @@ footer{
   }
     .footer-col{
       width: 33%;
-    }
+  }
+  .adminList {
+    display: flex;
+    flex-direction: column;
+  }
+
   }
   

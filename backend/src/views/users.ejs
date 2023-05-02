@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'usersStyles', title: 'Lista de usuarios'}) %> 
+    </head>
+    <body>
+        <%- include ('partials/header') %> 
+        <main>
+            <div class="principal-container">
+            <table class="userTable">
+                <thead class="userHead">
+                    <th class="userCells"> Nombre </th>
+                    <th class="userCells"> Apellido </th>
+                    <th class="userCells"> Email </th>
+                    <th class="userCells"> Celular </th>
+                    <th class="userCells"> Pais </th>
+                    <th class="userCells"> Avatar </th>
+                    <th class="userCells"> Tipo de usuario </th>
+                </thead>
+                <tbody>
+                    <% users.forEach(user => { %>
+                       <tr>
+                        <td class="userFields"><%= user.name %></td>
+                        <td class="userFields"><%= user.surname %></td>
+                        <td class="userFields"><%= user.email %></td>
+                        <td class="userFields"><%= user.tel %></td>
+                        <td class="userFields"><%= user.countries?.name %></td>
+                        <td class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
+                        <td class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
+                       </tr> 
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        </main>
+        <%- include ('partials/footer') %> 
+    </body>
+</html>    
