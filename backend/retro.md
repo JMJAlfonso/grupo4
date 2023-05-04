@@ -129,16 +129,16 @@
 ## RETRO SPRINT 7
 
 ### Comenzar a hacer: 
-- 
+- Contestar en el grupo.
 
 ### Hacer más: 
-- 
+- Actualizar trello.
 
 ### Continuar haciendo: 
-- 
+- Trabajar en grupo.
 
 ### Hacer menos: 
--  
+-Ignorar a los compañeros.
 
 ### Dejar de hacer: 
-- 
+- No contestar.
