@@ -52,7 +52,7 @@ function SearchMovies() {
 						</div>
 						<div className="row">
 							<div className="col-12">
-								<h2>Películas para la palabra: {keyword}</h2>
+								<h2>Buscar actividades por palabra: {keyword}</h2>
 							</div>
 							{/* Listado de películas */}
 							{
@@ -80,7 +80,7 @@ function SearchMovies() {
 								})
 							}
 						</div>
-						{movies?.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+						{movies?.length === 0 && <div className="alert alert-warning text-center">No se encontraron actividades</div>}
 					</>
 					:
 					<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div>

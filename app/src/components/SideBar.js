@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logo-DH.PNG';
 
 function SideBar() {
     return (
@@ -23,61 +23,46 @@ function SideBar() {
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - Los Messianos</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider" />
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Menú</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
+                {/*<!-- Nav Item - Categorias -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Actividades</span>
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
+                {/*<!-- Nav Item - Actividades -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastMovieInDb">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>¿Quiénes somos?</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
+                {/*<!-- Nav Item - Tabla -->*/}
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/ContentRowMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Actividades</span></Link>
                 </li>
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/search">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Search</span></Link>
+                        <span>Busqueda</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
-            {/*<!-- End of Sidebar -->*/}
 
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
         </React.Fragment>
     )
 }
