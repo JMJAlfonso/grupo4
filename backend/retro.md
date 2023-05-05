@@ -26,7 +26,7 @@
 - Dejar de ser desorganizados. 
 - Evitar ignorar a los compañeros. 
 
-
+___
 
 ## RETRO SPRINT 2
 
@@ -48,7 +48,7 @@
 - Dejar de ser desorganizados.
 - No hacer reuniones semanales.
 
-
+___
 
 ## RETRO SPRINT 3
 
@@ -67,7 +67,7 @@
 ### Dejar de hacer: 
 - Interrumpir cuando habla el otro.
 
-
+___
 
 ## RETRO SPRINT 4
 
@@ -86,7 +86,7 @@
 ### Dejar de hacer: 
 - No asistir a las reuniones. 
 
-
+___
 
 ## RETRO SPRINT 5
 
@@ -105,7 +105,7 @@
 ### Dejar de hacer: 
 - No asistir a las reuniones y no avisar.
 
-
+___
 
 ## RETRO SPRINT 6
 
@@ -124,7 +124,7 @@
 ### Dejar de hacer: 
 - Desaparecerse.
 
-
+___
 
 ## RETRO SPRINT 7
 
