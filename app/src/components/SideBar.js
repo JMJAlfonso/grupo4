@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import image from '../assets/images/logo-DH.PNG';
+import image from '../assets/images/logo-DH.png';
 
 function SideBar() {
     return (
