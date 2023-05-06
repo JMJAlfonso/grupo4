@@ -46,7 +46,7 @@ function SearchMovies() {
 										<label htmlFor="">Buscar por título:</label>
 										<input type="text" className="form-control" onChange={onChangeInput} />
 									</div>
-									<button className="btn btn-info">Search</button>
+									<button className="btn btn-info" style={{background:"#EB9204"}}>Search</button>
 								</form>
 							</div>
 						</div>

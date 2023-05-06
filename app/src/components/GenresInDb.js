@@ -13,42 +13,42 @@ function GenresInDb() {
           <div className="row">
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Trekking</div>
+                <div className="card-body" style={{background:"#02094666"}}>Trekking</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Kayac</div>
+                <div className="card-body" style={{background:"#02094666"}}>Kayac</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Paracaidismo</div>
+                <div className="card-body" style={{background:"#02094666"}}>Paracaidismo</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Parapente</div>
+                <div className="card-body" style={{background:"#02094666"}}>Parapente</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Rappel</div>
+                <div className="card-body"style={{background:"#02094666"}}>Rappel</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Cabalgate</div>
+                <div className="card-body"style={{background:"#02094666"}}>Cabalgata</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Ciclismo</div>
+                <div className="card-body"style={{background:"#02094666"}}>Ciclismo</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">Espeleismo</div>
+                <div className="card-body"style={{background:"#02094666"}}>Espeleismo</div>
               </div>
             </div>
           </div>
