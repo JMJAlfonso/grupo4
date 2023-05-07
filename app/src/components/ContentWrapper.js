@@ -10,8 +10,10 @@ function ContentWrapper(){
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <TopBar />
-                    <ContentRowTop />
+                   <ContentRowTop />
+                   
                     <Footer />
+                
                 </div>
             </div>    
         </React.Fragment>

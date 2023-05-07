@@ -1,5 +1,5 @@
 import React from 'react';
-import foto from '../assets/images/jordan-walke.png';
+import foto from '../assets/images/icono.jpg';
 
 function TopBar(){
     return(
@@ -39,7 +39,7 @@ function TopBar(){
 						{/*<!-- Nav Item - User Information -->*/}
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-								<span className="mr-2 d-none d-lg-inline text-black-600 small">Alfonso Lombardi</span>
+								<span className="mr-2 d-none d-lg-inline text-black-600 small"><em>Alfonso Lombardi</em></span>
 								<img className="img-profile rounded-circle" src={foto} alt="Alfonso Lombardi - Desarollador web" width="60"/>
 							</a>
 						</li>

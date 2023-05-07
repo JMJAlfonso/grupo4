@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import image from '../assets/images/logo-DH.PNG';
+import image from '../assets/images/logo.jpg';
 
 function SideBar() {
     return (
@@ -12,7 +12,7 @@ function SideBar() {
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                    <img style={{width: '120px'}} src={image} alt="Digital House" />
+                    <img style={{width: '120px'}} src={image} alt="Turismo Aventura" />
                     </div>
                 </a>
 
@@ -22,8 +22,8 @@ function SideBar() {
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - Los Messianos</span></Link>
+                        <i className></i>
+                        <span> Dashboard - Los Messianos</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -34,25 +34,27 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Categorias -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/GenresInDb">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Actividades</span>
+                        <span>Inicio</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Actividades -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/AboutUsTurismoAventura">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>¿Quiénes somos?</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tabla -->*/}
                 <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/ContentRowMovies">
+                    <Link className="nav-link" to="/Activities">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Actividades</span></Link>
+                
                 </li>
+                
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/search">
                         <i className="fas fa-fw fa-table"></i>

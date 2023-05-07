@@ -32,7 +32,7 @@ function Chart (){
                                 <th>Título</th>
                                 <th>Duración</th>
                                 <th>Rating</th>
-                                <th>Género</th>
+                                <th>GéneroOOO</th>
                                 <th>Premios</th>
                             </tr>
                         </thead>
