@@ -12,7 +12,7 @@ function SideBar() {
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                    <img style={{width: '90px'}} src={image} alt="Digital House" />
+                    <img style={{width: '120px'}} src={image} alt="Digital House" />
                     </div>
                 </a>
 

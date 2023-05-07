@@ -1,17 +1,27 @@
 import React from 'react';
-
+import "../assets/css/footer.css";
 function Footer(){
     return (
-        <React.Fragment>
-			<footer className="sticky-footer bg-white" style={{background:"02094691"}}>
-				<div className="container my-auto">
-					<div className="copyright text-center my-auto">
-						<span style={{background:"#02094666"}}>Copyright &copy; Turismo Aventura</span>
-					</div>
-				</div>
-			</footer>
-
-        </React.Fragment>
-    )
+        <footer className="footer">
+            <div className="container">
+                <div className="row">
+                
+                    <div className="footer-col">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="/">Inicio</a></li><li><a href="/LastMovieInDb">Quienes somos</a></li><li><a href="/GenresInDb">Actividades</a></li>
+                        </ul>
+                    </div>
+					
+                </div>
+				
+            </div>
+			
+          <div className="text-center my-auto">
+            <span>© Turismo Aventura</span>
+          </div>
+        </footer>
+    );
 }
+
 export default Footer;

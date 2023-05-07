@@ -1,0 +1,141 @@
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px ;
+}
+footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+footer ul{
+  list-style: none;
+  padding-left: 0;
+}
+footer{
+  background-color: #020946a6;
+  padding: 50px 0;
+  
+}
+.footer-col{
+  width: 33%;
+  padding: 0 15px; 
+}
+.footer-col h4{
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #EB9204;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 300ms ease;
+}
+.footer-col ul li a:hover{
+  color: #FFFFFF;
+  padding-left: 8px;
+}
+.footer-col .redes-sociales a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  transition: all 300ms ease;
+
+}
+.footer-col .redes-sociales a:hover{
+  color: #24262b;
+  background-color: #FFFFFF;
+}
+/*responsive*/
+
+@media(min-width:0px){
+  .footer-col{
+  width: 100%;
+  margin-bottom: 30px;
+  }
+}
+.logo-title{
+  color: #FFFFFF;
+  padding-left: 50px;
+  text-transform: capitalize;
+}
+.email-box{
+  height: 40px;
+  display: flex;
+}
+.email-box i{
+  background: #2f3542;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.tbox,.btn{
+  border: none;
+  outline: none;
+  font-size: 70%;
+}
+
+.btn{
+  background: #2f3542;
+  color: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.row-2{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+
+
+@media(min-width:768px){
+  .tbox{
+    width: 0px;
+    transition: 300ms;
+      
+  }
+  .email-box:hover >.tbox,.tbox:focus{
+    width: 160px;
+    padding: 0 10px;
+  }
+    .footer-col{
+      width: 33%;
+  }
+  .adminList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  }
+  
