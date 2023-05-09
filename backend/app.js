@@ -8,7 +8,8 @@ const mainRouter = require('./src/routes/main');
 const adminRouter = require('./src/routes/admin');
 const userRouter = require('./src/routes/user');
 const session = require('express-session');
- 
+const cors = require ('cors');
+const authenticationMW = require ('./src/middlewares/authentication');
 //Require Routes API
 const apiUsersRoutes = require('./src/routes/api/usersRouter');
 const apiProductsRoutes = require('./src/routes/api/productsRouter');
@@ -23,9 +24,12 @@ app.use(session({secret:'Secreto!!!'})); // secret para que los archivos de sess
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+// Activando los cors - va a lograr atrapar a cualquier ruta que le impacte
+let listaBlanca = ['http://localhost:3000'] ;
+app.use(cors({origin:listaBlanca}));
 //session
 //app.use(session({secret: "secreto"}));
-
+app.use(authenticationMW);
 //Start Routes app
 app.use('/', mainRouter);
 app.use('/admin', adminRouter);

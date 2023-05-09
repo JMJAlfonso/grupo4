@@ -3,12 +3,13 @@ const db = require('../../../database/models');
 const controller = {
     products: async (req, res) => {
         try {
-            const Products = await db.Activities.findAll({ attributes: ['id', 'name', 'description'] } );
-                        
+            const Products = await db.Activities.findAll({ attributes: ['id', 'name', 'description'], include: ['activity_images'] });
+
             Products.map((product, index) => {
                 Products[index] = {
                     id: product.id,
                     name: product.name,
+                    image: `http://localhost:3001/images/products/${product.activity_images[0].name}`,
                     description: product.description,
                     detail: `api/products/${product.id}`
                 }
@@ -16,8 +17,13 @@ const controller = {
             const cantidad = {
                 count: Products.length
             }
-            Products.unshift(cantidad);
-            return res.json(Products);
+            const response = {
+                meta: {
+                    cantidad
+                },
+                data: Products
+            }
+            return res.json(response);
         } catch (error) {
             return res.send(error);
         }

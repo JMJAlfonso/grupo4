@@ -15,8 +15,13 @@ const controller = {
             const cantidad = {
                 count : Users.length
             }
-            Users.unshift(cantidad);
-            return res.json(Users);
+            const response = {
+                meta:{
+                   cantidad
+                },
+                data:  Users
+            }           
+            return res.json(response);
         } catch (error) {
             return res.send(error);
         }
