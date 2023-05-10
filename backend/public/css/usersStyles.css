@@ -13,29 +13,52 @@ body {
     background-color: #ffffff;
 }
 
-.principal-container {
-    margin: 150px auto;
-    width: 80%;
+.mainTable {
+    padding: 1em 2em;
 }
 
+/* .principal-container {
+    margin: 5% auto;
+    width: 90%;
+} */
+
 .userTable {
-    background-color: rgb(2 9 70 / 10%);
+    /* background-color: rgb(2 9 70 / 10%);
     backdrop-filter: blur(6px);
-    font-size: 18px;
-    text-align: left;
+    font-size: 16px;
+    text-align: left; */
     width: 100%;
     border-collapse: collapse;
+}
+
+table .trRow {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0f1d36;
+    margin-bottom: 1em;
 }
 
 .userHead {
     background-color: rgba(2, 9, 70, 0.65);
     border-bottom: solid 5px #0f1d36;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
+    display: none;
 }
+
+table td[data-titulo] {
+    display: flex;    
+}
+
+table td[data-titulo]::before {
+    content: attr( data-titulo );
+    width: 90px;
+    font-weight: 500;
+}
+
 .userCells, .userFields {
-    border: 1px solid black;
-    padding: 10px;
+    /* border: 1px solid black; */
+    padding: 5px;
 }
 
 
@@ -51,4 +74,85 @@ tr:nth-child(odd) td{
 
 tr:hover td {
     background-color: #eb93047a;
+}
+
+@media (min-width: 361px) {
+table td[data-titulo] {
+    display: flex;
+    justify-content: space-between;
+}
+.userFields{
+    border-bottom: 1px solid #0f1d363d;}
+}
+
+@media (min-width: 769px) {
+
+    .principal-container {
+        margin: 50px auto;
+        width: 95%;
+    }
+
+    .mainTable {
+        padding: 0;
+    }
+
+    table td {
+        display: flex;
+    }
+    
+    .userTable {
+        background-color: rgb(2 9 70 / 10%);
+        backdrop-filter: blur(6px);
+        font-size: 18px;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    table .trRow {
+        display: revert;
+        border: 1px solid #0f1d36;
+        margin-bottom: 0;
+    }
+
+    table td {
+        display: revert;
+    }
+
+    table td[data-titulo] {
+        display: revert;
+        content: none;   
+    }
+    
+    table td[data-titulo]::before {
+        content: none;
+        width: 90px;
+        font-weight: 500;
+    }
+    
+    .userHead {
+        background-color: rgba(2, 9, 70, 0.65);
+        border-bottom: solid 5px #0f1d36;
+        color: #ffffff;
+        font-size: 20px;
+        display: revert;
+    }
+    .userCells, .userFields {
+        border: 1px solid black;
+        padding: 10px;
+    }
+    
+    
+    tr:nth-child(even) td{
+        background-color: #5864914f;    
+        background-color: rgb(2 9 70 / 20%);
+        color:rgba(2, 9, 70, 0.65);
+    }
+    
+    tr:nth-child(odd) td{
+        color:rgba(2, 9, 70, 0.65);
+    }
+    
+    tr:hover td {
+        background-color: #eb93047a;
+    }
 }

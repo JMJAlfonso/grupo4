@@ -239,7 +239,7 @@ body {
     justify-content: center;
   }
   .productContainer {
-    max-width: 95%;
+    width: 95%;
     max-height: 450px;
     margin: 4% 2%;
     background-color: #5864914f;

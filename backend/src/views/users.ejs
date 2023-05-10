@@ -2,10 +2,11 @@
 <html lang="en">
     <head>   
         <%- include ('partials/head', {style: 'usersStyles', title: 'Lista de usuarios'}) %> 
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
     </head>
     <body>
         <%- include ('partials/header') %> 
-        <main>
+        <main class="mainTable">
             <div class="principal-container">
             <table class="userTable">
                 <thead class="userHead">
@@ -19,14 +20,14 @@
                 </thead>
                 <tbody>
                     <% users.forEach(user => { %>
-                       <tr>
-                        <td class="userFields"><%= user.name %></td>
-                        <td class="userFields"><%= user.surname %></td>
-                        <td class="userFields"><%= user.email %></td>
-                        <td class="userFields"><%= user.tel %></td>
-                        <td class="userFields"><%= user.countries?.name %></td>
-                        <td class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
-                        <td class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
+                       <tr class="trRow">
+                        <td data-titulo="Nombre" class="userFields"><%= user.name %></td>
+                        <td data-titulo="Apellido" class="userFields"><%= user.surname %></td>
+                        <td data-titulo="Email" class="userFields"><%= user.email %></td>
+                        <td data-titulo="Telefono" class="userFields"><%= user.tel %></td>
+                        <td data-titulo="Pais" class="userFields"><%= user.countries?.name %></td>
+                        <td data-titulo="Foto de Perfil" class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
+                        <td data-titulo="Rol" class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
                        </tr> 
                     <% }); %>
                 </tbody>
