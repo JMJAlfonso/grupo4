@@ -3,44 +3,48 @@ import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+/* <!-- Activities in DB --> */
 
-let moviesInDB = {
+let activitiesInDB = {
     title: 'Actividades',
-    color: 'primary', 
+    color: 'primary',
     cuantity: 8,
-    icon: 'fa-clipboard-list'
+    icon: 'fa-clipboard-list',
+    api:'products'
 }
 
-/* <!-- Total awards --> */
+/* <!-- Total dificulties --> */
 
-let totalAwards = {
-    title:' Dificultad', 
-    color:'success', 
+let dificulties = {
+    title: 'Dificultad',
+    color: 'success',
     cuantity: '4',
-    icon:'fa-award'
+    icon: 'fa-award',
+    api:'dificulties'
 }
 
-/* <!-- Actors quantity --> */
+/* <!-- Users quantity --> */
 
-let actorsQuantity = {
-    title:'Publico' ,
-    color:'warning',
-    cuantity:'Personas :V',
-    icon:'fa-user-check'
+let usersQuantity = {
+    title: 'Usuarios',
+    color: 'warning',
+    cuantity: 'Personas :V',
+    icon: 'fa-user-check',
+    api:'users'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cartProps = [activitiesInDB, dificulties, usersQuantity];
 
-function ContentRowMovies(){
+function ContentRowMovies() {    
+
     return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
 
-                return <SmallCard {...movie} key={i}/>
-            
+        <div className="row">
+
+            {cartProps.map((api, i) => {
+
+                return <SmallCard {...api} key={i} />
+
             })}
 
         </div>

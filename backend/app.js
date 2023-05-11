@@ -13,6 +13,8 @@ const authenticationMW = require ('./src/middlewares/authentication');
 //Require Routes API
 const apiUsersRoutes = require('./src/routes/api/usersRouter');
 const apiProductsRoutes = require('./src/routes/api/productsRouter');
+const apiDificultiesRoutes = require('./src/routes/api/dificultiesRouter');
+
 //End Require Routes API
 
 //Configuración  //use para hacer la herramienta global 
@@ -38,6 +40,8 @@ app.use('/user',userRouter);
 //Start Routes API
 app.use('/api/users',apiUsersRoutes);
 app.use('/api/products',apiProductsRoutes);
+app.use('/api/dificulties',apiDificultiesRoutes);
+
 //End Routes API
 
 const port = process.env.PORT || 3001 ;

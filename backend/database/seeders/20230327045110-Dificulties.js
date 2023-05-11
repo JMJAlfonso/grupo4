@@ -6,13 +6,7 @@ module.exports = {
 
     await queryInterface.bulkInsert('dificulties', [{
       name: 'Dificultad Media',
-    },
-    {
-      name: 'Dificultad Media',
-    },
-    {
-      name: 'Dificultad Extrema'
-    },
+    },      
     {
       name: 'Dificultad Extrema'
     },
@@ -21,13 +15,7 @@ module.exports = {
     },
     {
       name: 'Dificultad Baja'
-    },
-    {
-      name: 'Dificultad Media'
-    },
-    {
-      name: 'Dificultad Alta'
-    }
+    },   
     ],
 
       {});

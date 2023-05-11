@@ -42,7 +42,7 @@ module.exports = {
         price: 4000,
         dateStart: '2023-02-14T14:59',
         dateFinish: '2023-02-22T15:03',
-        dificulties_id:5
+        dificulties_id:1
       },
       {
         name: 'Cabalgata',
@@ -50,7 +50,7 @@ module.exports = {
         price: 2134,
         dateStart: '2023-02-14T14:59',
         dateFinish: '2023-02-22T15:03',
-        dificulties_id:6        
+        dificulties_id:2       
       },
       {
         name: 'Ciclismo',
@@ -58,7 +58,7 @@ module.exports = {
         price: 2000,
         dateStart: '2023-02-14T14:59',
         dateFinish: '2023-02-22T15:03',
-        dificulties_id:7
+        dificulties_id:3
       },
       {
         name: 'Espeleismo',
@@ -66,7 +66,7 @@ module.exports = {
         price: 6000,
         dateStart: '2023-02-14T14:59',
         dateFinish: '2023-02-22T15:03',
-        dificulties_id:8
+        dificulties_id:4
       }], {});
 
   },

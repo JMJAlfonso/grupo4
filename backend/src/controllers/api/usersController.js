@@ -4,22 +4,19 @@ const controller = {
     users: async (req, res) => {
         try {
             const Users = await db.User.findAll({ attributes: ['id', 'name', 'email'] });            
-            Users.map((user, index) => {
-                Users[index] = {
+            const usersData = Users.map((user) => {
+               return  {
                     id: user.id,
                     name: user.name,
                     email: user.email,
                     detail: `http://localhost:3000/api/users/${user.id}`
                 }
-            })
-            const cantidad = {
-                count : Users.length
-            }
+            })           
             const response = {
                 meta:{
-                   cantidad
+                    count : Users.length
                 },
-                data:  Users
+                data:  usersData
             }           
             return res.json(response);
         } catch (error) {

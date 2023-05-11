@@ -5,23 +5,20 @@ const controller = {
         try {
             const Products = await db.Activities.findAll({ attributes: ['id', 'name', 'description'], include: ['activity_images'] });
 
-            Products.map((product, index) => {
-                Products[index] = {
+           const productsData =  Products.map((product) => {
+               return {
                     id: product.id,
                     name: product.name,
                     image: `http://localhost:3001/images/products/${product.activity_images[0].name}`,
                     description: product.description,
                     detail: `api/products/${product.id}`
                 }
-            })
-            const cantidad = {
-                count: Products.length
-            }
+            })          
             const response = {
                 meta: {
-                    cantidad
+                    count: Products.length
                 },
-                data: Products
+                data: productsData
             }
             return res.json(response);
         } catch (error) {
