@@ -177,7 +177,7 @@ const userController = {
         } catch (error) {
             res.send(error)
         }
-    }
+    },
 };
 
 module.exports = userController;

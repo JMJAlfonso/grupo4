@@ -127,6 +127,33 @@ header .nav-bar{
   .nav-bar{
     flex-direction: row;
   }
+  .userLog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .userImage {
+  width: 75px;
+  border-radius: 50%;
+  }
+  .userName {
+    padding: 10px;
+    animation: shining 2s ease-in-out infinite;
+  }
+  
+  @keyframes shining {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
 }
 
 /* FOOTER */

@@ -11,18 +11,26 @@
             </ul>
         </div>
         <div class="login-button">
-            <button><a class="user" href="/user/login"><i class="fa-solid fa-user"></i>Ingresar</a></button>
-            <button><a class="Register" href="/user/register">Registrarse</a></button>
-            <% if (locals.session?.role ==='admin') {%>
-                <div class="adminList">
-                    <button><a class="user" href="/admin/user"></i>Lista de Usuarios</a></button>
-                    <button><a class="user" href="/admin/listDetail"></i>Listar Productos</a></button>
-                </div>
-            <%}%>
-                    <a class="cart" href="/user/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <% if (locals.session) {%>
-                        <button><a class="user" href="/user/logout"></i>Cerrar Sesion</a></button>
-                        <%}%>
+            <div class="login-button">
+                <% if (locals.session?.role==='admin' ) {%>
+                    <div class="adminList">
+                        <button><a class="user" href="/admin/user"></i>Lista de Usuarios</a></button>
+                        <button><a class="user" href="/admin/listDetail"></i>Listar Productos</a></button>
+                    </div>
+                    <%}%>
+            </div>
+            <% if (!locals.session) { %>
+                <button><a class="user" href="/user/login"><i class="fa-solid fa-user"></i> Ingresar</a></button>
+                <button><a class="Register" href="/user/register">Registrarse</a></button>
+                <% } else { %>
+                    <div class="userLog">
+                        <img class="userImage" src="/images/users/<%= locals.session.avatar %>">
+                        <span class="userName">Bienvenid@ <%= locals.session.name %></span>
+                    </div>
+                        <button><a class="user" href="/user/logout"><i class="fa-solid fa-sign-out"></i> Cerrar
+                                sesión</a></button>
+                    <% } %>
+                        <a class="cart" href="/user/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
     </nav>
