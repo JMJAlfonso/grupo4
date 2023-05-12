@@ -9,7 +9,7 @@ const validation = require('../validation/productValidation');
 
 //configuracion de multer para almacenar imaganes
 const multer = require('multer');
-const userController = require('../controllers/usersController');
+const usersController = require('../controllers/usersController');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, '../../public/images/products'));
@@ -28,8 +28,8 @@ router.get('/products/:id/edit',accessAuthorized,productController.editProduct);
 router.put('/products/:id',accessAuthorized,upload.single('image'),productController.update);
 router.get('/products/:id/delete',accessAuthorized,productController.delete);
 router.delete('/products/:id',accessAuthorized,productController.destroy);
-router.get('/user', accessAuthorized, userController.userList);
-
+router.get('/user', accessAuthorized, usersController.userList);
+router.get('/:id', accessAuthorized, usersController.destroy);
 
 
 

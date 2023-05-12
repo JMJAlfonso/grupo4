@@ -44,7 +44,7 @@ module.exports = {
         email: 'yanina@conectate.com',
         tel: '+54 9 1121238889',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
-        avatar: 'otamendi.jpg',
+        avatar: 'otamendi.png',
         roles_id: 4,
         countries_id: 4
       }
@@ -55,7 +55,7 @@ module.exports = {
         email: 'alejandro@conectate.com',
         tel: '+54 9 1184569652',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
-        avatar: 'enzo.jpg',
+        avatar: 'enzo.png',
         roles_id: 5,
         countries_id: 5
       }

@@ -182,7 +182,7 @@ const userController = {
             console.log(req.params.id);      
             await db.User.destroy({ where: { id: req.params.id } });
 
-            res.redirect('admin/user')
+            res.redirect('/')
         } catch (error) {
             res.send(error);
         }

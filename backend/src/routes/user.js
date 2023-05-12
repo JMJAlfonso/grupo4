@@ -26,13 +26,13 @@ const upload = multer({ storage });
 
 router.get('/', authorizationMiddleware, usersController.list);
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', upload.single('userAvatar'), validation.register, usersController.create);
+router.post('/register',upload.single('userAvatar'), validation.register, usersController.create);
 router.get("/login", guestMiddleware,usersController.login);
 router.post("/login",validation.login, usersController.loginProcess);
 router.get('/productCart',userMiddleware, usersController.productCart);
 router.get('/logout', usersController.logout);
 router.get('/profile', authorizationMiddleware, usersController.profile);
-router.get('/:id', accessAuthorized, usersController.destroy);
+
 
 router.get('/check', function (req, res) {
     if (!req.session.usuarioLogueado ) {

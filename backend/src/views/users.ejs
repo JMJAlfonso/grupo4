@@ -8,6 +8,7 @@
         <%- include ('partials/header') %> 
         <main class="mainTable">
             <div class="principal-container">
+            <h3> LISTA DE USUARIOS </h3>   
             <table class="userTable">
                 <thead class="userHead">
                     <th class="userCells"> Nombre </th>
@@ -29,7 +30,7 @@
                         <td data-titulo="Foto de Perfil" class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
                         <td data-titulo="Rol" class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
                         <% if(user.id !==1){ %>
-                        <td data-titulo="Rol"><a href="/user/<%=user.id%>">eliminar</a></td>
+                        <td data-titulo="Rol"><a href="/admin/<%=user.id%>">eliminar</a></td>
                         <% }%>
                         </tr> 
                     <% }); %>
