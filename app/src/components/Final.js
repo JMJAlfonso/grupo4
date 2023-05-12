@@ -15,7 +15,7 @@ function Final(){
                     <div className="text-center">
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt="Campeones"/>
                     </div>
-                    <p>Muchas gracias a todos. Especialmente Andrey por la dedicacion y la paciencia que nos tuviste. Tambien a vos Matias por estar siempre a disposicion. Y Paul, como olvidarnos de paul que hizo el aguante todas las noches.. Gracias por hacer mas facil el recorrido y ayudarnos a conseguir estar esta meta. </p>                    
+                    <p>Muchas gracias a todos. Especialmente Andrey por la dedicacion y la paciencia que nos tuviste. Tambien a vos Matias por estar siempre a disposicion. Y Paul, como olvidarnos de paul que hizo el aguante todas las noches.. Gracias por hacer mas facil el recorrido y ayudarnos a alcanzar la meta. Ahora a celebrar como campeones del mundo!  </p>                    
                 </div>
             </div>
         </div>
