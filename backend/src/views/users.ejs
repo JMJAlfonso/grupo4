@@ -28,7 +28,10 @@
                         <td data-titulo="Pais" class="userFields"><%= user.countries?.name %></td>
                         <td data-titulo="Foto de Perfil" class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
                         <td data-titulo="Rol" class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
-                       </tr> 
+                        <% if(user.id !==1){ %>
+                        <td data-titulo="Rol"><a href="/user/<%=user.id%>">eliminar</a></td>
+                        <% }%>
+                        </tr> 
                     <% }); %>
                 </tbody>
             </table>

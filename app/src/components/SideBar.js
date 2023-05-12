@@ -7,12 +7,12 @@ function SideBar() {
     return (
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" style={{background:"#02094691"}}>
+            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" style={{ background: "#02094691" }}>
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                    <img style={{width: '120px'}} src={image} alt="Turismo Aventura" />
+                        <img style={{ width: '120px' }} src={image} alt="Turismo Aventura" />
                     </div>
                 </a>
 
@@ -52,11 +52,15 @@ function SideBar() {
                     <Link className="nav-link" to="/Activities">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Actividades</span></Link>
-                
-                </li>                
-                
+                </li>
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
+                <li className="nav-item nav-link">
+                    <Link className="nav-link" to="/Campeones">
+                        <i className="fas fa-rocket-launch"></i>
+                        <span>Fin</span></Link>
+                </li>
             </ul>
 
         </React.Fragment>

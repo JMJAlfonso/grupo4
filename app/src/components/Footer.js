@@ -10,7 +10,7 @@ function Footer(){
                         <h4>Links</h4>
                         <ul>
                             <li><a href="/">Inicio</a></li>
-							<li><a href="/LastMovieInDb">Quienes somos</a></li>
+							<li><a href="/AboutUsTurismoAventura">Quienes somos</a></li>
 							<li><a href="/Activities">Actividades</a></li>
                         </ul>
                     </div>

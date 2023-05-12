@@ -171,12 +171,22 @@ const userController = {
                 attributes: {
                     exclude: ['password', 'roles_id', 'countries_id']
                 }
-            });
-
+            });            
             res.render('users', {users} )
         } catch (error) {
             res.send(error)
+        }  
+    }, 
+    destroy: async function (req, res) {
+        try {     
+            console.log(req.params.id);      
+            await db.User.destroy({ where: { id: req.params.id } });
+
+            res.redirect('admin/user')
+        } catch (error) {
+            res.send(error);
         }
+
     },
 };
 

@@ -21,7 +21,7 @@ function Activities() {
     },[])
   
   return (
-    <div className="col-lg-6 mb-5">
+    <div className="col-lg-6 mb-5" >
       <div className="card shadow mb-3">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800 text-center">

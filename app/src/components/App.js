@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import ContentWrapper from './ContentWrapper';
 import Activities from './Activities';
 import AboutUsTurismoAventura from './AboutUsTurismoAventura';
-
+import Final from './Final';
 import NotFound from './NotFound';
 
 import SideBar from './SideBar';
@@ -27,8 +27,8 @@ function App() {
           <Route path="/Categoria">
             <Activities/>
           </Route>
-          <Route path="/">
-            
+          <Route path="/Campeones">
+            <Final/>
           </Route>
           <Route component={NotFound} />
         </Switch>

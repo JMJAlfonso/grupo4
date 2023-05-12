@@ -7,14 +7,68 @@ module.exports = {
 
     await queryInterface.bulkInsert('users', [
       {
-        name: 'jacky',
-        surname: 'vamosquesepuede',
+        name: 'Jaqueline',
+        surname: 'Vazquez',
         email: 'jacky@conectate.com',
-        tel:'+54 9 1124942933',
+        tel: '+54 9 1124942933',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
         avatar: 'messi.jpg',
-        roles_id:1,
-        countries_id:1
+        roles_id: 1,
+        countries_id: 1
+      },
+      {
+        name: 'Alfonso',
+        surname: 'Lombardi',
+        email: 'alfonso@conectate.com',
+        tel: '+54 9 1120304050',
+        password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
+        avatar: 'emiliano_martinez.jpg',
+        roles_id: 2,
+        countries_id: 2
+      }
+      ,
+      {
+        name: 'Fabian',
+        surname: 'Loza',
+        email: 'fabian@conectate.com',
+        tel: '+54 9 1180203230',
+        password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
+        avatar: 'di_maria.jpg',
+        roles_id: 3,
+        countries_id: 3
+      }
+      ,
+      {
+        name: 'Yanina ',
+        surname: 'Andrade',
+        email: 'yanina@conectate.com',
+        tel: '+54 9 1121238889',
+        password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
+        avatar: 'otamendi.jpg',
+        roles_id: 4,
+        countries_id: 4
+      }
+      ,
+      {
+        name: 'Alejandro ',
+        surname: 'Sosa',
+        email: 'alejandro@conectate.com',
+        tel: '+54 9 1184569652',
+        password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
+        avatar: 'enzo.jpg',
+        roles_id: 5,
+        countries_id: 5
+      }
+      ,
+      {
+        name: 'Bruno  ',
+        surname: 'Cabral',
+        email: 'bruno@conectate.com',
+        tel: '+54 9 1184569652',
+        password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
+        avatar: 'dybala.jpg',
+        roles_id: 6,
+        countries_id: 6
       }
     ], {});
 

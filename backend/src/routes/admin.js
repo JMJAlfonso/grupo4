@@ -28,7 +28,8 @@ router.get('/products/:id/edit',accessAuthorized,productController.editProduct);
 router.put('/products/:id',accessAuthorized,upload.single('image'),productController.update);
 router.get('/products/:id/delete',accessAuthorized,productController.delete);
 router.delete('/products/:id',accessAuthorized,productController.destroy);
-router.get('/user', accessAuthorized, userController.userList)
+router.get('/user', accessAuthorized, userController.userList);
+
 
 
 
