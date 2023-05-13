@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import ContentWrapper from './ContentWrapper';
 import Activities from './Activities';
+import Users from './Users';
 import AboutUsTurismoAventura from './AboutUsTurismoAventura';
 import Final from './Final';
 import NotFound from './NotFound';
@@ -21,11 +22,11 @@ function App() {
           <Route path="/Activities"> 
             <Activities/>
           </Route>
+          <Route path="/Users">
+            <Users/>
+          </Route>
           <Route path="/AboutUsTurismoAventura">
             <AboutUsTurismoAventura/>
-          </Route>
-          <Route path="/Categoria">
-            <Activities/>
           </Route>
           <Route path="/Campeones">
             <Final/>

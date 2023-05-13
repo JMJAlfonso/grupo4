@@ -1,14 +1,15 @@
 import React from "react";
-import CardActivity from "./CardActivity";
+import CardUser from "./CardUser";
+import '../assets/css/userStyle.css' 
 
 
-function Activities() {    
-    const [activities, setActivities] = React.useState([]);
+function Users() {    
+    const [users, setUsers] = React.useState([]);
     React.useEffect(()=>{
-        fetch('http://localhost:3001/api/products')
+        fetch('http://localhost:3001/api/users')
         .then((res)=>res.json())
         .then(info =>{
-          setActivities(info.data);
+          setUsers(info.data);
         })
     },[])
   
@@ -17,11 +18,11 @@ function Activities() {
       <div className="card shadow mb-3">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800 text-center">
-        Actividades
+        Usuarios
           </h5>
         </div>
-        <div className="cardActivity">
-          {activities.map((activity,i)=><CardActivity key={i} {...activity} />)}        
+        <div className="card-body-user">
+          {users.map((user,i)=><CardUser key={i} {...user} />)}        
           {/* ...activity es equivalente a  name={activity.name} image={activity.image} description={activity.description}*/ }
         </div>
       </div>
@@ -29,5 +30,5 @@ function Activities() {
   );
 }
 
-export default Activities
+export default Users
 

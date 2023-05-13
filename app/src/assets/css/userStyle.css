@@ -1,0 +1,16 @@
+.imgUser {
+    width: 250px;
+    height: 250px;
+}
+
+.card-body-user {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.rowUser {
+    padding: 15px 10px;
+    width: 45%;
+}

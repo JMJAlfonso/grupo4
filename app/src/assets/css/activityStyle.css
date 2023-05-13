@@ -1,0 +1,13 @@
+.cardActivity {
+    background: "#02094650";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.rowActivities {
+    width: 45%;
+    padding: 10px 0;
+}

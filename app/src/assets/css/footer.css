@@ -116,7 +116,7 @@ footer{
     padding: 0 10px;
   }
     .footer-col{
-      width: 33%;
+      width: 50%;
   }
   .adminList {
     display: flex;

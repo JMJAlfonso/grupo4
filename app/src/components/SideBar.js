@@ -35,30 +35,32 @@ function SideBar() {
                 {/*<!-- Nav Item - Categorias -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/">
-                        <i className="fas fa-fw fa-folder"></i>
+                        <i className='fas fa-fw fa-home'></i>
                         <span>Inicio</span>
                     </Link>
                 </li>
-
                 {/*<!-- Nav Item - Actividades -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/AboutUsTurismoAventura">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>¿Quiénes somos?</span></Link>
                 </li>
-
                 {/*<!-- Nav Item - Tabla -->*/}
-                <li className="nav-item nav-link">
+                <li className="nav-item">
                     <Link className="nav-link" to="/Activities">
-                        <i className="fas fa-fw fa-table"></i>
+                        <i className="fas fa-fw fa-folder"></i>
                         <span>Actividades</span></Link>
                 </li>
-
+                <li className="nav-item">
+                    <Link className="nav-link" to="/Users">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Usuarios</span></Link>
+                </li>
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/Campeones">
-                        <i className="fas fa-rocket-launch"></i>
+                        <i className='fas fa-fw fa-hourglass-end'></i>
                         <span>Fin</span></Link>
                 </li>
             </ul>

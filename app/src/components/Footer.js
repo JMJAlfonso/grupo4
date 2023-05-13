@@ -12,6 +12,7 @@ function Footer(){
                             <li><a href="/">Inicio</a></li>
 							<li><a href="/AboutUsTurismoAventura">Quienes somos</a></li>
 							<li><a href="/Activities">Actividades</a></li>
+							<li><a href="/Users">Usuarios</a></li>
                         </ul>
                     </div>
 					
