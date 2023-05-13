@@ -142,3 +142,36 @@ ___
 
 ### Dejar de hacer: 
 - No contestar.
+
+## RETRO SPRINT 8
+Llegamos al final de este camino y la verdad es que tuvimos un aprendizaje dinámico, como equipo 
+funcionamos bien y creemos que cumplicos con los objetivos que nos pusieron desde el comienzo.
+Estamos contentos con el proyecto final y lo que significa. En conclusión lo que podemos decir es:
+### Comenzar a hacer: 
+- Para nuestros próximos proyectos tener en cuenta a nuestros compañeros de equipo, con esto nos
+referimos a siempre mantener una comunicación fluída, no quedarnos con una idea, sino explorar, 
+escuchar nuevas propuestas y estar abiertos al cambio.
+
+### Hacer más: 
+- Para nuestros próximos proyectos, tenemos que aprender a gestionar más el tiempo, lo logramos 
+en este caso, pero claramente fue dificil y seguro hay lugar a mejorar aprovechando las herramientas
+tecnológicas de hoy en día.
+
+### Continuar haciendo: 
+- Seguir enfocados en aprender, aprovechar los recursos, poder desarrollar un "amor" a medida de que 
+cada proyecto vaya creciendo. Cuando uno deja una marca en un proyecto; el valor y la dedicación también marca nuestros caminos.
+
+### Hacer menos: 
+-Hay muchos puntos de mejoras, pero a veces las bromas y chistes cuando tenemos que enfocarnos, porque 
+tenemos poco tiempo para entregar. Todo es cuestión de llegar al objetivo pero podemos decir que 
+DIVERSIÓN en nuestro equipo no falto!
+
+### Dejar de hacer: 
+- Hay aprendizajes que nos llevamos: siempre respeto, por lo cual, no contestar mensajes o no participar
+en decisiones es algo que HAY QUE DEJAR DE HACER, en nuestro proyecto eso pasó muy poco. Por lo cual lo 
+llevamos como aprendizaje.
+
+### FINALMENTE:
+Queremos agradecer a los profesores que no solo nos han enseñado y nos dieron su paciencia, y muchas veces repitieron conceptos... Gracias por todas esas veces que nos ayudaron fuera de clase, los consejos y tips 
+que nos aportan muchísimo.
+Y gracias al destino por el equipo que nos tocó... Hasta la próxima!!
