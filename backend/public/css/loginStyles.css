@@ -53,6 +53,12 @@ main input{
   cursor: pointer;
 }
 
+.error {
+  color: #bf1717;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
 .form-group{
   display: flex;
   flex-direction: column;

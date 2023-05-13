@@ -9,7 +9,7 @@ const validations = {
         body("tel").notEmpty().withMessage("Tienes que escribir tu numero de teléfono"),
         body("country").notEmpty().withMessage("Tienes que escribir tu país"),
         body("password").notEmpty().withMessage("Tienes que escribir tu contraseña").isLength({ min: 8 }),
-        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmación de contraseña").custom((value, {req}) => value === req.body.password).withMessage("The passwords do not match"),
+        body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmación de contraseña").custom((value, {req}) => value === req.body.password).withMessage("Las contraseñas no coinciden"),
         body("userAvatar").custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = [".jpg", ".png",'.jpeg',".gif"];

@@ -31,7 +31,7 @@ const userController = {
             return res.render("register", {
                 errors: {
                     email: {
-                        msg: "este mail ya esta registrado"
+                        msg: "Este mail ya está registrado"
                     }
                 },
                 oldData: req.body
@@ -55,7 +55,7 @@ const userController = {
                 return res.render("register", {
                     errors: {
                         email: {
-                            msg: "este mail ya esta registrado"
+                            msg: "Este mail ya está registrado"
                         }
                     },
                     oldData: req.body
@@ -127,10 +127,10 @@ const userController = {
                 }
             });           
             if (!user) {
-                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña inválidos' } } });
             }
             if (!bcryptjs.compareSync(req.body.password, user.password)) {
-                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña inválidos' } } });
             }
             req.session.user = {
                 id: user.id,

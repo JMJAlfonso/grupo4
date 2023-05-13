@@ -7,13 +7,17 @@ body{
     line-height: 23px;
 }
 .is-invalid{
-    color: #842029;
-    border: 2px solid red
+    border: 4px solid #842029
 }
 .error-message{
     color: #842029;
     display: none;
 }
+
+.text-danger {
+    color: #bf1717;
+}
+
 .show-error-message {
     display: block;
 }

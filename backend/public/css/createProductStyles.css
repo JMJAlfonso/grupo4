@@ -7,11 +7,10 @@ body{
     line-height: 23px;
 }
 .is-invalid{
-    color: #842029;
-    border: 2px solid red
+    border: 4px solid #842029;
 }
 .error-message{
-    color: #842029;
+    color: #bf1717;
     display: none;
 }
 .show-error-message {
@@ -22,8 +21,8 @@ body{
  box-sizing: border-box;
 }
 .text-danger{
-    color: orange;
-    font-size: 15px;
+    color: #bf1717;
+    /* font-size: 15px; */
 }
 
 h2{

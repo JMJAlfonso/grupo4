@@ -3,12 +3,15 @@ const db = require('../../../database/models');
 const controller = {   
     users: async (req, res) => {
         try {
-            const Users = await db.User.findAll({ attributes: ['id', 'name', 'email'] });            
+            const Users = await db.User.findAll({ attributes: ['id', 'name', 'surname','email', 'tel','avatar'] });            
             const usersData = Users.map((user) => {
                return  {
                     id: user.id,
                     name: user.name,
+                    surname: user.surname,
                     email: user.email,
+                    tel: user.tel,
+                    avatar: `http://localhost:3001/images/users/${user.avatar}`,
                     detail: `http://localhost:3000/api/users/${user.id}`
                 }
             })           

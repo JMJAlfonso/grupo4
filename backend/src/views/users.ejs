@@ -18,6 +18,7 @@
                     <th class="userCells"> Pais </th>
                     <th class="userCells"> Avatar </th>
                     <th class="userCells"> Tipo de usuario </th>
+                    <th class="userCells"> Acción </th>
                 </thead>
                 <tbody>
                     <% users.forEach(user => { %>
@@ -30,7 +31,7 @@
                         <td data-titulo="Foto de Perfil" class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
                         <td data-titulo="Rol" class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
                         <% if(user.id !==1){ %>
-                        <td data-titulo="Rol"><a href="/admin/<%=user.id%>">eliminar</a></td>
+                        <td data-titulo="Accion"class="userFields userFieldsCenter"><a href="/admin/<%=user.id%>"> Eliminar </a></td>
                         <% }%>
                         </tr> 
                     <% }); %>

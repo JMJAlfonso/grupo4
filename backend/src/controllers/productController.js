@@ -58,7 +58,7 @@ const productController = {
                 name: req.body.dificulty
             }
 
-            const newD = await db.Dificulties.create(newDificulty);
+            const newD = await db.Dificulties.findOne(newDificulty);
 
             const newProduct = {
                 name: req.body.name,

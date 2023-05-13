@@ -13,11 +13,9 @@
             </div>
                     <div class="form-control">
                     <label>Nombre:</label>                   
-                    <input 
-                    type="text" 
-                    name="name" 
-                    class="control <%= locals.errors && errors.name ? "is-invalid" : null %>"
-                    value="<%= locals.oldData ? oldData.name : null %> "
+                    <input type="text" name="name" 
+                    class="control <%= locals.errors && errors.name ? "is-invalid" : null %>" 
+                    value="<%= locals.oldData ? oldData.name : null %>"
                     >
                     <% if (locals.errors && errors.name) { %>
                         <div class= "text-danger">
@@ -27,11 +25,9 @@
                 </div>
                 <div class="form-control">
                     <label>Apellido:</label>                    
-                    <input 
-                    type="text" 
-                    name="surname" 
-                    class="control <%= locals.errors && errors.surname ? "is-invalid" : null %>"
-                    value="<%= locals.oldData ? oldData.surname : null %> ">
+                    <input type="text" name="surname" 
+                    class="control <%=locals.errors && errors.surname ? "is-invalid" : null %>" 
+                    value="<%= locals.oldData ? oldData.surname : null %>">
                     <% if (locals.errors && errors.surname) { %>
                         <div class= "text-danger">
                      <%= errors.surname.msg %>
@@ -54,9 +50,9 @@
                 </div>
                 <div class="form-control">
                     <label>Celular:</label>                    
-                    <input type="tel" name="tel" placeholder="+54 9 11234000" 
-                     class="control <%= locals.errors && errors.tel ? "is-invalid" : null %>"
-                    value="<%= locals.oldData ? oldData.tel : null %> ">
+                    <input type="tel" name="tel" placeholder="+54 9 11234000"
+                    class="control <%= locals.errors && errors.tel ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.tel : null %>">
                     <% if (locals.errors && errors.tel) { %>
                         <div class= "text-danger">
                      <%= errors.tel.msg %>
@@ -66,13 +62,18 @@
 
                 <div class="form-control">
                     <label>País</label>                    
-                    <select name="country" class="control <%= locals.errors && errors.country ? "is-invalid" : null %>"
-                        value="<%= locals.oldData ? oldData.country : null %> ">
-                        <option value="argentina">Argentina</option>
-                        <option value="bolivia">Bolivia</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="venezuela">Venezuela</option>
-                        <option value="guyanaFrancesa">Guyana Francesa </option>
+                    <select name="country" class="control <%=locals.errors && errors.country ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.country : null %>">
+                    <option value="argentina">Argentina</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="Peru">Peru</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="paraguay">Paraguay</option>
+                    <option value="uruguay">Uruguay</option>
+                    <option value="Chile">Chile</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="guyanaFrancesa">Guyana Francesa</option>
                     </select>
                     <% if (locals.errors && errors.country) { %>
                         <div class= "text-danger">

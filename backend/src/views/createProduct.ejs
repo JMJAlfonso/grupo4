@@ -24,9 +24,7 @@
                         </div>
                         <div class="form-control">
                             <label>Descripción:</label>
-                            <textarea name="description" placeholder="Detalle de la actividad" rows="5"
-                                style="width: 100%;" class="control <%= locals.errors && errors.description ? "is-invalid" : null %>">
-                                <%= locals.oldData ? oldData.description : null %></textarea>
+                            <textarea name="description" placeholder="Detalle de la actividad" rows="5" style="width: 100%;" class="control <%= locals.errors && errors.description ? "is-invalid" : null %>"><%= locals.oldData ? oldData.description : null %></textarea>
                             <% if (locals.errors && errors.description) { %>
                                 <div class="text-danger">
                                     <%= errors.description.msg %>
