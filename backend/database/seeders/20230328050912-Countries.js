@@ -6,31 +6,48 @@ module.exports = {
 
     await queryInterface.bulkInsert('countries', [
       {
-        name: 'argentina',
+        name: 'Argentina',
         code: 'arg'
       }
       ,
       {
-        name: 'argentina',
-        code: 'arg'
+        name: 'Bolivia',
+        code: 'bol'
       },
       {
-        name: 'argentina',
-        code: 'arg'
+        name: 'Peru',
+        code: 'per'
       },
       {
-        name: 'argentina',
-        code: 'arg'
+        name: 'Brasil',
+        code: 'bra'
       },
       {
-        name: 'argentina',
-        code: 'arg'
+        name: 'Colombia',
+        code: 'col'
       }
       ,
       {
-        name: 'argentina',
-        code: 'arg'
-      }], {});
+        name: 'Paraguay',
+        code: 'par'
+      },
+      {
+        name: 'Uruguay',
+        code: 'uru'
+      },
+      {
+        name: 'Chile',
+        code: 'chi'
+      },
+      {
+        name: 'Venezuela',
+        code: 'ven'
+      },
+      {
+        name: 'Guyana Francesa',
+        code: 'guf'
+      }
+    ], {});
 
   },
 

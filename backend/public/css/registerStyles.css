@@ -13,15 +13,13 @@ body{
     color: #842029;
     display: none;
 }
-
-.text-danger {
-    color: #bf1717;
-}
-
 .show-error-message {
     display: block;
 }
 
+.text-danger {
+    color: #bf1717;
+}
 
 *{  
  box-sizing: border-box;
@@ -38,7 +36,7 @@ font-family: "Rubik", sans-serif;
 background-color: white;
 }
 
-.create-form{ 
+.register-form{ 
 padding: 20px 15px;
 margin: 5x 5px 5px 5px;
 }

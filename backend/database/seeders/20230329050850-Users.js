@@ -23,8 +23,8 @@ module.exports = {
         tel: '+54 9 1120304050',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
         avatar: 'emiliano_martinez.jpg',
-        roles_id: 2,
-        countries_id: 2
+        roles_id: 1,
+        countries_id: 1
       }
       ,
       {
@@ -34,8 +34,8 @@ module.exports = {
         tel: '+54 9 1180203230',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
         avatar: 'di_maria.jpg',
-        roles_id: 3,
-        countries_id: 3
+        roles_id: 2,
+        countries_id: 1
       }
       ,
       {
@@ -45,8 +45,8 @@ module.exports = {
         tel: '+54 9 1121238889',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
         avatar: 'otamendi.png',
-        roles_id: 4,
-        countries_id: 4
+        roles_id: 2,
+        countries_id: 1
       }
       ,
       {
@@ -56,8 +56,8 @@ module.exports = {
         tel: '+54 9 1184569652',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
         avatar: 'enzo.png',
-        roles_id: 5,
-        countries_id: 5
+        roles_id: 2,
+        countries_id: 1
       }
       ,
       {
@@ -67,8 +67,8 @@ module.exports = {
         tel: '+54 9 1184569652',
         password: '$2a$08$p7fRqdHKmG3iesuxqoCtDuq5TYGLP/q8hyK8H2W6hyiv1UI3XzDni',
         avatar: 'dybala.jpg',
-        roles_id: 6,
-        countries_id: 6
+        roles_id: 2,
+        countries_id: 1
       }
     ], {});
 

@@ -11,23 +11,9 @@ module.exports = {
       }
       ,
       {
-        name: 'admin',
-      }
-      ,
-      {
-        name: 'user',
-      },
-      {
         name: 'user',
       }
-      ,
-      {
-        name: 'user',
-      }
-      ,
-      {
-        name: 'user',
-      }], {});
+     ], {});
 
   },
 

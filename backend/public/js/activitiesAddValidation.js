@@ -1,7 +1,6 @@
 window.onload = function () {
 
-    const form = document.querySelector('.create-form');
-    console.log('hola');
+    const form = document.querySelector('.create-form');    
     form.name.focus();
 
     form.addEventListener('submit', (e) => {
@@ -37,6 +36,16 @@ window.onload = function () {
             errors.push({ name: 'image', message: 'El formato de imagen debe ser .jpg , .jpeg, .png , .gif ' });
             form.image.classList.add('is-invalid');
         }
+
+        if (!form.price.value) {
+            errors.push({ name: 'price', message: 'El campo precio no puede estar vacio' });
+            form.price.classList.add('is-invalid');
+        }
+        if (form.price.value <0) {
+            errors.push({ name: 'price', message: 'Debe ingresar un valor valido.' });
+            form.price.classList.add('is-invalid');
+        }
+        
         errors.forEach(error => {
             const errorLabel = document.getElementById(`error-${error.name}`)
             errorLabel.classList.add('show-error-message');

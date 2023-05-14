@@ -62,24 +62,28 @@ const userController = {
                 });
             }
             const newRole = {
-                name: 'user'
+                name:'user'
             }
 
-            const newR = await db.Roles.create(newRole);
+            const newR = await db.Roles.findOne({ where: newRole  });            
 
             const newCountry = {
                 name: req.body.country
             }
 
-            const newC = await db.Countries.create(newCountry);
-
+            const newC = await db.Countries.findOne( { where: newCountry });
+            if(!req.file.filename){
+                req.file.filename = 'default-avatar.png';
+            } 
+            console.log('DEBAJO IMPRIME REQ.FILE ==============================')                     
+            console.log(req.file.filename)
             let userToCreate = {
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
                 tel: req.body.tel,
                 password: bcryptjs.hashSync(req.body.password, 10),
-                avatar: req.file.filename ? req.file.filename : 'default-avatar.png',
+                avatar: req.file.filename,
                 roles_id: newR.id,
                 countries_id: newC.id,                
             }            

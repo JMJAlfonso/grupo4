@@ -8,7 +8,7 @@ const validations = {
         body("email").notEmpty().withMessage("Tienes que escribir tu correo electrónico").bail().isEmail().withMessage("debes escribir un correo electronico"),
         body("tel").notEmpty().withMessage("Tienes que escribir tu numero de teléfono"),
         body("country").notEmpty().withMessage("Tienes que escribir tu país"),
-        body("password").notEmpty().withMessage("Tienes que escribir tu contraseña").isLength({ min: 8 }),
+        body("password").notEmpty().withMessage("Tienes que escribir tu contraseña").isLength({ min: 8 }).withMessage("Debe ser mayor o igual a 8 caracteres"),
         body("repeat_password").notEmpty().withMessage("Tienes que escribir tu confirmación de contraseña").custom((value, {req}) => value === req.body.password).withMessage("Las contraseñas no coinciden"),
         body("userAvatar").custom((value, { req }) => {
             let file = req.file;
@@ -18,6 +18,8 @@ const validations = {
                 if (!acceptedExtensions.includes(fileExtension)) {
                     throw new Error(`las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
                 }
+            }else{
+                throw new Error(`Cargue un avatar con las extensiones de archivo permitidas: ${acceptedExtensions.join(', ')}`)
             }
             return true;
         })
