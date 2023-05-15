@@ -42,7 +42,7 @@ const productController = {
             });
         }
         try {
-            const productInDB = await db.Activities.findOne( {name: 'req.body.name' } );
+            const productInDB = await db.Activities.findOne({ where: { name: 'req.body.name' } });
 
             if (productInDB) {
                 return res.render("createProduct", {

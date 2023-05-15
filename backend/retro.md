@@ -143,6 +143,8 @@ ___
 ### Dejar de hacer: 
 - No contestar.
 
+___
+
 ## RETRO SPRINT 8
 Llegamos al final de este camino y la verdad es que tuvimos un aprendizaje dinámico, como equipo 
 funcionamos bien y creemos que cumplicos con los objetivos que nos pusieron desde el comienzo.
